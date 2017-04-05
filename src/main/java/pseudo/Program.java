@@ -1,8 +1,6 @@
 package pseudo;
 
-/**
- * Created by Cecilia Bergman and Anna Schuback.
- */
+
 
 
 public class Program {
