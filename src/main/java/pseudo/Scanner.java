@@ -27,6 +27,10 @@ public class Scanner {
         return current;
     }
 
+//En metod för att avgöra vilken typ av tagg det är, antingen <Health_Care_Unit> eller <Location>
+//När den har avgjort vilken tagg det är kan man tokanizera det som är inom taggen till sluttagg.
+//Tanke att dela upp tokenizern i två, en för vardera tagg med respektive kriterier.
+
     public void moveNext() throws IOException {
         if (reader == null)
             throw new IOException("No open file.");
