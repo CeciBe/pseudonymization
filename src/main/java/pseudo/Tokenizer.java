@@ -83,61 +83,65 @@ class Tokenizer {
         return new Lexeme(strBuilder.toString(), Token.HEALTH_CARE_UNIT);
     }
 
-    private Lexeme extractHealthCareUnit() throws IOException {
-        StringBuilder strBuilder = new StringBuilder();
-        while (Character.isLetter(scanner.current())) {
+    private Lexeme extractHealthCareUnit(StringBuilder strBuilder) throws IOException {
+        //StringBuilder strBuilder = new StringBuilder();
+        while (Character.getType(scanner.current()) == '_' || Character.isLetter(scanner.current())) {
             strBuilder.append(scanner.current());
             scanner.moveNext();
+            if (scanner.current() == '>'){
+                strBuilder.append(scanner.current());
+                break;
+            }
         }
         return new Lexeme(strBuilder.toString(), Token.HEALTH_CARE_UNIT);
     }
 
-    private Lexeme extractLocation() throws IOException {
-        StringBuilder strBuilder = new StringBuilder();
+    private Lexeme extractLocation(StringBuilder strBuilder) throws IOException {
+        //StringBuilder strBuilder = new StringBuilder();
+        Lexeme lexeme = null;
         while (Character.isLetter(scanner.current())) {
             strBuilder.append(scanner.current());
             scanner.moveNext();
+            if (scanner.current() == '>'){
+                strBuilder.append(scanner.current());
+                break;
+            }
         }
-        return new Lexeme(strBuilder.toString(), Token.LOCATION);
+        if(strBuilder.toString().equals("<Location>")){
+            lexeme = new Lexeme(strBuilder.toString(), Token.LOCATION);
+        } else {
+            lexeme = new Lexeme(strBuilder.toString(), Token.OTHER_TAG);
+        }
+        return lexeme;
     }
 
     private Lexeme extractTag(Character ch) throws IOException {
         Lexeme lexeme = null;
         StringBuilder strBuilder = new StringBuilder();
-
         if (ch == '<') {
             while(Character.getType(scanner.current()) == Character.START_PUNCTUATION) {
                 strBuilder.append(scanner.current());
                 scanner.moveNext();
-                lexeme = new Lexeme(strBuilder.toString(), Token.LEFT_TAG);
-                typeOfTag(ch);
-
-            }
-        } else if (ch == '>') {
-            while(Character.getType(scanner.current()) == Character.END_PUNCTUATION) {
-                strBuilder.append(scanner.current());
-                scanner.moveNext();
-                lexeme = new Lexeme(strBuilder.toString(), Token.RIGHT_TAG);
+                ch = scanner.current();
+                //lexeme = new Lexeme(strBuilder.toString(), Token.LEFT_TAG);
+                lexeme = typeOfTag(ch, strBuilder);
             }
         }
         return lexeme;
     }
 
-    private void typeOfTag(Character ch) throws IOException {
-        StringBuilder strBuilder = new StringBuilder();
+    private Lexeme typeOfTag(Character ch, StringBuilder strBuilder) throws IOException {
+        //StringBuilder strBuilder = new StringBuilder();
+        Lexeme lexeme = null;
         if (ch == 'H') {
-            extractHealthCareUnit();
+            lexeme = extractHealthCareUnit(strBuilder);
         } else if (ch == 'L') {
-            while (Character.isLetter(scanner.current())) {
-                strBuilder.append(scanner.current());
-                scanner.moveNext();
-            }
-            if (strBuilder.toString().equals("Location")) {
-                extractLocation();
-            } else {
-                scanner.moveNext();
-            }
+            lexeme = extractLocation(strBuilder);
+        } else {
+            //scanner.moveNext();
+            return null;
         }
+        return lexeme;
     }
 
     public void close() throws IOException {
