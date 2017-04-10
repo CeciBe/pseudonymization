@@ -101,53 +101,6 @@ class Tokenizer {
         return new Lexeme(strBuilder.toString(), Token.LOCATION);
     }
 
- /*   private Lexeme extractInt() throws IOException {
-        StringBuilder strBuilder = new StringBuilder();
-        while (Character.isDigit(scanner.current())) {
-            strBuilder.append(scanner.current());
-            scanner.moveNext();
-        }
-        return new Lexeme(strBuilder.toString(), Token.INT_LIT);
-    }
-
-    private Lexeme addSubOP(Character ch) throws IOException {
-        Lexeme lexeme = null;
-        StringBuilder strBuilder = new StringBuilder();
-        if (ch == '+') {
-            while (Character.getType(scanner.current()) == Character.MATH_SYMBOL) {
-                strBuilder.append(scanner.current());
-                scanner.moveNext();
-                lexeme = new Lexeme(strBuilder.toString(), Token.ADD_OP);
-            }
-
-        } else if (ch == '-') {
-            while (Character.getType(scanner.current()) == Character.DASH_PUNCTUATION) {
-                strBuilder.append(scanner.current());
-                scanner.moveNext();
-                lexeme = new Lexeme(strBuilder.toString(), Token.SUB_OP);
-            }
-        }
-        return lexeme;
-    }
-
-
-    private Lexeme mulDivOP(Character ch) throws IOException {
-        Lexeme lexeme = null;
-        StringBuilder strBuilder = new StringBuilder();
-        while (Character.getType(scanner.current()) == Character.OTHER_PUNCTUATION) {
-            if (ch == '*') {
-                strBuilder.append(scanner.current());
-                scanner.moveNext();
-                lexeme = new Lexeme(strBuilder.toString(), Token.MULT_OP);
-            } else if (ch == '/') {
-                strBuilder.append(scanner.current());
-                scanner.moveNext();
-                lexeme = new Lexeme(strBuilder.toString(), Token.DIV_OP);
-            }
-        }
-        return lexeme;
-    }*/
-
     private Lexeme extractTag(Character ch) throws IOException {
         Lexeme lexeme = null;
         StringBuilder strBuilder = new StringBuilder();
