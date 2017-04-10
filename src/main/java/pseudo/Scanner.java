@@ -32,6 +32,8 @@ class Scanner {
 //När den har avgjort vilken tagg det är kan man tokanizera det som är inom taggen till sluttagg.
 //Tanke att dela upp tokenizern i två, en för vardera tagg med respektive kriterier.
 
+
+
     public void moveNext() throws IOException {
         if (reader == null)
             throw new IOException("No open file.");
