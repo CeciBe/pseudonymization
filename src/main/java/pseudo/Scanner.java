@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 
 
-public class Scanner {
+class Scanner {
 
     public static final char NULL = (char)0;
     public static final char EOF = (char)-1; // End of file.
@@ -26,6 +26,7 @@ public class Scanner {
     public char current() {
         return current;
     }
+
 
 //En metod för att avgöra vilken typ av tagg det är, antingen <Health_Care_Unit> eller <Location>
 //När den har avgjort vilken tagg det är kan man tokanizera det som är inom taggen till sluttagg.

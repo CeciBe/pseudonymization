@@ -1,4 +1,4 @@
 package pseudo;
 
-public class Tokenizer {
+class Tokenizer {
 }

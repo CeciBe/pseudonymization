@@ -1,5 +1,5 @@
 package pseudo;
 
 
-public class Token {
+class Token {
 }
