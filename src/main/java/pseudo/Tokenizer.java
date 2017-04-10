@@ -47,8 +47,8 @@ class Tokenizer {
             return new Lexeme(character, Token.EOF);
         } else if (Character.isLetter(character)) {
             return extractLetter();
-        } else if (Character.isDigit(character)) {
-            return extractInt();
+        //} else if (Character.isDigit(character)) {
+            //return extractInt();
         } else if (symbols.containsKey(character)) {
             scanner.moveNext();
             return new Lexeme(character, symbols.get(character));
@@ -101,7 +101,7 @@ class Tokenizer {
         return new Lexeme(strBuilder.toString(), Token.LOCATION);
     }
 
-    private Lexeme extractInt() throws IOException {
+ /*   private Lexeme extractInt() throws IOException {
         StringBuilder strBuilder = new StringBuilder();
         while (Character.isDigit(scanner.current())) {
             strBuilder.append(scanner.current());
@@ -146,7 +146,7 @@ class Tokenizer {
             }
         }
         return lexeme;
-    }
+    }*/
 
     private Lexeme extractTag(Character ch) throws IOException {
         Lexeme lexeme = null;
@@ -157,6 +157,8 @@ class Tokenizer {
                 strBuilder.append(scanner.current());
                 scanner.moveNext();
                 lexeme = new Lexeme(strBuilder.toString(), Token.LEFT_TAG);
+                typeOfTag(ch);
+
             }
         } else if (ch == '>') {
             while(Character.getType(scanner.current()) == Character.END_PUNCTUATION) {
@@ -168,8 +170,21 @@ class Tokenizer {
         return lexeme;
     }
 
-    private Lexeme typeOfTag(Character ch) {
-
+    private void typeOfTag(Character ch) throws IOException {
+        StringBuilder strBuilder = new StringBuilder();
+        if (ch == 'H') {
+            extractHealthCareUnit();
+        } else if (ch == 'L') {
+            while (Character.isLetter(scanner.current())) {
+                strBuilder.append(scanner.current());
+                scanner.moveNext();
+            }
+            if (strBuilder.toString().equals("Location")) {
+                extractLocation();
+            } else {
+                scanner.moveNext();
+            }
+        }
     }
 
     public void close() throws IOException {
@@ -178,4 +193,4 @@ class Tokenizer {
     }
 }
 
-}
+
