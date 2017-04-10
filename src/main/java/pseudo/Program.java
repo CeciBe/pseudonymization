@@ -13,21 +13,21 @@ public class Program {
         String inputFile = "C:/inputData.txt";
         String outputFile = "C:/outputData.txt";
 
-        StringBuilder builder = null;
-        FileOutputStream stream = null;
-        OutputStreamWriter writer = null;
+        //StringBuilder builder = null;
+        //FileOutputStream stream = null;
+        //OutputStreamWriter writer = null;
 
         //Behövs StringBuilder för att bygga texten? Antagligen (om inget annat alternativ är bättre).
 
-        Parser parser = null; //new Parser();
-        Scanner scan = null;
+        //Parser parser = null; //new Parser();
+        //Scanner scan = null;
 
         FileChannel sourceChannel = null;
         FileChannel destChannel = null;
 
         try {
             try {
-                scan = new Scanner();
+                //scan = new Scanner();
                 //parser = new Parser();
                 //parser.openFile(inputFile);
                 //builder = new StringBuilder();
