@@ -1,0 +1,1 @@
+text text text <Health_Care_Unit>Sjukhemmet</Health_Care_Unit> merText merText <Location>Platsen</Location> slutText.
