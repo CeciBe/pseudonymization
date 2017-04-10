@@ -28,8 +28,8 @@ public class Program {
         try {
             try {
                 scan = new Scanner();
-                parser = new Parser();
-                parser.openFile(inputFile);
+                //parser = new Parser();
+                //parser.openFile(inputFile);
                 //builder = new StringBuilder();
 
                 //builder.append(inputFile);
