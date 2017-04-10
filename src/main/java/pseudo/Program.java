@@ -46,14 +46,20 @@ public class Program {
                 System.err.print("Couldn't open file " + fileEx.getMessage());
             }
             finally {
-                //if (parser != null)
-                    //parser.close();
+                /*if (parser != null)
+                    parser.close();
                 if (scan != null)
                     scan.close();
                 if (writer != null)
                     writer.close();
                 if (stream != null)
-                    stream.close();
+                    stream.close();*/
+                if (sourceChannel != null) {
+                    sourceChannel.close();
+                }
+                if (destChannel != null) {
+                    destChannel.close();
+                }
             }
 
         }catch (Exception exception){
