@@ -53,20 +53,20 @@ class Tokenizer {
             scanner.moveNext();
             return new Lexeme(character, symbols.get(character));
         } else {
-            return getTag(character);
+            return extractTag(character);
         }
     }
 
 
-    private Lexeme getTag(Character ch) throws IOException, TokenizerException {
+    /***private Lexeme getTag(Character ch) throws IOException, TokenizerException {
 
-        switch(ch) {
+       switch(ch) {
             case '<': return extractTag(ch);
-            case '>': return extractTag(ch);
+            //case '>': return extractTag(ch);
             default: throw new TokenizerException("Unknown character: " + String.valueOf(ch));
 
         }
-    }
+    } ***/
 
     private void consumeWhiteSpaces() throws IOException {
         while (Character.isWhitespace(scanner.current())) {
@@ -95,7 +95,7 @@ class Tokenizer {
         }
         if(strBuilder.toString().equals("<Health_Care_Unit>")) {
             HCU_Lexeme = new Lexeme(strBuilder.toString(), Token.STARTTAG_HCU);
-        } else if (strBuilder.toString().equals("<Health_Care_Unit>")) {
+        } else if (strBuilder.toString().equals("</Health_Care_Unit>")) {
             HCU_Lexeme = new Lexeme(strBuilder.toString(), Token.ENDTAG_HCU);
         }
         return HCU_Lexeme;
@@ -125,13 +125,12 @@ class Tokenizer {
         Lexeme lexeme = null;
         StringBuilder strBuilder = new StringBuilder();
         if (ch == '<') {
-            while(Character.getType(scanner.current()) == Character.START_PUNCTUATION) {
+           // while(Character.getType(scanner.current()) == Character.START_PUNCTUATION) {
                 strBuilder.append(scanner.current());
                 scanner.moveNext();
                 ch = scanner.current();
-                //lexeme = new Lexeme(strBuilder.toString(), Token.LEFT_TAG);
                 lexeme = checkStartOrEnd(ch, strBuilder);
-            }
+            //}
         }
         return lexeme;
     }
@@ -157,7 +156,7 @@ class Tokenizer {
         } else if (ch == 'L') {
             lexeme = extractLocation(strBuilder);
         } else {
-            //scanner.moveNext();
+            scanner.moveNext();
             return null;
         }
         return lexeme;
