@@ -3,6 +3,6 @@ package pseudo;
 
 public enum Token {
 
-        EOF, HEALTH_CARE_UNIT, LOCATION, OTHER_TAG;
+        EOF, STARTTAG_HCU, ENDTAG_HCU, HEALTH_CARE_UNIT, STARTTAG_L, ENDTAG_L, LOCATION, OTHER_TAG;
 
 }

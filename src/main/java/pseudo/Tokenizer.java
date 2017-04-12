@@ -1,6 +1,6 @@
 package pseudo;
 
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 class Tokenizer {
@@ -84,7 +84,7 @@ class Tokenizer {
     }
 
     private Lexeme extractHealthCareUnit(StringBuilder strBuilder) throws IOException {
-        //StringBuilder strBuilder = new StringBuilder();
+        Lexeme HCU_Lexeme;
         while (Character.getType(scanner.current()) == '_' || Character.isLetter(scanner.current())) {
             strBuilder.append(scanner.current());
             scanner.moveNext();
@@ -93,12 +93,16 @@ class Tokenizer {
                 break;
             }
         }
+        if(strBuilder.toString().equals("<Health_Care_Unit>")) {
+
+        } else if (strBuilder.toString().equals("<Health_Care_Unit>")) {
+
+        }
         return new Lexeme(strBuilder.toString(), Token.HEALTH_CARE_UNIT);
     }
 
     private Lexeme extractLocation(StringBuilder strBuilder) throws IOException {
-        //StringBuilder strBuilder = new StringBuilder();
-        Lexeme lexeme = null;
+        Lexeme lexeme;
         while (Character.isLetter(scanner.current())) {
             strBuilder.append(scanner.current());
             scanner.moveNext();
@@ -108,7 +112,9 @@ class Tokenizer {
             }
         }
         if(strBuilder.toString().equals("<Location>")){
-            lexeme = new Lexeme(strBuilder.toString(), Token.LOCATION);
+            lexeme = new Lexeme(strBuilder.toString(), Token.STARTTAG_L);
+        } else if (strBuilder.toString().equals("</Location>")) {
+            lexeme = new Lexeme(strBuilder.toString(), Token.ENDTAG_L);
         } else {
             lexeme = new Lexeme(strBuilder.toString(), Token.OTHER_TAG);
         }
@@ -124,10 +130,23 @@ class Tokenizer {
                 scanner.moveNext();
                 ch = scanner.current();
                 //lexeme = new Lexeme(strBuilder.toString(), Token.LEFT_TAG);
-                lexeme = typeOfTag(ch, strBuilder);
+                lexeme = checkStartOrEnd(ch, strBuilder);
             }
         }
         return lexeme;
+    }
+
+    private Lexeme checkStartOrEnd(Character ch, StringBuilder strBuilder) throws IOException {
+        Lexeme result = null;
+        if (ch == '/') {
+            strBuilder.append(scanner.current());
+            scanner.moveNext();
+            ch = scanner.current();
+            result = typeOfTag(ch, strBuilder);
+        } else {
+            result = typeOfTag(ch, strBuilder);
+        }
+        return result;
     }
 
     private Lexeme typeOfTag(Character ch, StringBuilder strBuilder) throws IOException {
