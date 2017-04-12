@@ -84,7 +84,7 @@ class Tokenizer {
     }
 
     private Lexeme extractHealthCareUnit(StringBuilder strBuilder) throws IOException {
-        Lexeme HCU_Lexeme;
+        Lexeme HCU_Lexeme = null;
         while (Character.getType(scanner.current()) == '_' || Character.isLetter(scanner.current())) {
             strBuilder.append(scanner.current());
             scanner.moveNext();
@@ -94,11 +94,11 @@ class Tokenizer {
             }
         }
         if(strBuilder.toString().equals("<Health_Care_Unit>")) {
-
+            HCU_Lexeme = new Lexeme(strBuilder.toString(), Token.STARTTAG_HCU);
         } else if (strBuilder.toString().equals("<Health_Care_Unit>")) {
-
+            HCU_Lexeme = new Lexeme(strBuilder.toString(), Token.ENDTAG_HCU);
         }
-        return new Lexeme(strBuilder.toString(), Token.HEALTH_CARE_UNIT);
+        return HCU_Lexeme;
     }
 
     private Lexeme extractLocation(StringBuilder strBuilder) throws IOException {
