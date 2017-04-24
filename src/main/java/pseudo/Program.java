@@ -53,7 +53,7 @@ public class Program {
     }
 
     public String printMenu() {
-        return "1. Copy EPR data \n2. Pseudonymize data \n3. Close program";
+        return "1. Copy EPR data \n2. Initiate pseudonymization \n3. Close program";
     }
 
 
