@@ -75,7 +75,6 @@ public class Program {
 
                 if (verify.contains("Location")) {
                     put1 = verify.replaceAll("Location", "L");
-                    //put2 = verify.replaceAll("Health_Care_Unit", "H");
                     bw.write(put1);
                 }
                 if (verify.contains("Health_Care_Unit")){
