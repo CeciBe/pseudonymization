@@ -59,35 +59,42 @@ public class Program {
 
 
     public void copyData() {
-        String inputFile = "C:/inputData.txt";
-        String outputFile = "C:/outputData.txt";
+       try {
+            String verify, put1, put2;
+            FileReader fr = new FileReader("C:/inputData.txt");
+            FileWriter fw = new FileWriter("C:/outputData.txt");
 
-        FileChannel sourceChannel = null;
-        FileChannel destChannel = null;
+            // Always wrap FileReader in BufferedReader.
+            BufferedReader br = new BufferedReader(fr);
+            BufferedWriter bw = new BufferedWriter(fw);
+            //int c;
+            //while((c = fr.read()) != -1) {
 
-        try {
-            try {
-                sourceChannel = new FileInputStream(inputFile).getChannel();
-                destChannel = new FileOutputStream(outputFile).getChannel();
-                destChannel.transferFrom(sourceChannel, 0, sourceChannel.size());
+            //String c;
+            while ((verify = br.readLine()) != null){
 
-            } catch (FileNotFoundException fileEx) {
-                System.err.print("Couldn't open file " + fileEx.getMessage());
-            }
-            finally {
-                if (sourceChannel != null) {
-                    sourceChannel.close();
+                if (verify.contains("Location")) {
+                    put1 = verify.replaceAll("Location", "L");
+                    //put2 = verify.replaceAll("Health_Care_Unit", "H");
+                    bw.write(put1);
                 }
-                if (destChannel != null) {
-                    destChannel.close();
-                }
-            }
+                if (verify.contains("Health_Care_Unit")){
+                    put2 = verify.replaceAll("Health_Care_Unit", "H");
+                    bw.write(put2);
+                    }
 
-        }catch (Exception exception){
-            System.err.print("Exception: " + exception.getMessage());
+            }
+            br.close();
+            bw.close();
+            fr.close();
+            fw.close();
+
         }
-        System.out.println("\nA copy of the file is created!\n");
+        catch(IOException e) {
+            System.err.println(e.getMessage());
+        }
     }
+}
 
     public void closeScanner() {
         if(scan != null) {
