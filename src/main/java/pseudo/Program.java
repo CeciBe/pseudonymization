@@ -93,7 +93,7 @@ public class Program {
             System.err.println(e.getMessage());
         }
     }
-}
+
 
     public void closeScanner() {
         if(scan != null) {
