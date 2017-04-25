@@ -99,15 +99,10 @@ public class Program {
 
            BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("C:/outputData.txt"), "ISO-8859-1"));
 
-           //BufferedWriter writer = new BufferedWriter(new FileWriter("C:/newFile.txt"));
-
            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("C:/newFile.txt"),"ISO-8859-1"));
 
            // Always wrap FileReader in BufferedReader.
-            //int c;
-            //while((c = fr.read()) != -1) {
 
-            //String c;
             while ((verify = reader.readLine()) != null){
 
                 if (verify.contains("Location")) {
@@ -120,11 +115,9 @@ public class Program {
                     }
 
             }
-           //writer.flush();
            reader.close();
            writer.close();
-            //fr.close();
-            //fw.close();
+
 
         }
         catch(IOException e) {
