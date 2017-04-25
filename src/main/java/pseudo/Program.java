@@ -28,7 +28,8 @@ public class Program {
                     copyData();
                     break;
                 case "2":
-                    System.out.println("Maintenance work, please return later!\n");
+                    pseudonymize();
+                    //System.out.println("Maintenance work, please return later!\n");
                     break;
                 case "3":
                     isRunning = false; System.out.println("The program is closing"); closeScanner();
@@ -59,34 +60,71 @@ public class Program {
 
 
     public void copyData() {
-       try {
-            String verify, put1, put2;
-            FileReader fr = new FileReader("C:/inputData.txt");
-            FileWriter fw = new FileWriter("C:/outputData.txt");
 
-            // Always wrap FileReader in BufferedReader.
-            BufferedReader br = new BufferedReader(fr);
-            BufferedWriter bw = new BufferedWriter(fw);
+        String inputFile = "C:/inputData.txt";
+        String outputFile = "C:/outputData.txt";
+
+        FileChannel sourceChannel = null;
+        FileChannel destChannel = null;
+
+        try {
+            try {
+                sourceChannel = new FileInputStream(inputFile).getChannel();
+                destChannel = new FileOutputStream(outputFile).getChannel();
+                destChannel.transferFrom(sourceChannel, 0, sourceChannel.size());
+
+            } catch (FileNotFoundException fileEx) {
+                System.err.print("Couldn't open file " + fileEx.getMessage());
+            }
+            finally {
+                if (sourceChannel != null) {
+                    sourceChannel.close();
+                }
+                if (destChannel != null) {
+                    destChannel.close();
+                }
+            }
+
+        }catch (Exception exception){
+            System.err.print("Exception: " + exception.getMessage());
+        }
+        System.out.println("\nA copy of the file is created!\n");
+    }
+
+
+    public void pseudonymize(){
+
+       try {
+           String verify, put1, put2;
+
+           BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("C:/outputData.txt"), "ISO-8859-1"));
+
+           //BufferedWriter writer = new BufferedWriter(new FileWriter("C:/newFile.txt"));
+
+           BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("C:/newFile.txt"),"ISO-8859-1"));
+
+           // Always wrap FileReader in BufferedReader.
             //int c;
             //while((c = fr.read()) != -1) {
 
             //String c;
-            while ((verify = br.readLine()) != null){
+            while ((verify = reader.readLine()) != null){
 
                 if (verify.contains("Location")) {
                     put1 = verify.replaceAll("Location", "L");
-                    bw.write(put1);
+                    writer.write(put1);
                 }
                 if (verify.contains("Health_Care_Unit")){
                     put2 = verify.replaceAll("Health_Care_Unit", "H");
-                    bw.write(put2);
+                    writer.write(put2);
                     }
 
             }
-            br.close();
-            bw.close();
-            fr.close();
-            fw.close();
+           //writer.flush();
+           reader.close();
+           writer.close();
+            //fr.close();
+            //fw.close();
 
         }
         catch(IOException e) {

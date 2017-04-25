@@ -102,7 +102,7 @@ class Tokenizer {
     }
 
     private Lexeme extractLocation(StringBuilder strBuilder) throws IOException {
-        Lexeme lexeme;
+        Lexeme lexeme = null;
         while (Character.isLetter(scanner.current())) {
             strBuilder.append(scanner.current());
             scanner.moveNext();
