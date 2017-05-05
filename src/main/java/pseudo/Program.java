@@ -100,9 +100,7 @@ public class Program {
             String verify;
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("C:/outputData.txt"), "ISO-8859-1"));
-
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("C:/newFile.txt"),"ISO-8859-1"));
-
 
             while ((verify = reader.readLine()) != null){
 
@@ -115,24 +113,33 @@ public class Program {
                 Pattern pattern2 = Pattern.compile(patternString2);
                 Matcher matcher2 = pattern2.matcher(verify);
 
+                //TODO, angående nedanstående loopar, vi måste se till att innehållet som hämtas ska hanteras på något sätt
+                while(matcher1.find()) {
+                    String h_c_u_Unit = matcher1.group(1);
+                    System.out.println(h_c_u_Unit);  //Testar utskrift av H_C_U
+                }
+
+                while(matcher2.find()) {
+                    String locationUnit = matcher2.group(1);
+                    System.out.println(locationUnit);  //Testar utskrift av Location
+                }
+
                 //Loopen räknar bara ut var taggarna finns och är inte viktigt för programmet
                 //lät den vara kvar tills vidare.
+
                 int count = 0;
                 while(matcher1.find() && matcher2.find()) {
                     count++;
                     System.out.println("found Location: " + count + " : "
                             + matcher2.start() + " - " + matcher2.end()
                             + "and HCU: " + matcher1.start() + " - " + matcher1.end());
-
                 }
 
                 writer.write(verify.replaceAll(patternString2, "<Location>Stockholm</Location>").replaceAll(patternString1, "<Health_Care_Unit>SÖS</Health_Care_Unit>"));
 
-
             }
             reader.close();
             writer.close();
-
 
         }
         catch(IOException e) {
