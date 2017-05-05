@@ -12,11 +12,13 @@ import static java.lang.String.valueOf;
 
 public class Program {
 
+    private Pseudonymizer pseudonymizer = null;
     private Scanner scan = null;
     private boolean isRunning;
 
 
     public Program() {
+        pseudonymizer = new Pseudonymizer();
         scan = new Scanner(System.in);
     }
 
@@ -114,12 +116,12 @@ public class Program {
                 Matcher matcher2 = pattern2.matcher(verify);
 
                 //TODO, angående nedanstående loopar, vi måste se till att innehållet som hämtas ska hanteras på något sätt
-                while(matcher1.find()) {
+                while (matcher1.find()) {
                     String h_c_u_Unit = matcher1.group(1);
                     System.out.println(h_c_u_Unit);  //Testar utskrift av H_C_U
                 }
 
-                while(matcher2.find()) {
+               while (matcher2.find()) {
                     String locationUnit = matcher2.group(1);
                     System.out.println(locationUnit);  //Testar utskrift av Location
                 }
@@ -128,7 +130,7 @@ public class Program {
                 //lät den vara kvar tills vidare.
 
                 int count = 0;
-                while(matcher1.find() && matcher2.find()) {
+                while (matcher1.find() && matcher2.find()) {
                     count++;
                     System.out.println("found Location: " + count + " : "
                             + matcher2.start() + " - " + matcher2.end()
