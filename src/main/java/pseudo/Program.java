@@ -122,31 +122,43 @@ public class Program {
 
             while ((verify = reader.readLine()) != null){
                 int numberOfTokens = 0;
-                StringTokenizer st = new StringTokenizer(verify);
-                StringBuilder sb = new StringBuilder();
-                String currentToken = "";
-                System.out.println("Före: " + verify);
+                //StringTokenizer st = new StringTokenizer(verify);
+                //StringBuilder sb = new StringBuilder();
+                //String currentToken = "";
+                //System.out.println("Före: " + verify);
 
-                System.out.println("Efter: ");
+                //System.out.println("Efter: ");
 
                 //while (st.hasMoreTokens()) {
                     //currentToken = st.nextToken();
 
 
-                    String patternString = "<Location>\\s*(.+?)\\s*</Location>";
+                    String patternString1 = "<Health_Care_Unit>\\s*(.+?)\\s*</Health_Care_Unit>";
+                    String patternString2 = "<Location>\\s*(.+?)\\s*</Location>";
 
-                    Pattern pattern = Pattern.compile(patternString);
-                    Matcher matcher = pattern.matcher(verify);
+                    Pattern pattern1 = Pattern.compile(patternString1);
+                    Matcher matcher1 = pattern1.matcher(verify);
 
+                    Pattern pattern2 = Pattern.compile(patternString2);
+                    Matcher matcher2 = pattern2.matcher(verify);
+
+                    //Räknar bara ut var taggarna finns.
                     int count = 0;
-                    while(matcher.find()) {
+                    while(matcher1.find() && matcher2.find()) {
                         count++;
-                        System.out.println("found: " + count + " : "
-                                + matcher.start() + " - " + matcher.end());
+                        System.out.println("found Location: " + count + " : "
+                                + matcher2.start() + " - " + matcher2.end()
+                                + "and HCU: " + matcher1.start() + " - " + matcher1.end());
 
                     }
 
-                    writer.write(verify.replaceAll(patternString, "<Location>Stockholm</Location>"));
+                //String loc = verify.replaceAll(patternString2, "<Location>Stockholm</Location>");
+                //String hcu = verify.replaceAll(patternString1, "<Health_Care_Unit>SÖS</Health_Care_Unit>");
+
+                writer.write(verify.replaceAll(patternString2, "<Location>Stockholm</Location>").replaceAll(patternString1, "<Health_Care_Unit>SÖS</Health_Care_Unit>"));
+
+                //writer.write(verify.replaceAll(patternString2, "<Location>Stockholm</Location>"));
+                //writer.write(verify.replaceAll(patternString1, "<Health_Care_Unit>SÖS</Health_Care_Unit>"));
 
 
                     /*if (currentToken.contains("<Location>")) {
