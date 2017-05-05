@@ -9,10 +9,6 @@ import java.util.regex.Pattern;
 
 import static java.lang.String.valueOf;
 
-/**OBS! Nedanstående två rader ska vi avvakta med då det har med weka att göra!**/
-//import weka.core.Instances;         //För datainsamlingen
-//import weka.filters.Filter;         //För att preprocessa data
-
 
 public class Program {
 
@@ -35,13 +31,10 @@ public class Program {
                     break;
                 case "2":
                     pseudonymize();
-                    //System.out.println("Maintenance work, please return later!\n");
                     break;
                 case "3":
                     isRunning = false; System.out.println("The program is closing"); closeScanner();
                     return;
-                case "4":
-                    break;
                 default:
                     System.out.println("The option is not valid try again!\n");
             }
@@ -161,5 +154,3 @@ public class Program {
 
     }
 }
-
-//"C:/inputData.txt" "C:/outputData.txt"
