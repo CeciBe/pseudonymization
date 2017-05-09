@@ -1,47 +1,153 @@
-Albanien,
-Andorra,
-Azerbajdzjan,
-Belgien,
-Bosnien och Hercegovina,
-Bulgarien,
-Danmark,
-Estland,
-Finland,
-Frankrike,
-Georgien,
-Grekland,
-Irland,
-Island,
-Italien,
-Kosovo,
-Kroatien,
-Lettland,
-Liechtenstein,
-Litauen,
-Luxemburg,
-Makedonien,
-Malta,
-Moldavien,
-Monaco,
-Montenegro,
-Nederländerna,
-Norge,
-Polen,
-Portugal,
-Rumänien,
-Ryssland,
-San Marino,
-Schweiz,
-Serbien,
-Slovakien,
-Slovenien,
-Spanien,
-Storbritannien,
-Sverige,
-Tjeckien,
-Turkiet,
-Tyskland,
-Ukraina,
-Ungern,
-Vitryssland,
+LAND
+Albanien
+Andorra
+Azerbajdzjan
+Belgien
+Bosnien och Hercegovina
+Bulgarien
+Danmark
+Estland
+Finland
+Frankrike
+Georgien
+Grekland
+Irland
+Island
+Italien
+Kosovo
+Kroatien
+Lettland
+Liechtenstein
+Litauen
+Luxemburg
+Makedonien
+Malta
+Moldavien
+Monaco
+Montenegro
+Nederländerna
+Norge
+Polen
+Portugal
+Rumänien
+Ryssland
+San Marino
+Schweiz
+Serbien
+Slovakien
+Slovenien
+Spanien
+Storbritannien
+Sverige
+Tjeckien
+Turkiet
+Tyskland
+Ukraina
+Ungern
+Vitryssland
 Österrike
+LOCATIONTYPE:
+LANDSKAP
+Blekinge
+Bohuslän
+Dalarna
+Dalsland
+Gotland
+Gästrikland
+Halland
+Hälsingland
+Härjedalen
+Jämtland
+Lappland
+Medelpad
+Norrbotten
+Närke
+Skåne
+Småland
+Södermanland
+Uppland
+Värmland
+Västerbotten
+Västergötland
+Västmanland
+Ångermanland
+Öland
+Östergötland
+LOCATIONTYPE:
+LANDSDEL
+Norrland
+Svealand
+Götaland
+LOCATIONTYPE:
+LÄN
+Blekinge län
+Dalarnas län
+Gotlands län
+Gävleborgs län
+Hallands län
+Kalmar län
+Kronobergs län
+Jämtlands län
+Jönköpings län
+Norrbottens län
+Skåne län
+Stockholms län
+Södermanlands län
+Uppsala län
+Värmlands län
+Västerbottens län
+Västernorrlands län
+Västmanlands län
+Västra Götalands län
+Örebro län
+Östergötlands län
+LOCATIONTYPE:
+KOMMUN/ORT/DISTRIKT
+Botkyrka
+Danderyd
+Ekerö
+Haninge
+Huddinge
+Järfälla
+Lidingö
+Nacka
+Norrtälje
+Nykvarn
+Nynäshamn
+Salem
+Sigtuna
+Sollentuna
+Solna
+Stockholm
+Sundbyberg
+Södertälje
+Tyresö
+Täby
+Upplands-Bro
+Upplands Väsby
+Vallentuna
+Vaxholm
+Värmdö
+Österåker
+Alby
+Arninge
+Djursholm
+Kårsta
+Vallentuna
+Åkersberga
+Älvsjö
+Kista
+Skarpnäck
+LOCATIONTYPE:
+ÖVRIGA VÄRDEN
+apoteket
+Best Western
+Gallerian
+hotell Clarion
+Radisson Blu
+Röda korset
+Scandic hotell
+Stockholms läns landsting
+sjukhuset
+Sodexo
+restaurang Vapiano

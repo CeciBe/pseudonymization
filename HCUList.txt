@@ -1,0 +1,259 @@
+SJUKHUS
+Södersjukhuset
+Danderyds sjukhus
+Karolinska Universitetssjukhuset
+Norrtälje sjukhus
+S:t Eriks ögonsjukhus
+S:t Görans sjukhus
+Ersta diakoni - Sjukhus
+Röda Korsets Sjukhus
+Sophiahemmet
+Astrid Lindgrens Barnsjukhus
+Nynäs Vårdcentral
+Sahlgrenska Universitetssjukhuset
+NU-sjukvården
+Skaraborgs sjukhus
+Södra Älvsborgs Sjukhus
+Kungälvs sjukhus
+Frölunda Specialistsjukhus
+Alingsås lasarett
+Angereds Närsjukhus
+Universitetssjukhuset i Örebro
+Karlskoga lasarett
+Lindesbergs lasarett
+Universitetssjukhuset i Linköping
+Vrinnevisjukhuset - Norrköping
+Lasarettet i Motala
+Centrallasarettet i Västerås
+Köping Närsjukhus
+Sala Närsjukhus
+Västerås Närsjukhus
+Mitt Hjärta - Bergslagssjukhuset - Fagersta
+Länssjukhuset Sundsvall Härnösand
+Sollefteå sjukhus
+Örnsköldsviks sjukhus
+Lycksele lasarett
+Norrlands universitetssjukhus - Nus Umeå
+Skellefteå lasarett
+Centralsjukhuset i Karlstad
+Sjukhuset i Arvika
+Sjukhuset i Torsby
+Centrallasarettet Växjö
+Ljungby lasarett
+Gällivare sjukhus
+Kalix sjukhus
+Kiruna Sjukhus
+Piteå älvdals sjukhus
+Sunderby sjukhus - Luleå
+Universitetssjukhus Lund
+Universitetssjukhus Malmö
+Helsingborgs Lasarett
+Sjukhuset i Hässleholm
+Centralsjukhuset Kristianstad
+Lasarettet i Landskrona
+Lasarettet Trelleborg
+Lasarettet i Ystad
+Ängelholms sjukhus
+Sjukhuset i Simrishamn
+Kullbergska sjukhuset - Katrineholm
+Mälarsjukhuset - Eskilstuna
+Nyköpings lasarett
+Regionsjukhuset Karsudden
+Akademiska sjukhuset - Uppsala
+Lasarettet i Enköping
+Blekingesjukhuset
+Anestesikliniken Karlshamn
+Anestesikliniken Karlskrona
+Avesta lasarett
+Borlänge sjukhus
+Falu lasarett
+Ludvika lasarett
+Mora lasarett
+Visby lasarett
+Sjukhuset i Bollnäs
+Sjukhuset i Gävle
+Sjukhuset i Hudiksvall
+Sjukhuset i Ljusdal
+Sjukhuset i Sandviken
+Sjukhuset i Söderhamn
+Hallands sjukhus
+Halmstad sjukhus
+Kungsbacka sjukhus
+Varberg sjukhus
+Östersunds sjukhus
+Höglandssjukhuset
+Länssjukhuset Ryhov
+Värnamo sjukhus
+Länssjukhuset i Kalmar
+Oskarshamns sjukhus
+Västerviks sjukhus
+HCUTYPE:
+BOENDEN
+Akalla äldreboende
+Attendo Bättringsvägen
+Attendo Dalahöjden
+Attendo Flygarhöjden
+Attendo Långbroberg
+Attendo Långbrogården
+Attendo Oasen
+Attendo Årstabergshemmet
+Axelsbergs vård- och omsorgsboende
+Axgårdens vård- och omsorgsboende
+Bejtona vård- och omsorgsboende
+Birger Jarl
+Björkgården
+Björksätra vård- och omsorgsboende
+Borgerskapets äldrehem
+Brahem
+Byholmen
+Edsätra äldreboende
+Elinsborgs vård- och omsorgsboende
+Enskede Nya servicehus
+Enskededalens Servicehus
+Ersta Hannahemmet
+Ersta Linnégården
+Ersta Mariahemmet
+Finskt Äldrecentrum
+Fristad vård- och omsorgsboende
+Fruängens Servicehus
+Fruängsgårdens vård- och omsorgsboende
+Hemmet för gamla
+Hornskroken
+Hässelgården
+Högdalens vård- och omsorgsboende
+Johannesgården
+Kampementet
+Kattrumpstullen
+Kista vård- och omsorgsboende
+Koppargården
+Kristallgården
+Kyrkbyn
+La Casa
+Lignagatan
+Lindegård
+Liviagården
+Löjtnantsgården
+Magdalenagården
+Marieberg
+Mårtensgården
+Nymilen
+Persikans vård- och omsorgsboende
+Postiljonens vård- och omsorgsboende
+Riddargårdens vård- och omsorgsboende
+Rio vård- och omsorgsboende
+Rågsveds Servicehus
+S:t Erik
+Sabbatsbergsbyn
+Sjöberga Gård
+Sjöstadsgårdens vård- och omsorgsboende
+Skogsgläntans vård- och omsorgsboende
+Skolörtens Servicehus
+Sofiagårdens vård- och omsorgsboende
+Solbacken
+Solgården
+Stockholms Sjukhem
+Stureby vård- och omsorgsboende
+Sätra Profilboende Huntington
+Sätra vård- och omsorgsboende
+Söndagsgården
+Trekantens Servicehus
+Veckobo
+Villa Dreviken
+Villa Sköndal
+Villa Tärnö
+Villa Vesta Gruppboende
+Vilobacken
+Väderkvarnens vård- och omsorgsboende
+Vällingbygården
+Vård- och omsorgsboendet Hornstull
+Ängsö gruppboende
+Årsta vård- och omsorgsboende
+Åsengårdens vård- och omsorgsboende
+Alströmerhemmet
+Bergsund
+Dianagårdens vård- och omsorgsboende
+Edö vård- och omsorgsboende
+Guldbröllopshemmet
+Herdens Äldreboende
+Hornstulls Servicehus
+Judiska hemmet
+Katarinagårdens vård- och omsorgsboende
+Kulltorps vård- och omsorgsboende
+Lisebergs äldreboende, Blomsterfonden
+Nockebyhöjdens vård- och omsorgsboende
+Nytorgsgårdens vård- och omsorgsboende
+Rinkeby vård- och omsorgsboende
+Serafens vård- och omsorgsboende
+Solberga vård- och omsorgsboende
+Sörklippans äldreboende
+Brommagården
+Mälarbacken vård- och omsorgsboende
+Pilträdets servicehus
+HCUTYPE:
+VÅRDCENTRAL
+Abrahamsberg
+Alby
+Axelsberg
+Barkaby
+Bergshamra Ulriksdal
+Bollmora
+Boo
+Brandbergen
+Bredäng
+Brommaplan
+Dalarö
+Djursholm
+Enebyberg
+Essingen
+Fisksätra
+Fittja
+Flemingsberg
+Forum
+Gröndal
+Gustavsberg
+Gärdet
+Hallonbergen
+Hallunda
+Handen
+Hagalund Frösunda
+Huddinge
+Husby Akalla
+Husläkarmottagning Johannes
+Hässelby
+Jakobsberg
+Jordbro
+Kista
+Kungsängen
+Kvartersakuten Surbrunn
+Liljeholmen
+Liseberg
+Luna
+Mörby
+Norrviken
+Rinkeby
+Rissne
+Rotebro
+Råsunda
+Salem
+Segeltorp
+Sigtuna läkarhus
+Skärholmen
+Solna Centrum
+Spånga
+Stocksund
+Sätra
+Tallhöjden
+Tensta
+Torsvik
+Traneberg
+Trollbäcken
+Trångsund
+Tullinge
+Tumba
+Tureberg
+Täby
+Vallentuna,hälsomottagning Korallen
+Valsta
+Vendelsö
+Vårby
+Älvsjö
