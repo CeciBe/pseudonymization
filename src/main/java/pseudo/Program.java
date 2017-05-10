@@ -158,18 +158,29 @@ public class Program {
             System.err.println(e.getMessage());
         }
         isPseudonymized = true;
+        printText();
     }
 
 
     //Håller på med att fixa denna metod
     public void printText() {
         try {
+            String verify;
             BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("C:/outputData.txt"), "ISO-8859-1"));
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("C:/newFile.txt"),"ISO-8859-1"));
 
-            String patternString = ("(<Health_Care_Unit>)|(<Location>)"); //"<Health_Care_Unit>\\s*(.+?)\\s*</Health_Care_Unit>";
-            Pattern pattern = Pattern.compile(patternString);
-
+            while((verify = reader.readLine()) != null) {
+                String patternString = "((<Health_Care_Unit>|<Location>)\\s*(.+?)\\s*(</Health_Care_Unit>|</Location>))";
+                Pattern pattern = Pattern.compile(patternString);
+                Matcher match = pattern.matcher(verify);
+                while(match.find()) {
+                    String firstTag = match.group(2);
+                    String unit = match.group(3);
+                    String lastTag = match.group(4);
+                    String newUnit = pseudonymizer.getSurrogate(firstTag,unit,lastTag);
+                    writer.write(newUnit);
+                }
+            }
             reader.close();
             writer.close();
         } catch (IOException ex) {

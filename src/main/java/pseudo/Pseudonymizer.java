@@ -3,6 +3,7 @@ package pseudo;
 import java.io.*;
 import java.util.*;
 
+
 public class Pseudonymizer {
 
     private String locationListLink = "C:/LocationList.txt";
@@ -82,14 +83,13 @@ public class Pseudonymizer {
             }
         }
         if (isFound == true) {
-            continiuePseudonymization(data, category, tempMap);
+            continiuePseudonymization(data, tempMap);
         } else {
             handleUnlistedValues(data, "ÖVRIGA VÄRDEN");
         }
-        System.out.println(pseudonymizedData);
     }
 
-    public void continiuePseudonymization(String data, String category, HashMap<String, String> tempMap) {
+    public void continiuePseudonymization(String data, HashMap<String, String> tempMap) {
         ArrayList <String> newList = null;
         newList = tempObject.getTemporaryList(tempMap);
         generateSurrogate(data,newList);
@@ -171,6 +171,13 @@ public class Pseudonymizer {
             }
         }
         generateSurrogate(input, list);
+    }
+
+    public String getSurrogate(String firstTag, String unit, String lastTag) {
+        String surrogate = null;
+        String newUnit = pseudonymizedData.get(unit);
+        surrogate = firstTag + newUnit + lastTag;
+        return surrogate;
     }
 
     public void printSurrogateList() {
