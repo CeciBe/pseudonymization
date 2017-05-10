@@ -90,7 +90,7 @@ public class Program {
 
     public void copyData() {
 
-        String inputFile = "inputData.txt";
+        String inputFile = "C:/inputData.txt";
         String outputFile = "C:/outputData.txt";
 
         FileChannel sourceChannel = null;
@@ -174,22 +174,23 @@ public class Program {
                 String patternString = "((<Health_Care_Unit>|<Location>)\\s*(.+?)\\s*(</Health_Care_Unit>|</Location>))";
                 Pattern pattern = Pattern.compile(patternString);
                 Matcher match = pattern.matcher(verify);
+                String finalSentence = verify;
                 while(match.find()) {
+                    String originalString = match.group();
                     String firstTag = match.group(2);
                     String unit = match.group(3);
                     String lastTag = match.group(4);
-                    newUnit = pseudonymizer.getSurrogate(firstTag,unit,lastTag);
-                    //writer.write(newUnit);
-
+                    String temp = finalSentence.replaceAll(originalString, pseudonymizer.getSurrogate(firstTag,unit,lastTag));
+                    finalSentence = temp;
                 }
-                writer.write(verify.replaceAll(patternString, newUnit));
-
+                writer.write(finalSentence);
             }
             reader.close();
             writer.close();
         } catch (IOException ex) {
             System.err.print(ex.getMessage());
         }
+        System.out.println("\nThe text is pseudonymized!\n");
     }
 
 
