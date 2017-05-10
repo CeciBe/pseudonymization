@@ -11,11 +11,8 @@ public class Pseudonymizer {
 
     private ArrayList <HashMap <String,String>> locationList = new ArrayList<>();
     private ArrayList <HashMap <String,String>> hcuList = new ArrayList<>();
-    private HashMap <String, ArrayList<String>> surrogates = new HashMap<>();     //<Surrogat,Ordinarie>, ev onödig?
+    private HashMap <String, HashSet<String>> surrogates = new HashMap<>();         //<Surrogat,Ordinarie>
     private HashMap <String, String> pseudonymizedData = new HashMap<>();           //<Ordinarie,Surrogat>
-
-    //private ArrayList <String> listOfDefalutValues = new ArrayList<>();     //För värden som inte går att kategorisera
-    //private HashMap <String, String> newDefaultValues = new HashMap<>();
 
 
     public Pseudonymizer() {}
@@ -29,8 +26,8 @@ public class Pseudonymizer {
                 HashMap <String,String> tempMap = new HashMap<>();
                 String category = line;
                 while(((line = locationReader.readLine()) != null) && !(line.equals("LOCATIONTYPE:"))) {
-                    String input = line;
-                    tempMap.put(input, category);
+                    String location = line;
+                    tempMap.put(location, category);
                 }
                 locationList.add(tempMap);
             }
@@ -39,7 +36,6 @@ public class Pseudonymizer {
             System.err.println(ioEx.getMessage());
         }
         continiueCreatingLists();
-        System.out.println("\nNew lists are created!\n");
     }
 
     public void continiueCreatingLists() {
@@ -50,8 +46,8 @@ public class Pseudonymizer {
                 HashMap <String,String> tempMap = new HashMap<>();
                 String category = line;
                 while(((line = hcuReader.readLine()) != null) && !(line.equals("HCUTYPE:"))) {
-                    String input = line;
-                    tempMap.put(input, category);
+                    String hcu = line;
+                    tempMap.put(hcu, category);
                 }
                 hcuList.add(tempMap);
             }
@@ -59,77 +55,78 @@ public class Pseudonymizer {
         } catch (IOException ioEx) {
             System.err.println(ioEx.getMessage());
         }
+        System.out.println("\nNew lists are created!\n");
     }
 
 
-    public void pseudonymizeData(String inputData, String category) {
+    public void pseudonymizeData(String data, String category) {
         boolean isFound = false;
         HashMap<String, String> tempMap = null;
         if(category.equals("Location")) {
             for (int index = 0; index < locationList.size(); index++) {
                 tempMap = locationList.get(index);
-                String categoryText = tempMap.get(inputData);
+                String categoryText = tempMap.get(data);
                 if(categoryText != null) {
-                    index = locationList.size();
+                    index = locationList.size();                //Denna rad är för att stoppa loopen!
                     isFound = true;
                 }
             }
         } else if(category.equals("Health_Care_Unit")) {
             for(int index = 0; index < hcuList.size(); index++) {
                 tempMap = hcuList.get(index);
-                String categoryText = tempMap.get(inputData);
+                String categoryText = tempMap.get(data);
                 if(categoryText != null) {
-                    index = locationList.size();
+                    index = locationList.size();                //Denna rad är för att stoppa loopen!
                     isFound = true;
                 }
             }
         }
         if (isFound == true) {
-            continiuePseudonymization(inputData, category, tempMap);
+            continiuePseudonymization(data, category, tempMap);
+        } else {
+            handleUnlistedValues(data, "ÖVRIGA VÄRDEN");
         }
+        System.out.println(pseudonymizedData);
     }
 
-    public void continiuePseudonymization(String inputData, String category, HashMap<String, String> tempMap) {
+    public void continiuePseudonymization(String data, String category, HashMap<String, String> tempMap) {
         ArrayList <String> newList = null;
-        if(category.equals("Location")) {
-            newList = tempObject.getTemporaryList(tempMap);
-        } else if(category.equals("Health_Care_Unit")) {
-            newList = tempObject.getTemporaryList(tempMap);
-        }
-        generateSurrogate(inputData,newList);
+        newList = tempObject.getTemporaryList(tempMap);
+        generateSurrogate(data,newList);
     }
 
     public void generateSurrogate(String value, ArrayList <String> newList) {
-        //System.out.println(value + " " + newList);
-        String surrogate = pseudonymizedData.get(value);
+        String surrogate = pseudonymizedData.get(value);        //Kollar om det finns ett surrogat sedan tidigare
         if(surrogate == null) {
-            checkIfSurrogate(value, newList);
-        } else {
-            System.out.println("EXCISTING VALUE");
+            checkIfValidSurrogate(value, newList);
         }
     }
 
-    public void checkIfSurrogate(String value, ArrayList <String> newList) {
-        Random randomGenerator = new Random();
+    public void checkIfValidSurrogate(String value, ArrayList <String> newList) {
+        Random randomGenerator = new Random();;
         int randomIndex = randomGenerator.nextInt(newList.size() - 1);
-        System.out.println(newList.size() + " " + randomIndex);
         String newSurrogate = getSurrogateFromList(randomIndex, newList);
-        ArrayList<String> list = surrogates.get(newSurrogate);
+        if (newSurrogate.equals(value)) {
+            System.out.println("Same surrogate: "+newSurrogate+" "+value+" "+randomIndex);    //Testning, övervakar värde och surrogat
+            checkIfValidSurrogate(value, newList);
+            return;
+        }
+        HashSet<String> list = surrogates.get(newSurrogate);                //Kontrollerar om surrogatet använts tidigare
         if(list == null) {
-            list = new ArrayList<>();
+            list = new HashSet<>();
             list.add(value);
             surrogates.put(newSurrogate, list);
-            System.out.println("New pair: " + value + ", " + newSurrogate);
             pseudonymizedData.put(value, newSurrogate);
         } else {
-            list.add(value);
-            checkIfSurrogate(value, newList);
+            //list.add(value);    //ta bort!
+            checkIfValidSurrogate(value, newList);
         }
     }
+
 
     public String getSurrogateFromList(int randomIndex, ArrayList <String> newList) {
         String surrogate = null;
-        for(int counter = 0; counter != randomIndex; counter++) {
+        for(int counter = 0; counter <= randomIndex; counter++) {
             surrogate = newList.get(counter);
         }
         return surrogate;
@@ -137,10 +134,9 @@ public class Pseudonymizer {
 
     class TempData {
 
-        TempData() {
-        }
+        TempData() {}
 
-        public ArrayList<String> getTemporaryList(HashMap<String, String> tempMap) {
+        private ArrayList<String> getTemporaryList(HashMap <String,String> tempMap) {
             ArrayList<String> tempList = new ArrayList<>();
             for(Map.Entry<String, String> iter: tempMap.entrySet()) {
                 String key = iter.getKey();
@@ -149,9 +145,41 @@ public class Pseudonymizer {
             return tempList;
         }
 
-        public void updateTable() {
-
+        private ArrayList<String> switchValues(String category, HashMap<String, String> tempMap) {
+            String value = null; // result;
+            ArrayList<String> tempList = new ArrayList<>();
+            for(Map.Entry<String,String> iter: tempMap.entrySet()) {
+                String key = iter.getKey();
+                tempList.add(key);
+                value = iter.getValue();
+            }
+            if(!category.equals(value)) {
+                tempList = null;
+            }
+            return tempList;
         }
+    }
+
+    public void handleUnlistedValues(String input, String category) {
+        HashMap <String, String> tempMap = null;
+        ArrayList<String> list = null;
+        for (int i = 0; i < locationList.size(); i++) {
+            tempMap = locationList.get(i);
+            list = tempObject.switchValues(category, tempMap);
+            if(list != null) {
+                i = locationList.size();
+            }
+        }
+        generateSurrogate(input, list);
+    }
+
+    public void printSurrogateList() {
+        for(Map.Entry<String, HashSet<String>> iter: surrogates.entrySet()) {
+            String key = iter.getKey();
+            HashSet<String> valueList = iter.getValue();
+            System.out.print("\n - " + key + ": " + valueList + "\n");
+        }
+        //System.out.println("\n"+pseudonymizedData);
     }
 }
 
@@ -196,11 +224,6 @@ public class Pseudonymizer {
 //Nedanstående text används ej för tillfället
 
 
-
-    /*private HashMap <Character, ArrayList<String>> länder = new HashMap<>();
-    private HashMap <Character, ArrayList<String>> landskap = new HashMap<>();
-    private HashMap <Character, ArrayList<String>> landsDelar = new HashMap<>();
-    private HashMap <Character, ArrayList<String>> län = new HashMap<>();*/
 
 
 

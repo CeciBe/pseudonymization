@@ -14,12 +14,14 @@ public class Program {
 
     private Pseudonymizer pseudonymizer = null;
     private Scanner scan = null;
-    private boolean isRunning;
+    private boolean isRunning, isFilled, isPseudonymized;
 
 
     public Program() {
         pseudonymizer = new Pseudonymizer();
         scan = new Scanner(System.in);
+        isPseudonymized = false;
+        isFilled = false;
     }
 
     public void run(boolean condition) {
@@ -32,12 +34,15 @@ public class Program {
                     copyData();
                     break;
                 case "2":
-                    pseudonymizer.createLists();
+                    checkListStatus();
                     break;
                 case "3":
-                    pseudonymize();
+                    checkStatus();
                     break;
                 case "4":
+                    pseudonymizer.printSurrogateList();
+                    break;
+                case "5":
                     isRunning = false; System.out.println("The program is closing"); closeScanner();
                     return;
                 default:
@@ -60,10 +65,28 @@ public class Program {
     }
 
     public String printMenu() {
-        return "1. Copy EPR data \n2. Fill lists \n3. Initiate pseudonymization \n4. Close program";
+        return "1. Copy EPR data \n2. Fill lists \n3. Initiate pseudonymization \n4. View distribution of surrogates \n5. Close program";
     }
 
 
+    public void checkListStatus() {
+        if(isFilled == false) {
+            pseudonymizer.createLists();
+            isFilled = true;
+        } else {
+            System.out.println("\nThe lists are already filled!\n");
+        }
+    }
+
+    public void checkStatus() {
+        if(isPseudonymized == false && isFilled == true) {
+            pseudonymize();
+        } else if(isPseudonymized == false && isFilled == false) {
+            System.out.println("\nThe lists are not filled yet!\n");
+        } else {
+            System.out.println("\nThe text has already been pseudonymized!\n");
+        }
+    }
 
     public void copyData() {
 
@@ -99,16 +122,14 @@ public class Program {
 
 
     public void pseudonymize() {
-        try {
 
+        try {
             String verify;
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("C:/outputData.txt"), "ISO-8859-1"));
             //BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("C:/newFile.txt"),"ISO-8859-1"));
 
-
             while ((verify = reader.readLine()) != null){
-
                 String patternString1 = "<Health_Care_Unit>\\s*(.+?)\\s*</Health_Care_Unit>";
                 String patternString2 = "<Location>\\s*(.+?)\\s*</Location>";
 
@@ -135,6 +156,24 @@ public class Program {
         }
         catch(IOException e) {
             System.err.println(e.getMessage());
+        }
+        isPseudonymized = true;
+    }
+
+
+    //Håller på med att fixa denna metod
+    public void printText() {
+        try {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("C:/outputData.txt"), "ISO-8859-1"));
+            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("C:/newFile.txt"),"ISO-8859-1"));
+
+            String patternString = ("(<Health_Care_Unit>)|(<Location>)"); //"<Health_Care_Unit>\\s*(.+?)\\s*</Health_Care_Unit>";
+            Pattern pattern = Pattern.compile(patternString);
+
+            reader.close();
+            writer.close();
+        } catch (IOException ex) {
+            System.err.print(ex.getMessage());
         }
     }
 
