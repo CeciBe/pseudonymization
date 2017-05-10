@@ -6,8 +6,8 @@ import java.util.*;
 
 public class Pseudonymizer {
 
-    private String locationListLink = "C:/LocationList.txt";
-    private String hcuListLink = "C:/HCUList.txt";
+    private String locationListLink = "LocationList.txt";
+    private String hcuListLink = "HCUList.txt";
     private TempData tempObject = new TempData();
 
     private ArrayList <HashMap <String,String>> locationList = new ArrayList<>();

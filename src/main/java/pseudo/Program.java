@@ -90,7 +90,7 @@ public class Program {
 
     public void copyData() {
 
-        String inputFile = "C:/inputData.txt";
+        String inputFile = "inputData.txt";
         String outputFile = "C:/outputData.txt";
 
         FileChannel sourceChannel = null;
@@ -166,6 +166,7 @@ public class Program {
     public void printText() {
         try {
             String verify;
+            String newUnit = "";
             BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("C:/outputData.txt"), "ISO-8859-1"));
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("C:/newFile.txt"),"ISO-8859-1"));
 
@@ -177,9 +178,12 @@ public class Program {
                     String firstTag = match.group(2);
                     String unit = match.group(3);
                     String lastTag = match.group(4);
-                    String newUnit = pseudonymizer.getSurrogate(firstTag,unit,lastTag);
-                    writer.write(newUnit);
+                    newUnit = pseudonymizer.getSurrogate(firstTag,unit,lastTag);
+                    //writer.write(newUnit);
+
                 }
+                writer.write(verify.replaceAll(patternString, newUnit));
+
             }
             reader.close();
             writer.close();
