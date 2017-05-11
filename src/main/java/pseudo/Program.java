@@ -127,7 +127,6 @@ public class Program {
             String verify;
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("C:/outputData.txt"), "ISO-8859-1"));
-            //BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("C:/newFile.txt"),"ISO-8859-1"));
 
             while ((verify = reader.readLine()) != null){
                 String patternString1 = "<Health_Care_Unit>\\s*(.+?)\\s*</Health_Care_Unit>";
@@ -162,11 +161,9 @@ public class Program {
     }
 
 
-    //Håller på med att fixa denna metod
     public void printText() {
         try {
             String verify;
-            String newUnit = "";
             BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("C:/outputData.txt"), "ISO-8859-1"));
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("C:/newFile.txt"),"ISO-8859-1"));
 
@@ -175,15 +172,18 @@ public class Program {
                 Pattern pattern = Pattern.compile(patternString);
                 Matcher match = pattern.matcher(verify);
                 String finalSentence = verify;
+                //System.out.println("BEFORE: "+ finalSentence);   //Testning för att se meningen som inte är pseudonymiserad
                 while(match.find()) {
                     String originalString = match.group();
                     String firstTag = match.group(2);
                     String unit = match.group(3);
                     String lastTag = match.group(4);
                     String temp = finalSentence.replaceAll(originalString, pseudonymizer.getSurrogate(firstTag,unit,lastTag));
-                    finalSentence = temp;
+                    finalSentence = temp;       //Uppdaterar texten som ändrats hittills
                 }
+                //System.out.println("AFTER: " + finalSentence);   //Testning för att se meningen som är pseudonymiserad
                 writer.write(finalSentence);
+                writer.newLine();
             }
             reader.close();
             writer.close();
