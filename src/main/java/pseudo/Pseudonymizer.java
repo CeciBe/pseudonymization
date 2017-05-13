@@ -6,17 +6,24 @@ import java.util.*;
 
 public class Pseudonymizer {
 
-    private String locationListLink = "LocationList.txt";
-    private String hcuListLink = "HCUList.txt";
+    private String locationListLink = "C:/LocationList.txt";
+    private String hcuListLink = "C:/HCUList.txt";
     private TempData tempObject = new TempData();
 
     private ArrayList <HashMap <String,String>> locationList = new ArrayList<>();
     private ArrayList <HashMap <String,String>> hcuList = new ArrayList<>();
+    //private HashMap <String,String> surrogates = new HashMap<>();
     private HashMap <String, HashSet<String>> surrogates = new HashMap<>();         //<Surrogat,Ordinarie>
     private HashMap <String, String> pseudonymizedData = new HashMap<>();           //<Ordinarie,Surrogat>
 
+    Location location;
+    HealthCareUnit healthCareUnit;
 
-    public Pseudonymizer() {}
+
+    public Pseudonymizer() {
+        location = new Location();
+        healthCareUnit = new HealthCareUnit();
+    }
 
 
     public void createLists() {
@@ -27,8 +34,8 @@ public class Pseudonymizer {
                 HashMap <String,String> tempMap = new HashMap<>();
                 String category = line;
                 while(((line = locationReader.readLine()) != null) && !(line.equals("LOCATIONTYPE:"))) {
-                    String location = line;
-                    tempMap.put(location, category);
+                    String locationUnit = line;
+                    tempMap.put(locationUnit, category);
                 }
                 locationList.add(tempMap);
             }
@@ -85,8 +92,37 @@ public class Pseudonymizer {
         if (isFound == true) {
             continiuePseudonymization(data, tempMap);
         } else {
-            handleUnlistedValues(data, "ÖVRIGA VÄRDEN");
+            String result = evaluateIfLocationOrHCU(data,category);
+            if(result != null) {
+                System.out.println("Result: " + result);   //Testning
+                HashMap<String,String> map = getHashMap(category);
+                continiuePseudonymization(result, map);
+            } else {
+                System.out.println("Nothing found, moving on with other values.");   //Testning
+                handleUnlistedValues(data, "ÖVRIGA VÄRDEN");
+            }
         }
+    }
+
+
+    public String evaluateIfLocationOrHCU(String data, String category) {
+        String result = null;
+        if(category.equals("Location")) {
+            result = location.evaluateLocation(data, locationList);
+        }else if(category.equals("Health_Care_Unit")) {
+            healthCareUnit.evaluateHCU(data, hcuList);
+        }
+        return result;
+    }
+
+    public HashMap<String,String> getHashMap(String category) {
+        HashMap<String,String> tempMap = null;
+        if(category.equals("Location")) {
+            tempMap = location.getLocationMap();
+        }else if(category.equals("Health_Care_Unit")) {
+            tempMap = healthCareUnit.getHcuMap();
+        }
+        return tempMap;
     }
 
     public void continiuePseudonymization(String data, HashMap<String, String> tempMap) {
@@ -99,6 +135,8 @@ public class Pseudonymizer {
         String surrogate = pseudonymizedData.get(value);        //Kollar om det finns ett surrogat sedan tidigare
         if(surrogate == null) {
             checkIfValidSurrogate(value, newList);
+        } else {
+            System.out.println("Surrogate already exists for "+value +", "+surrogate);
         }
     }
 
@@ -146,7 +184,7 @@ public class Pseudonymizer {
         }
 
         private ArrayList<String> switchValues(String category, HashMap<String, String> tempMap) {
-            String value = null; // result;
+            String value = null;
             ArrayList<String> tempList = new ArrayList<>();
             for(Map.Entry<String,String> iter: tempMap.entrySet()) {
                 String key = iter.getKey();
@@ -189,83 +227,3 @@ public class Pseudonymizer {
         //System.out.println("\n"+pseudonymizedData);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Nedanstående text används ej för tillfället
-
-
-
-
-
-/*** ArrayList<String> tempList = LocationMap.get(firstChar);
- if(tempList == null) {
- tempList = new ArrayList<>();
- tempList.add(line);
- //LocationMap.put(firstChar, tempList);
- } else {
- tempList.add(line);
- }***/
-
-
-
-/*public void createLists() {
-        BufferedReader locationReader = null;
-        String line; String currentCategory; int counter = 0;
-        try {
-            locationReader = new BufferedReader(new InputStreamReader(new FileInputStream(locationListLink), "ISO-8859-1"));
-
-            while(((line = locationReader.readLine()) != null) && !(line.equals("LOCATIONTYPE:")))  {
-                char firstChar = line.charAt(0);
-                ArrayList<String> tempList = LocationMap.get(firstChar);
-                if(tempList == null) {
-                    tempList = new ArrayList<>();
-                    tempList.add(line);
-                    //LocationMap.put(firstChar, tempList);
-                } else {
-                    tempList.add(line);
-                }
-            }
-           // System.out.println(countries);
-
-            locationReader.close();
-        } catch (IOException ioEx) {
-            System.err.println(ioEx.getMessage());
-        }
-    }*/
