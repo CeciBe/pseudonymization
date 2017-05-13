@@ -8,22 +8,16 @@ public class Pseudonymizer {
 
     private String locationListLink = "C:/LocationList.txt";
     private String hcuListLink = "C:/HCUList.txt";
+    private String currentWord = null;
     private TempData tempObject = new TempData();
 
     private ArrayList <HashMap <String,String>> locationList = new ArrayList<>();
     private ArrayList <HashMap <String,String>> hcuList = new ArrayList<>();
-    //private HashMap <String,String> surrogates = new HashMap<>();
     private HashMap <String, HashSet<String>> surrogates = new HashMap<>();         //<Surrogat,Ordinarie>
     private HashMap <String, String> pseudonymizedData = new HashMap<>();           //<Ordinarie,Surrogat>
 
-    Location location;
-    HealthCareUnit healthCareUnit;
 
-
-    public Pseudonymizer() {
-        location = new Location();
-        healthCareUnit = new HealthCareUnit();
-    }
+    public Pseudonymizer() {}
 
 
     public void createLists() {
@@ -90,74 +84,85 @@ public class Pseudonymizer {
             }
         }
         if (isFound == true) {
-            continiuePseudonymization(data, tempMap);
+            continiuePseudonymization(data, tempMap, false);
         } else {
-            String result = evaluateIfLocationOrHCU(data,category);
-            if(result != null) {
-                System.out.println("Result: " + result);   //Testning
-                HashMap<String,String> map = getHashMap(category);
-                continiuePseudonymization(result, map);
-            } else {
-                System.out.println("Nothing found, moving on with other values.");   //Testning
+            boolean status = evaluateIfLocationOrHCU(data,category);
+            if(status == false) {
                 handleUnlistedValues(data, "ÖVRIGA VÄRDEN");
             }
         }
     }
 
 
-    public String evaluateIfLocationOrHCU(String data, String category) {
-        String result = null;
-        if(category.equals("Location")) {
-            result = location.evaluateLocation(data, locationList);
-        }else if(category.equals("Health_Care_Unit")) {
-            healthCareUnit.evaluateHCU(data, hcuList);
+    public boolean evaluateIfLocationOrHCU(String data, String category) {
+        boolean status = false;
+        Location location = new Location();
+        HealthCareUnit healthCareUnit = new HealthCareUnit();
+        HashMap<String, String> tempMap = null;
+        HashMap<String,String> result = null;
+        if (category.equals("Location")) {
+            tempMap = location.evaluateLocation(data, locationList);
+        } else if (category.equals("Health_Care_Unit")) {
+            tempMap = healthCareUnit.evaluateHCU(data, hcuList);
         }
-        return result;
+        if (tempMap != null) {
+            String value = tempMap.get(data);
+            if(category.equals("Location")) {
+                result = location.getLocationMap();
+            }else if(category.equals("Health_Care_Unit")) {
+                result = healthCareUnit.getHcuMap();
+            }
+            if(result != null) {
+                currentWord = data;
+                System.out.println("Current word "+currentWord);
+                continiuePseudonymization(value, result,true);
+                status = true;
+            }
+        }
+        return status;
     }
 
-    public HashMap<String,String> getHashMap(String category) {
-        HashMap<String,String> tempMap = null;
-        if(category.equals("Location")) {
-            tempMap = location.getLocationMap();
-        }else if(category.equals("Health_Care_Unit")) {
-            tempMap = healthCareUnit.getHcuMap();
-        }
-        return tempMap;
-    }
 
-    public void continiuePseudonymization(String data, HashMap<String, String> tempMap) {
+    public void continiuePseudonymization(String data, HashMap<String, String> tempMap, boolean anotherValue) {
         ArrayList <String> newList = null;
         newList = tempObject.getTemporaryList(tempMap);
-        generateSurrogate(data,newList);
+        generateSurrogate(data,newList,anotherValue);
     }
 
-    public void generateSurrogate(String value, ArrayList <String> newList) {
+    public void generateSurrogate(String value, ArrayList <String> newList, boolean anotherValue) {
         String surrogate = pseudonymizedData.get(value);        //Kollar om det finns ett surrogat sedan tidigare
         if(surrogate == null) {
-            checkIfValidSurrogate(value, newList);
-        } else {
-            System.out.println("Surrogate already exists for "+value +", "+surrogate);
+            checkIfValidSurrogate(value, newList,anotherValue);
+        } else if (anotherValue == true && surrogate != null) {
+            pseudonymizedData.put(currentWord, surrogate);
+            HashSet<String> tempList = surrogates.get(surrogate);
+            tempList.add(currentWord);
+            currentWord = null;
+            //System.out.println("Surrogate already exists for "+value +", "+surrogate);
         }
     }
 
-    public void checkIfValidSurrogate(String value, ArrayList <String> newList) {
-        Random randomGenerator = new Random();;
+    public void checkIfValidSurrogate(String value, ArrayList <String> newList, boolean anotherValue) {
+        Random randomGenerator = new Random();
         int randomIndex = randomGenerator.nextInt(newList.size() - 1);
         String newSurrogate = getSurrogateFromList(randomIndex, newList);
         if (newSurrogate.equals(value)) {
-            System.out.println("Same surrogate: "+newSurrogate+" "+value+" "+randomIndex);    //Testning, övervakar värde och surrogat
-            checkIfValidSurrogate(value, newList);
+            checkIfValidSurrogate(value, newList,anotherValue);
             return;
         }
         HashSet<String> list = surrogates.get(newSurrogate);                //Kontrollerar om surrogatet använts tidigare
-        if(list == null) {
+        if (list == null) {
             list = new HashSet<>();
             list.add(value);
-            surrogates.put(newSurrogate, list);
             pseudonymizedData.put(value, newSurrogate);
+            if(anotherValue == true) {
+                pseudonymizedData.put(currentWord, newSurrogate);
+                list.add(currentWord);
+                currentWord = null;
+            }
+            surrogates.put(newSurrogate, list);
         } else {
-            //list.add(value);    //ta bort!
-            checkIfValidSurrogate(value, newList);
+            checkIfValidSurrogate(value, newList,anotherValue);
         }
     }
 
@@ -208,7 +213,7 @@ public class Pseudonymizer {
                 i = locationList.size();
             }
         }
-        generateSurrogate(input, list);
+        generateSurrogate(input, list, false);
     }
 
     public String getSurrogate(String firstTag, String unit, String lastTag) {

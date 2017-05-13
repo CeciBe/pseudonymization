@@ -200,7 +200,6 @@ public class Program {
         String one = "Danderyds Sjukhus"; String two = "Danderyds sjukhus";
         int result = levDistance.computeLevenshteinDistance(one.toLowerCase(),two.toLowerCase());
         System.out.println("Värde 1; " + one + ", Värde 2; " + two + " Distans: "+result);
-
     }
 
 
