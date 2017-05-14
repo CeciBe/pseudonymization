@@ -109,12 +109,12 @@ public class Pseudonymizer {
             String value = tempMap.get(data);
             if(category.equals("Location")) {
                 result = location.getLocationMap();
+
             }else if(category.equals("Health_Care_Unit")) {
                 result = healthCareUnit.getHcuMap();
             }
             if(result != null) {
                 currentWord = data;
-                System.out.println("Current word "+currentWord);
                 continiuePseudonymization(value, result,true);
                 status = true;
             }
@@ -138,7 +138,6 @@ public class Pseudonymizer {
             HashSet<String> tempList = surrogates.get(surrogate);
             tempList.add(currentWord);
             currentWord = null;
-            //System.out.println("Surrogate already exists for "+value +", "+surrogate);
         }
     }
 
@@ -229,6 +228,5 @@ public class Pseudonymizer {
             HashSet<String> valueList = iter.getValue();
             System.out.print("\n - " + key + ": " + valueList + "\n");
         }
-        //System.out.println("\n"+pseudonymizedData);
     }
 }

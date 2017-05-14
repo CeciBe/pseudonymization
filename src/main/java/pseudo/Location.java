@@ -10,7 +10,6 @@ public class Location {
     private HashMap<String,String> locationMap = null;
 
     private String currentWord = null;
-    private String currentCategory = null;
     private int levDistValue = 0;
 
     public Location() {
@@ -24,50 +23,95 @@ public class Location {
 
     public HashMap<String,String> evaluateLocation(String location, ArrayList<HashMap<String,String>> locationList) {
         HashMap<String,String> result = null;
-        String output = null;
         listOfLocations = locationList;
-        if(location.length() < 6) {
-            output = checkIfAcronym(location);
-        } if(output != null) {
-            result = new HashMap<>();
-            result.put(location, output);
+        result = checkIfAddress(location);
+        if (result == null) {
+            if(location.length() < 6) {
+                result = checkIfAcronym(location);
+            }
+        }
+        if(result == null) {
+            result = checkIfCorrectSpelling(location);
         }
         return result;
     }
 
-    public String checkIfAcronym(String location) {
-        String result = null;
+    public HashMap<String,String> fillHashMap(String location, String output) {
+        HashMap<String,String> map = new HashMap<>();
+        map.put(location, output);
+        return map;
+    }
+
+    public HashMap<String, String> checkIfAcronym(String location) {
+        HashMap<String, String> result = null;
+        result = searchLocation(location, 1);
+        return result;
+    }
+
+    public HashMap<String, String> checkIfCorrectSpelling(String location) {
+        HashMap<String,String> result = null;
+        result = searchLocation(location, 2);
+        return result;
+    }
+
+    public HashMap<String, String> searchLocation(String location, int option) {
+        HashMap<String, String> result = null;
         HashMap<String, String> locations;
         for (int index = 0; index < listOfLocations.size(); index++) {
             locations = listOfLocations.get(index);
-            continiueCheckAcronym(locations,location);
+            if (option == 1) {
+                continiueSearchingAcronym(locations, location);
+            } else if (option == 2) {
+                continiueSearchingLocation(locations, location);
+            } else if (option == 3) {
+                getAdress(locations, location);
+            }
         }
         if(currentWord != null) {
-            result = currentWord;
+            result = fillHashMap(location, currentWord);
+        }
+        if(option == 3 && currentWord == null) {
+            result = fillHashMap(location,location);
         }
         return result;
     }
 
-    public void continiueCheckAcronym(HashMap<String, String> locations, String location) {
-        String value = null;
+
+    public void continiueSearchingAcronym(HashMap<String, String> locations, String location) {
         boolean response = false;
         ArrayList<String> tempList = new ArrayList<>();
         for(Map.Entry<String,String> iter: locations.entrySet()) {
             String key = iter.getKey();
-            value = iter.getValue();
             if((key.charAt(0) == location.charAt(0)) && (key.length() > location.length())) {
                 tempList.add(key);
             }
         }
         if (!tempList.isEmpty()) {
-            response = compareLocations(location, value, tempList);
-            if(response == true) {
-                locationMap = locations;
-            }
+            response = compareLocations(location, tempList);
+        }
+        if(response == true) {
+            locationMap = locations;
         }
     }
 
-    public boolean compareLocations(String location, String category, ArrayList<String> tempList) {
+    public void continiueSearchingLocation(HashMap<String, String> locations, String location) {
+        boolean response = false;
+        ArrayList<String> tempList = new ArrayList<>();
+        for(Map.Entry<String,String> iter: locations.entrySet()) {
+            String key = iter.getKey();
+            if(key.charAt(0) == location.charAt(0)) {
+                tempList.add(key);
+            }
+        }
+        if (!tempList.isEmpty()) {
+            response = evaluateSpelling(location, tempList);
+        }
+        if(response == true) {
+            locationMap = locations;
+        }
+    }
+
+    public boolean compareLocations(String location, ArrayList<String> tempList) {
 
         boolean response = false;
         String tempLocation = location.toLowerCase().replaceAll(" ", "");
@@ -83,12 +127,10 @@ public class Location {
                 i++;
             }
             if(counter == tempLocation.length()) {
-                //System.out.println("För "+tempLocation+", Funnit: " + tempValue);
                 int ld = levDistance.computeLevenshteinDistance(tempLocation.toLowerCase(), tempValue.toLowerCase());
                 if(levDistValue > ld || levDistValue == 0) {
                     levDistValue = ld;
                     currentWord = value;
-                    currentCategory = category;
                     response = true;
                 }
             }
@@ -96,11 +138,68 @@ public class Location {
         return response;
     }
 
-    public void checkIfCorrectSpelling() {
-        //computeLevenshteinDistance();
+    public boolean evaluateSpelling(String location, ArrayList<String> tempList) {
+        boolean response = false;
+        String tempLocation = null;
+        int limit = 4; int tempLDValue = 0;
+        for(int index = 0; index < tempList.size(); index++) {
+            String otherLocation  = tempList.get(index);
+            int ldValue = levDistance.computeLevenshteinDistance(location.toLowerCase(), otherLocation.toLowerCase());
+            if((ldValue < tempLDValue) || (tempLDValue == 0)) {
+                tempLDValue = ldValue;
+                tempLocation = otherLocation;
+            }
+        }
+        if (((tempLDValue < limit) && (tempLDValue < levDistValue)) || ((tempLDValue < limit) && (levDistValue == 0))) {
+            levDistValue = tempLDValue;
+            currentWord = tempLocation;
+            response = true;
+        }
+        return response;
     }
 
-    public void checkIfAdress() {
+    public HashMap<String, String> checkIfAddress(String location) {
 
+        HashMap<String,String> result = null;
+        if(location.contains("väg") || location.contains("gata")) {
+            result = searchLocation(location, 3);
+        }
+        return result;
+    }
+
+    public void getAdress(HashMap<String, String> locations, String location) {
+        DataContainer dataContainer = new DataContainer();
+        ArrayList<String> newList = dataContainer.getList(locations);
+        if(newList != null) {
+            String[] locationArray = location.split(" ");
+            for(String otherLocation: newList) {
+                String[] otherLocationArray = otherLocation.split(" ");
+                int distance = levDistance.computeLevenshteinDistance(locationArray[0].toLowerCase(), otherLocationArray[0].toLowerCase());
+                if(distance < 2) {
+                    currentWord = otherLocation;
+                }
+            }
+            locationMap = locations;
+        }
+    }
+
+
+    class DataContainer {
+
+        DataContainer() {}
+
+        private ArrayList<String> getList(HashMap <String,String> tempMap) {
+            ArrayList<String> tempList = new ArrayList<>();
+            String value = null;
+            for(Map.Entry<String, String> iter: tempMap.entrySet()) {
+                String key = iter.getKey();
+                value = iter.getValue();
+                tempList.add(key);
+            } if (value.equals("ADRESS")) {
+                return tempList;
+            } else {
+                return null;
+            }
+        }
     }
 }
