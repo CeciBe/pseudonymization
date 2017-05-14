@@ -1,6 +1,7 @@
-text text text <Health_Care_Unit>Danderyds sjukhus</Health_Care_Unit> merText merText <Location>Malta</Location> slutText. 
+<Location>Sthlm</Location> text text <Health_Care_Unit>Danderyds sjukhus</Health_Care_Unit> text merText merText <Location>Malta</Location> slutText <Health_Care_Unit>Danderyds sjukhus</Health_Care_Unit>. 
 ännu mera text kommer här <Age>35</Age> och fyller är den <Date>31 maj</Date> i <Location> i ett hus i Stockholm</Location> 
 eller om det blir på <Location>Sveavägen, Stockholm</Location>. När sedan <Location>Hemmet </Location> inte var utrustat. 
-Patienten kom till <Health_Care_Unit>Karolinska Universitetssjukhuset</Health_Care_Unit> förflyttades från 
-<Health_Care_Unit>Danderyds sjukhus</Health_Care_Unit> och <Health_Care_Unit>Äldreboendet Järnhanden</Health_Care_Unit> 
-i <Location>grangata 13, 145 65 Tomteboda</Location>.
+Patienten kom till <Health_Care_Unit>Vallentuna,hälsomottagning Korallen</Health_Care_Unit> förflyttades från 
+<Health_Care_Unit>Karolinska Universitetssjukhuset</Health_Care_Unit> och <Health_Care_Unit>Äldreboendet Järnhanden</Health_Care_Unit> 
+i <Location>grangata 13, 145 65 Tomteboda</Location> och <Health_Care_Unit>KUS</Health_Care_Unit> och <Location>Stockholms</Location>.
+En person bor på <Location>Hundvägen 44 44 JAKOBSBERG</Location>
