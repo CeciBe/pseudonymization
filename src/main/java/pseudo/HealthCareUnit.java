@@ -29,6 +29,28 @@ public class HealthCareUnit {
         if(result == null) {
             result = checkIfCorrectSpelling(hcu);
         }
+        if(result == null) {
+            result = checkIfHospital(hcu);
+        }
+        if(result == null) {
+            result = checkIfNursingHome(hcu);
+        }
+        return result;
+    }
+
+    public HashMap<String, String> checkIfHospital(String hcu) {
+        HashMap<String,String> result = null;
+        if(hcu.contains("jukhus") || hcu.contains("sjuk") || hcu.contains("asarett") || (hcu.contains("sjh"))) {
+            System.out.println("Is a hospital: "+ hcu);
+        }
+        return result;
+    }
+
+    public HashMap<String, String> checkIfNursingHome(String hcu) {
+        HashMap<String,String> result = null;
+        if(hcu.contains("oende") || hcu.contains("jukhem")) {
+            System.out.println("Is a nursing home: " + hcu);
+        }
         return result;
     }
 
