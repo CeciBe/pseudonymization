@@ -47,9 +47,6 @@ public class Program {
                 case "5":
                     isRunning = false; System.out.println("The program is closing"); closeScanner();
                     return;
-                case "6":
-                    computeLevDistance();
-                    break;
                 default:
                     System.out.println("The option is not valid try again!\n");
             }
@@ -71,7 +68,7 @@ public class Program {
 
     public String printMenu() {
         return "1. Copy EPR data \n2. Fill lists \n3. Initiate pseudonymization \n4. View distribution of surrogates" +
-                " \n5. Close program \n6. (Temporary option) Test spellchecking! )";
+                " \n5. Close program";
     }
 
 
@@ -184,7 +181,6 @@ public class Program {
                     String temp = finalSentence.replaceAll(originalString, pseudonymizer.getSurrogate(firstTag,unit,lastTag));
                     finalSentence = temp;       //Uppdaterar texten som ändrats hittills
                 }
-                //System.out.println("AFTER: " + finalSentence);   //Testning för att se meningen som är pseudonymiserad
                 writer.write(finalSentence);
                 writer.newLine();
             }
@@ -194,12 +190,6 @@ public class Program {
             System.err.print(ex.getMessage());
         }
         System.out.println("\nThe text is pseudonymized!\n");
-    }
-
-    public void computeLevDistance() {
-        String one = "Danderyds Sjukhus"; String two = "Danderyds sjukhus";
-        int result = levDistance.computeLevenshteinDistance(one.toLowerCase(),two.toLowerCase());
-        System.out.println("Värde 1; " + one + ", Värde 2; " + two + " Distans: "+result);
     }
 
 

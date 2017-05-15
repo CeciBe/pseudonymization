@@ -78,7 +78,7 @@ public class Location {
 
 
     public void continiueSearchingAcronym(HashMap<String, String> locations, String location) {
-        boolean response = false;
+        boolean response = false; boolean isFound = false;
         ArrayList<String> tempList = new ArrayList<>();
         for(Map.Entry<String,String> iter: locations.entrySet()) {
             String key = iter.getKey();
@@ -86,7 +86,13 @@ public class Location {
                 tempList.add(key);
             }
         }
-        if (!tempList.isEmpty()) {
+        if(!tempList.isEmpty() && location.length() < 4) {
+            isFound = compareShortLocations(location, tempList);
+            if(isFound == true) {
+                response = true;
+            }
+        }
+        if (!tempList.isEmpty() && isFound == false) {
             response = compareLocations(location, tempList);
         }
         if(response == true) {
@@ -109,6 +115,28 @@ public class Location {
         if(response == true) {
             locationMap = locations;
         }
+    }
+
+    public boolean compareShortLocations(String location, ArrayList<String> tempList) {
+        boolean response = false;
+        for(int index = 0; index < tempList.size(); index++) {
+            String otherLocation = tempList.get(index).toLowerCase();
+            String[] locationArray = otherLocation.split(" ");
+            if (locationArray.length > 1) {
+                int counter = 0;
+                for (int i = 0; i < locationArray.length; i++) {
+                    if (locationArray[i].charAt(0) == location.toLowerCase().charAt(counter)) {
+                        counter++;
+                    }
+                    if (counter == location.length()) {
+                        i = locationArray.length;
+                        currentWord = otherLocation;
+                        response = true;
+                    }
+                }
+            }
+        }
+        return response;
     }
 
     public boolean compareLocations(String location, ArrayList<String> tempList) {
