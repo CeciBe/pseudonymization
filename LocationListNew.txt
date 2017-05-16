@@ -158,223 +158,220 @@ Toljatti
 Lódz
 LOCATIONTYPE:
 LANDSKAP
-Blekinge
-Bohuslän
-Dalarna
-Dalsland
-Gotland
+Blekinge [5]
+Bohuslän [4]
+Dalarna [6]
+Dalsland [6]
+Gotland [5]
 Gästrikland
-Halland
-Hälsingland
-Härjedalen
-Jämtland
-Lappland
-Medelpad
-Norrbotten
-Närke
-Skåne
-Småland
+Halland [4]
+Hälsingland [7]
+Härjedalen [7]
+Jämtland [7]
+Lappland [7]
+Medelpad [7]
+Norrbotten [7]
+Närke [6]
+Skåne [5]
+Småland [5]
 Södermanland [2]
 Uppland [3]
-Värmland
-Västerbotten
-Västergötland
-Västmanland
-Ångermanland
-Öland
-Östergötland
+Värmland [6]
+Västerbotten [7]
+Västergötland [4]
+Västmanland [6]
+Ångermanland [7]
+Öland [5]
+Östergötland [6]
 LOCATIONTYPE:
 LANDSDEL
-Norrland
-Svealand
+Norrland 
+Svealand 
 Götaland
 LOCATIONTYPE:
 LÄN
-Blekinge län
-Dalarnas län
-Gotlands län
-Gävleborgs län
-Hallands län
-Kalmar län
-Kronobergs län
-Jämtlands län
-Jönköpings län
-Norrbottens län
-Skåne län
+Blekinge län [5]
+Dalarnas län [6]
+Gotlands län [5]
+Gävleborgs län [7]
+Hallands län [4]
+Kalmar län [5]
+Kronobergs län [6]
+Jämtlands län [7]
+Jönköpings län [5]
+Norrbottens län [7]
+Skåne län [5]
 Stockholms län [1]
 Södermanlands län [2]
 Uppsala län [3]
-Värmlands län
-Västerbottens län
-Västernorrlands län
-Västmanlands län
-Västra Götalands län
-Örebro län
-Östergötlands län
+Värmlands län [6]
+Västerbottens län [7]
+Västernorrlands län [7]
+Västmanlands län [6]
+Västra Götalands län [4]
+Örebro län [6]
+Östergötlands län [6]
 LOCATIONTYPE:
 STAD
-Alingsås
-Arboga
-Arlanda
-Arvika
-Askersund
-Avaskär
-Avesta
-Boden
-Bollnäs
-Borgholm
-Borlänge
-Borås
-Broo
-Brätte
-Båstad
+Alingsås [4]
+Arboga [6]
+Arlanda [3]
+Arvika [6]
+Askersund [6]
+Avesta [6]
+Boden [7]
+Bollnäs [7]
+Borgholm [5]
+Borlänge [6]
+Borås [4]
+Båstad [4]
 Djursholm [3]
-Eksjö
-Elleholm
-Enköping
-Eskilstuna
-Eslöv
-Fagersta
-Falkenberg
-Falköping
-Falsterbo
-Falun
-Filipstad
-Flen
-Gamla Lödöse
-Getakärr
-Gränna
-Gävle
-Göteborg
-Hagfors
-Halmstad
-Haparanda
-Hedemora
-Helsingborg
-Hjo
-Hudiksvall
-Huskvarna
-Härnösand
-Hässleholm
-Hästholmen
-Höganäs
-Järle 
-Jönköping
-Kalmar
-Karl Johans stad
-Karlshamn
-Karlskoga
-Karlskrona
-Karlstad
-Katrineholm
-Kiruna
-Kongahälla
-Kramfors
-Kristianopel
-Kristianstad
-Kristinehamn
-Kumla
-Kungsbacka
-Kungälv
-Köping
-Laholm
-Landskrona
+Eksjö [5]
+Elleholm [5]
+Enköping [6]
+Eskilstuna [6]
+Eslöv [5]
+Fagersta [6]
+Falkenberg [4]
+Falköping [4]
+Falsterbo [5]
+Falun [6]
+Filipstad [6]
+Flen [6]
+Gamla Lödöse [4]
+Getakärr [4]
+Gränna [5]
+Gävle [7]
+Göteborg [4]
+Hagfors [6]
+Halmstad [4]
+Haparanda [7]
+Hedemora [6]
+Helsingborg [5]
+Hjo [4]
+Hudiksvall [7]
+Huskvarna [5]
+Härnösand [7]
+Hässleholm [5]
+Hästholmen [6]
+Höganäs [5]
+Järle [6]
+Jönköping [5]
+Kalmar [5]
+Karl Johans stad [7]
+Karlshamn [5]
+Karlskoga [6]
+Karlskrona [5]
+Karlstad [6]
+Katrineholm [6]
+Kiruna [7]
+Kongahälla [4]
+Kramfors [7]
+Kristianopel [5]
+Kristianstad [5]
+Kristinehamn [6]
+Kumla [6]
+Kungsbacka [4]
+Kungälv [4]
+Köping [6]
+Laholm [4]
+Landskrona [5]
 Lidingö [1]
-Lidköping
-Lindesberg
-Linköping
-Ljungby
-Lomma
-Ludvika
-Luleå
-Lund
-Luntertun
-Lycksele
-Lyckå
-Lysekil
-Lödöse
-Malmö
-Mariefred
-Mariestad
-Marstrand
-Mjölby
-Motala
-Mölndal
-Mönsterås
+Lidköping [4]
+Lindesberg [6]
+Linköping [6]
+Ljungby [5]
+Lomma [5]
+Ludvika [6]
+Luleå [7]
+Lund [5]
+Luntertun [5]
+Lycksele [7]
+Lyckå [5]
+Lysekil [4]
+Lödöse [4]
+Malmö [5]
+Mariefred [6]
+Mariestad [4]
+Marstrand [4]
+Mjölby [6]
+Motala [6]
+Mölndal [4]
+Mönsterås [5]
 Nacka [1]
-Nora
-Norrköping
+Nora [6]
+Norrköping [6]
 Norrtälje [3]
-Järlåsa
-Nya Lidköping
-Nya Lödöse
-Nybro
-Nyköping
+Järlåsa [6]
+Nya Lidköping [4]
+Nya Lödöse [4]
+Nybro [5]
+Nyköping [6]
 Nynäshamn [2]
-Nässjö
-Oskarshamn
-Oxelösund
-Piteå
-Ronneby
-Sala
-Sandviken
+Nässjö [5]
+Oskarshamn [5]
+Oxelösund [6]
+Piteå [7]
+Ronneby [5]
+Sala [6]
+Sandviken [7]
 Sigtuna [3]
-Simrishamn
-Skanör
-Skanör med Falsterbo
-Skara
-Skellefteå
-Skänninge
-Skövde
-Sollefteå
+Simrishamn [5]
+Skanör [5]
+Skanör med Falsterbo [5]
+Skara [4]
+Skellefteå [7]
+Skänninge [6]
+Skövde [4]
+Sollefteå [7]
 Solna [1]
 Stockholm [1]
-Strängnäs 
-Strömstad
+Strängnäs [6]
+Strömstad [4]
 Sundbyberg [1]
-Sundsvall
-Säffle
-Säter
-Sävsjö
-Söderhamn
-Söderköping
+Sundsvall [7]
+Säffle [6]
+Säter [6]
+Sävsjö [5]
+Söderhamn [7]
+Söderköping [6]
 Södertälje [2]
-Sölvesborg
-Tidaholm
-Torget
-Torshälla
-Tranås
-Trelleborg
-Trollhättan
-Trosa
-Tumathorp
-Uddevalla
-Ulricehamn
-Umeå
-Uppsala
-Vadstena
-Varberg
-Vaxholm
-Vetlanda
-Vimmerby
-Visby
-Vä
-Vänersborg
-Värnamo
-Västervik
-Västerås
-Växjö
-Ystad
-Åhus
-Åmål
-Älvsborg
-Ängelholm
-Öjebyn
-Örebro
-Öregrund
-Örnsköldsvik
-Östersund
-Östhammar
+Sölvesborg [5]
+Tidaholm [4]
+Torget [5]
+Torshälla [6]
+Tranås [5]
+Trelleborg [5]
+Trollhättan [4]
+Trosa [6]
+Tumathorp [5]
+Uddevalla [4]
+Ulricehamn [4]
+Umeå [7]
+Uppsala [6]
+Vadstena [6]
+Varberg [4]
+Vaxholm [1]
+Vetlanda [5]
+Vimmerby [5]
+Visby [5]
+Vä [5]
+Vänersborg [4]
+Värnamo [5]
+Västervik [5]
+Västerås [6]
+Växjö [5]
+Ystad [5]
+Åhus [5]
+Åmål [4]
+Älvsborg [4]
+Ängelholm [5]
+Öjebyn [7]
+Örebro [6]
+Öregrund [6]
+Örnsköldsvik [7]
+Östersund [7]
+Östhammar [6]
 LOCATIONTYPE:
 KOMMUN/ORT/DISTRIKT
 Botkyrka [2]
