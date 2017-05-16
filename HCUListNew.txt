@@ -1,0 +1,503 @@
+SJUKHUS
+Södersjukhuset [1]
+Danderyds sjukhus [3]
+Dalens sjukhus [2]
+Karolinska Universitetssjukhuset, Huddinge [2]
+Karolinska Universitetssjukhuset, Solna [1]
+Norrtälje sjukhus [3]
+S:t Eriks ögonsjukhus [1]
+S:t Görans sjukhus [1]
+Ersta diakoni - Sjukhus [1]
+Röda Korsets Sjukhus [1]
+Sophiahemmet [1]
+Löwenströmska sjukhuset [1]
+Astrid Lindgrens Barnsjukhus [1]
+Södertälje sjukhus [2]
+Bromma sjukhus [3]
+Sahlgrenska Universitetssjukhuset [4]
+NU-sjukvården
+Skaraborgs sjukhus
+Södra Älvsborgs Sjukhus
+Kungälvs sjukhus [4]
+Frölunda Specialistsjukhus
+Alingsås lasarett [4]
+Angereds Närsjukhus [4]
+Universitetssjukhuset i Örebro
+Karlskoga lasarett
+Lindesbergs lasarett
+Universitetssjukhuset i Linköping
+Vrinnevisjukhuset - Norrköping
+Lasarettet i Motala
+Centrallasarettet i Västerås
+Köping Närsjukhus
+Sala Närsjukhus
+Västerås Närsjukhus
+Mitt Hjärta - Bergslagssjukhuset - Fagersta
+Länssjukhuset Sundsvall Härnösand
+Sollefteå sjukhus
+Örnsköldsviks sjukhus
+Lycksele lasarett
+Norrlands universitetssjukhus - Nus Umeå
+Skellefteå lasarett
+Centralsjukhuset i Karlstad
+Sjukhuset i Arvika
+Sjukhuset i Torsby
+Centrallasarettet Växjö
+Ljungby lasarett
+Gällivare sjukhus
+Kalix sjukhus
+Kiruna Sjukhus
+Piteå älvdals sjukhus
+Sunderby sjukhus - Luleå
+Universitetssjukhus Lund
+Universitetssjukhus Malmö
+Helsingborgs Lasarett
+Sjukhuset i Hässleholm
+Centralsjukhuset Kristianstad
+Lasarettet i Landskrona
+Lasarettet Trelleborg
+Lasarettet i Ystad
+Ängelholms sjukhus
+Sjukhuset i Simrishamn
+Kullbergska sjukhuset - Katrineholm
+Mälarsjukhuset - Eskilstuna
+Nyköpings lasarett
+Regionsjukhuset Karsudden
+Akademiska sjukhuset - Uppsala
+Lasarettet i Enköping
+Blekingesjukhuset
+Anestesikliniken Karlshamn
+Anestesikliniken Karlskrona
+Avesta lasarett
+Borlänge sjukhus
+Falu lasarett
+Ludvika lasarett
+Mora lasarett
+Visby lasarett
+Sjukhuset i Bollnäs
+Sjukhuset i Gävle
+Sjukhuset i Hudiksvall
+Sjukhuset i Ljusdal
+Sjukhuset i Sandviken
+Sjukhuset i Söderhamn
+Hallands sjukhus
+Halmstad sjukhus
+Kungsbacka sjukhus
+Varberg sjukhus
+Östersunds sjukhus
+Höglandssjukhuset
+Länssjukhuset Ryhov
+Värnamo sjukhus
+Länssjukhuset i Kalmar
+Oskarshamns sjukhus
+Västerviks sjukhus
+HCUTYPE:
+BOENDEN
+Akalla äldreboende [3]
+Attendo Bättringsvägen
+Attendo Dalahöjden
+Attendo Flygarhöjden
+Attendo Långbroberg
+Attendo Långbrogården
+Attendo Oasen
+Attendo Årstabergshemmet [1]
+Axelsbergs vård- och omsorgsboende [2]
+Axgårdens vård- och omsorgsboende 
+Bejtona vård- och omsorgsboende
+Birger Jarl
+Björkgården
+Björksätra vård- och omsorgsboende
+Borgerskapets äldrehem
+Brahem
+Byholmen
+Edsätra äldreboende
+Elinsborgs vård- och omsorgsboende
+Ekbackens äldreboende
+Enskede Nya servicehus [2]
+Enskededalens Servicehus [2]
+Ersta Hannahemmet
+Ersta Linnégården
+Ersta Mariahemmet
+Erstagården
+Finskt Äldrecentrum
+Fristad vård- och omsorgsboende
+Fruängens Servicehus [2]
+Fruängsgårdens vård- och omsorgsboende [2]
+Frösätrabacken
+Furuhöjden
+Hemmet för gamla
+Hornskroken
+Humlegården [1]
+Hässelgården
+Högdalens vård- och omsorgsboende [2]
+Johannesgården
+Kampementet
+Kattrumpstullen
+Kista vård- och omsorgsboende [3]
+Koppargården
+Kristallgården
+Kyrkbyn
+La Casa
+Lignagatan [1]
+Lindegård
+Liviagården
+Löjtnantsgården
+Magdalenagården
+Marieberg
+Mårtensgården
+Nymilen
+Persikans vård- och omsorgsboende
+Postiljonens vård- och omsorgsboende
+Riddargårdens vård- och omsorgsboende
+Rio vård- och omsorgsboende
+Rågsveds Servicehus [2]
+Rådans äldreboende
+S:t Erik [1]
+Sabbatsbergsbyn
+Sjöberga Gård
+Sjödalens serviceboende
+Sjöstadsgårdens vård- och omsorgsboende
+Skogsgläntans vård- och omsorgsboende
+Skolörtens Servicehus
+Sofiagårdens vård- och omsorgsboende
+Solbacken
+Solgården
+Stockholms Sjukhem [1]
+Stortorps korttidsboende
+Strandgården korttidsboende
+Stureby vård- och omsorgsboende [2]
+Sundbybergs korttidsboende [1]
+Sätra Profilboende Huntington [2]
+Sätra vård- och omsorgsboende [2]
+Söndagsgården
+Trekantens Servicehus [1]
+Veckobo
+Villa Dreviken
+Villa Sköndal [2]
+Villa Tärnö
+Villa Vesta Gruppboende
+Vilobacken
+Väderkvarnens vård- och omsorgsboende
+Vällingbygården [3]
+Vård- och omsorgsboendet Hornstull [1]
+Ängsö gruppboende
+Årsta vård- och omsorgsboende
+Åsengårdens vård- och omsorgsboende
+Alströmerhemmet
+Älvsjö servicehus
+Bergsund [1]
+Dianagårdens vård- och omsorgsboende
+Edö vård- och omsorgsboende
+Guldbröllopshemmet
+Herdens Äldreboende
+Hornstulls Servicehus [1]
+Ekbackens kommunala boende
+Judiska hemmet
+Katarinagårdens vård- och omsorgsboende
+Kulltorps vård- och omsorgsboende
+Lisebergs äldreboende, Blomsterfonden [1]
+Nockebyhöjdens vård- och omsorgsboende [3]
+Nytorgsgårdens vård- och omsorgsboende
+Rinkeby vård- och omsorgsboende [3]
+Serafens vård- och omsorgsboende
+Solberga vård- och omsorgsboende
+Sörklippans äldreboende
+Hemtjänsten Bandhagen [2]
+Äldre teamet Huddinge [2]
+Brommagården [3]
+Mälarbacken vård- och omsorgsboende
+Pilträdets servicehus
+Minerva gruppboende
+Nockeby servicehem
+Orsavillan
+Östfora LVM-hem
+Klubbackens barn- och ungdomsboende
+HCUTYPE:
+MISSBRUK
+Missbruksenheten, Huddinge kommun
+Östfora behandlingshem
+socialtjänsten i Huddinge
+Missbruksenheten
+Beroendecentrum
+Nutritionsteamet
+HCUTYPE:
+KORTTID
+Hallens korttidsboende
+Sundtorps korttidsboende
+Utsiktens korttidsboende
+Löwenströmska korttidsboende
+Hornstulls korttidsboende
+HCUTYPE:
+VÅRDCENTRAL
+Abrahamsbergs vårdcentral
+Alby vårdcentral [2]
+Axelsbergs vårdcentral [2]
+Barkaby vårdcentral [3]
+Bergshamra Ulriksdal [1]
+Bollmora vårdcentral [2]
+Boo vårdcentral []
+Brandbergens vårdcentral [2]
+Bredängs vårdcentral [2]
+Brommaplans vårdcentral [3]
+Dalarö vårdcentral [2]
+Djursholms husläkarmottagning [3]
+Enebyberg vårdcentral [3]
+Essinge vårdcentral [1]
+Fisksätra vårdcentral [1]
+Fittja vårdcentral [2]
+Flemingsbergs vårdcentral [2]
+Forums vårdcentral [1]
+Fruängens vårdcentral [2]
+Gröndals vårdcentral [1]
+Gustavsbergs vårdcentral [3]
+Gärdets vårdcentral [1]
+Hallonbergens vårdcentral [1]
+Hallunda vårdcentral [2]
+Handens vårdcentral [2]
+Hagalund Frösunda vårdcentral [1]
+Huddinge vårdcentral [2]
+Husby Akalla vårdcentral [3]
+Husläkarmottagning Johannes [1]
+Hässelby vårdcentral [3]
+Högdalens vårdcentral [2]
+Jakobsbergs vårdcentral [3]
+Jordbro vårdcentral [2]
+Kista vårdcentral [3]
+Kungsängens vårdcentral [3]
+Kvartersakuten Surbrunn [1]
+Kvartersakuten [1]
+Liljeholmen vårdcentral [1]
+Lisebergs vårdcentral [1]
+Luna vårdcentral [1]
+Mörby vårdcentral [3]
+Norrvikens vårdcentral [3]
+Nynäs Vårdcentral [2]
+Odenplans vårdcentral [1]
+Rinkeby vårdcentral [3]
+Rissne vårdcentral [1]
+Rotebro vårdcentral [3]
+Rågsveds vårdcentral [2]
+Råsunda vårdcentral [1]
+Salems vårdcentral [2]
+Segeltorps vårdcentral [2]
+Sigtuna läkarhus [3]
+Skärholmens vårdcentral [2]
+Solna Centrum vårdcentral [1]
+Spånga vårdcentral [3]
+Stocksunds vårdcentral [3]
+Sätra vårdcentral [2]
+Södermalms vårdcentral [1]
+Tallhöjdens vårdcentral [1]
+Tensta vårdcentral [3]
+Torsviks vårdcentral [1]
+Tranebergs vårdcentral [3]
+Trollbäckens vårdcentral [2]
+Trångsunds vårdcentral [2]
+Tullinge vårdcentral [2]
+Tumba vårdcentral [2]
+Turebergs vårdcentral [3]
+Täby vårdcentral [3]
+Vallentuna,hälsomottagning Korallen [3]
+Valsta vårdcentral [3]
+Vendelsö vårdcentral [2]
+Vibblaby vårdcentral [3]
+Vårby vårdcentral [2]
+Västra skogens vårdcentral [3]
+Älvsjö vårdcentral [1]
+HCUTYPE:
+NEURO
+Neurologmottagning
+Neurologkliniken
+Neurologakuten
+Neurorehab
+neurolog-AVA
+Neurologavdelningen
+neurorehab på DS
+HCUTYPE:
+ONKOLOGI
+Onkologen på Solna
+Onkologen på SÖS
+Radiumhemmet
+HCUTYPE:
+THORAX
+Lungmedicin
+Lungallergikliniken
+Lungkliniken
+HCUTYPE:
+NJUR
+Dialys Väst
+Dialys Öst
+Urologkliniken
+Njurmedicinska kliniken
+Njurmedicinsk mottagning Danderyds sjukhus
+Njurmedicin, Huddinge
+HCUTYPE:
+AKUT
+Vuxenakuten, Solna
+Akutmottagningen, Huddinge
+Intensiven UAS
+HCUTYPE:
+KIRURGI
+Kärlkirurgen
+Thoraxkirurgjouren
+Thoraxkirurgen
+Övre Abdominell Kirurgi
+Kirurgimottagning
+Kirurgikliniken
+Käkkirurgi
+Handkirurgi SÖS
+Centraloperation
+Kirurgjouren, SÖS
+Plastikkirurgiska mottagningen KS, Solna
+HCUTYPE:
+ENDOKRIN
+Diabetesfot-teamet
+Kliniken för Endokrinologi, Metabolism och Diabetes
+Endokrin mottagningen
+Beroendeakuten S:t Görans sjukhus
+HCUTYPE:
+TAND
+Endodontiavdelningen Tandläkarhögskolan
+Dagkäkkirurgijour, Huddinge
+Specialistkliniken för Dentala Implantat, Nacka
+Tandregleringskliniken Danderyd
+Emaljkliniken
+Tandvården KS
+Tandregleringen, Handenterminalen
+Oral röntgen
+Tandregleringen, Södertälje
+EndodontijourenInstutionen för odontologi
+Specialistcentrum, Endodonti, Inst för odontologi
+Oral radiologi
+Klinisk oral fysiologi, Inst för odontologi
+Radiologi institutionen för odontologi
+HCUTYPE:
+ORTOPED
+Ortopedisk mottagning
+Ortopedverkstaden
+Aktiv Ortopedteknik
+Ortopedkliniken
+HCUTYPE:
+MEDICIN
+Medicinkliniken
+Infektionskliniken
+Reumatologkliniken
+Allergikliniken
+Öron näsa hals akuten
+Hörselkliniken, KS
+ÖNH-mottagningen, Huddinge
+Reumatologi, Huddinge
+Motilitetsmottagningen
+Motilitetsenheten
+Endoskopienheten
+Kliniskt Bakterie Laboratorium
+TB-mottagningen
+Reumatologen
+Hematologen på Solna
+HBO-Hyperbarmedicin
+Hematologkliniken
+Vårdhygien-enheten
+Centrum för intergrativ medicin
+HCUTYPE:
+REHAB
+Reagerakliniken Huddinge
+Frösunda rehabcenter
+Rehab Danderyds sjukhus
+Dalen hemrehabteam
+Rehab på Röda Korset
+Furuhöjdens rehab
+Rehab Station Stockholm
+HCUTYPE:
+SJUKHEM
+Älvsjö sjukhem
+Vårbergs sjukhem
+Stockholms sjukhem
+Stureby sjukhem
+Ekbackens sjukhem
+HCUTYPE:
+APOTEK
+apotek scheele
+Apoteket på KS, Solna
+apoteket Fjärilen
+HCUTYPE:
+GERIATRIK
+Jakobsbergsgeriatriken
+Danderydsgeriatriken
+Huddingegeriatriken
+Brommageriatriken
+Nackageriatriken
+Stockholms geriatriska klinik
+Dalens geriatrik
+HCUTYPE:
+PALLIATIV
+ASIH Äldreteamet
+ASIH, södra teamet
+ASIH-remissen
+ASIH, Långbropark
+ASIH Nordväst
+Bromma SAH
+Maria Regina hospice
+Ersta hospice
+Hospice Löwenströmska
+Stockholms sjukhems palliativa avd
+Palliativa enheten
+Palliativ avdelning Södertälje Sjukhus
+Specialiserad Palliativ Slutenvård Lidingö
+Capio Specialiserad palliativ slutenvård, Dalens sjukhus
+Byle Gård vårdavdelning
+HCUTYPE:
+AVDELNINGAR
+DS avd 97
+R82
+K41
+R84
+K73
+K42
+R81
+neurolog mott R52, Huddinge
+K66
+G35
+R71
+B52
+B54
+I53
+Avd 72 på Dalens sjukhus
+I48
+K83
+B81
+B83
+Danderyds geriatriken avd. 37
+A25A
+A22A
+Beroendecentrum, I66
+Urologmottagningen K62
+K43
+B82
+ÖNH-avd. B87
+B81
+38
+B3
+D26
+DS avd 80
+B24
+R15
+a25b
+R19
+N23
+D14
+B13
+AVA 2
+Röntgenavd, Karolinska Univ. sjukhuset, Solna
+Käkkirurgi B61
+Medicinsk Tandvård I48, Karolinska Huddinge
+B34
+AVA 1
+Avd B, hus 20, plan5
+CIVA, KS
+CIVA, Akademiska
+Infektionsavd 4, Danderyds sjukhus
+Löwet närvard palliativ avd 61
+stureby sjukhem avd 41
+Hornstull, avd. 2
+Hematologmott R51
+Vårbergs sjukhem, avd. 3
