@@ -4,12 +4,13 @@ package pseudo;
 import java.util.*;
 
 public class Location {
+    //MEDICIN, HOTELL, SHOPPING
 
     private LevenshteinDistance levDistance = null;
     private ArrayList<HashMap<String,String>> listOfLocations = null;
     private HashMap<String,String> locationMap = null;
 
-    private String currentWord = null;
+    private String currentWord = null, mostProbableWord = null;
     private int levDistValue = 0;
 
     public Location() {
@@ -19,7 +20,6 @@ public class Location {
     public HashMap<String,String> getLocationMap() {
         return locationMap;
     }
-
 
     public HashMap<String,String> evaluateLocation(String location, ArrayList<HashMap<String,String>> locationList) {
         HashMap<String,String> result = null;
@@ -33,6 +33,27 @@ public class Location {
         if(result == null) {
             result = checkIfCorrectSpelling(location);
         }
+        return result;
+    }
+
+    public String preprocessData(String location) {
+        String result = null;
+        if(location.contains(".")) {
+            location = location.replace(".", " ");
+        }
+        if(location.contains("/")) {
+            location = location.replace("/", " ");
+        }
+        if(location.contains(",")) {
+            location = location.replace(",", " ");
+        }
+        if(location.contains(":")) {
+            location = location.replace(":", " ");
+        }
+        if(location.contains("-")) {
+            location = location.replace("-", " ");
+        }
+        result = location.trim();
         return result;
     }
 
@@ -110,7 +131,10 @@ public class Location {
             }
         }
         if (!tempList.isEmpty()) {
-            response = evaluateSpelling(location, tempList);
+            response = checkFirstPartOfSpelling(location, tempList);
+            if(response == false) {
+                response = evaluateSpelling(location, tempList);
+            }
         }
         if(response == true) {
             locationMap = locations;
@@ -138,6 +162,7 @@ public class Location {
         }
         return response;
     }
+
 
     public boolean compareLocations(String location, ArrayList<String> tempList) {
 
@@ -186,11 +211,34 @@ public class Location {
         return response;
     }
 
-    public HashMap<String, String> checkIfAddress(String location) {
+    public boolean checkFirstPartOfSpelling(String location, ArrayList<String> tempList) {
+        boolean response = false;
+        location = preprocessData(location).toLowerCase();
+        for(String otherLoc: tempList) {
+            String otherValue = preprocessData(otherLoc).toLowerCase();
+            if (otherValue.contains(location)) {
+                mostProbableWord = otherLoc;
+                response = true;
+                if(currentWord == null || currentWord.length() > mostProbableWord.length()) {
+                    currentWord = mostProbableWord;
+                }
+            }
+        }
+        return response;
+    }
 
+    public HashMap<String, String> checkIfAddress(String location) {
         HashMap<String,String> result = null;
         if(location.contains("väg") || location.contains("gata")) {
             result = searchLocation(location, 3);
+        } else {
+            String tempAddress = preprocessData(location);
+            String[] addressArray = tempAddress.split(" ");
+            if(addressArray.length > 1) {
+                int number = 0; String text = null;
+                for(int i = 0; i < addressArray.length; i++) {
+                }
+            }
         }
         return result;
     }
@@ -202,8 +250,9 @@ public class Location {
             String[] locationArray = location.split(" ");
             for(String otherLocation: newList) {
                 String[] otherLocationArray = otherLocation.split(" ");
-                int distance = levDistance.computeLevenshteinDistance(locationArray[0].toLowerCase(), otherLocationArray[0].toLowerCase());
-                if(distance < 2) {
+                String loc1 = preprocessData(locationArray[0].toLowerCase());
+                String loc2 = preprocessData(otherLocationArray[0].toLowerCase());
+                if(!loc1.equals(loc2)) {
                     currentWord = otherLocation;
                 }
             }

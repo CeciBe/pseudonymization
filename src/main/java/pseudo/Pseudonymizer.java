@@ -2,12 +2,13 @@ package pseudo;
 
 import java.io.*;
 import java.util.*;
+import java.util.regex.*;
 
 
 public class Pseudonymizer {
 
     private String locationListLink = "C:/LocationList.txt";
-    private String hcuListLink = "C:/HCUList.txt";
+    private String hcuListLink = "C:/HCUListNew.txt";
     private String currentWord = null;
     private TempData tempObject = new TempData();
 
@@ -15,6 +16,8 @@ public class Pseudonymizer {
     private ArrayList <HashMap <String,String>> hcuList = new ArrayList<>();
     private HashMap <String, HashSet<String>> surrogates = new HashMap<>();         //<Surrogat,Ordinarie>
     private HashMap <String, String> pseudonymizedData = new HashMap<>();           //<Ordinarie,Surrogat>
+    private HashMap <String, String> groupedSurrogates = new HashMap<>();
+    //1 = innerstan, 2 = söder, 3 = norr, 4 = Västra Götaland, 5 = Skåne;
 
 
     public Pseudonymizer() {}
@@ -29,7 +32,12 @@ public class Pseudonymizer {
                 String category = line;
                 while(((line = locationReader.readLine()) != null) && !(line.equals("LOCATIONTYPE:"))) {
                     String locationUnit = line;
-                    tempMap.put(locationUnit, category);
+                    String [] locMap = locationUnit.split(" ");
+                    int index = locMap.length - 1;
+                    String newLocation = locationUnit;//= locationUnit.replace(locMap[index], "");
+                    newLocation = newLocation.trim();
+                    tempMap.put(newLocation, category);
+                    groupedSurrogates.put(newLocation, locMap[index]);
                 }
                 locationList.add(tempMap);
             }
@@ -49,7 +57,12 @@ public class Pseudonymizer {
                 String category = line;
                 while(((line = hcuReader.readLine()) != null) && !(line.equals("HCUTYPE:"))) {
                     String hcu = line;
-                    tempMap.put(hcu, category);
+                    String [] hcuMap = hcu.split(" ");
+                    int index = hcuMap.length - 1;
+                    String newHCU = hcu; //hcu.replace(hcuMap[index], "");
+                    newHCU = newHCU.trim();
+                    tempMap.put(newHCU, category);
+                    groupedSurrogates.put(newHCU, hcuMap[index]);
                 }
                 hcuList.add(tempMap);
             }
@@ -145,7 +158,13 @@ public class Pseudonymizer {
         Random randomGenerator = new Random();
         int randomIndex = randomGenerator.nextInt(newList.size() - 1);
         String newSurrogate = getSurrogateFromList(randomIndex, newList);
-        if (newSurrogate.equals(value)) {
+        String valIdent = groupedSurrogates.get(value);
+        String newSIdent = groupedSurrogates.get(newSurrogate);
+        System.out.println("IDENTS : "+value+", "+valIdent+", "+newSurrogate +", "+newSIdent);
+        if(valIdent == null) {
+
+        }
+        if (newSurrogate.toLowerCase().equals(value.toLowerCase())) {
             checkIfValidSurrogate(value, newList,anotherValue);
             return;
         }
@@ -203,7 +222,7 @@ public class Pseudonymizer {
     }
 
     public void handleUnlistedValues(String input, String category) {
-        HashMap <String, String> tempMap = null;
+        HashMap <String, String> tempMap;
         ArrayList<String> list = null;
         for (int i = 0; i < locationList.size(); i++) {
             tempMap = locationList.get(i);
@@ -216,7 +235,7 @@ public class Pseudonymizer {
     }
 
     public String getSurrogate(String firstTag, String unit, String lastTag) {
-        String surrogate = null;
+        String surrogate;
         String newUnit = pseudonymizedData.get(unit);
         surrogate = firstTag + newUnit + lastTag;
         return surrogate;
