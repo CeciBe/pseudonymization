@@ -217,6 +217,14 @@ Sundtorps korttidsboende [6]
 Utsiktens korttidsboende [5]
 Löwenströmska korttidsboende [1]
 Hornstulls korttidsboende [1]
+Danvikshem [1]
+Farsta sjukhem [2]
+Tumba sjukhem [2]
+Älvsjö sjukhem [1]
+Vårbergs sjukhem [2]
+Stockholms sjukhem [1]
+Stureby sjukhem [2]
+Ekbackens sjukhem [1]
 HCUTYPE:
 MISSBRUK
 Missbruksenheten, Huddinge kommun
@@ -225,6 +233,7 @@ socialtjänsten i Huddinge
 Missbruksenheten
 Beroendecentrum
 Nutritionsteamet
+Beroendeakuten S:t Görans sjukhus
 HCUTYPE:
 VÅRDCENTRAL
 Abrahamsbergs vårdcentral
@@ -313,11 +322,18 @@ Neurologavdelningen
 neurorehab på DS
 HCUTYPE:
 ONKOLOGI
+Öppenvårdsmottagning, Danderyd
+Onkologisk mottagning och behandlingsavdelning, Danderyds sjukhus
 Onkologen på Solna
 Onkologen på SÖS
 Radiumhemmet
+Onkologisk dagvårdsavdelning st Göran
 HCUTYPE:
 THORAX
+Lungdagvården
+Hjärtintensiven
+Thoraxintensiven
+Thoraxmottagnoingen, Solna
 Lungmedicin
 Lungallergikliniken
 Lungkliniken
@@ -331,9 +347,16 @@ Njurmedicinsk mottagning Danderyds sjukhus
 Njurmedicin, Huddinge
 HCUTYPE:
 AKUT
+Närakuten Brommaplan
+Cityakuten
+Söderakuten
 Vuxenakuten, Solna
 Akutmottagningen, Huddinge
 Intensiven UAS
+Akuten st Görans sjukhus
+St Eriks ögonakut
+Närakuten Sabbatsberg
+Liljeholmens närakut
 HCUTYPE:
 KIRURGI
 Kärlkirurgen
@@ -349,10 +372,15 @@ Kirurgjouren, SÖS
 Plastikkirurgiska mottagningen KS, Solna
 HCUTYPE:
 ENDOKRIN
+Endokrinologmottagning, Södermalm
+Andrologisk mottagning, Norrmalm
+Diabetes och Endokrinmottagning, Danderyd
+Inaktiv endokrint centrum
+Endokrindagvården Huddinge
+Sophiahemmet endokrinologi
 Diabetesfot-teamet
 Kliniken för Endokrinologi, Metabolism och Diabetes
-Endokrin mottagningen
-Beroendeakuten S:t Görans sjukhus
+Endokrinmottagningen, Huddinge
 HCUTYPE:
 TAND
 Endodontiavdelningen Tandläkarhögskolan
@@ -371,6 +399,12 @@ Klinisk oral fysiologi, Inst för odontologi
 Radiologi institutionen för odontologi
 HCUTYPE:
 ORTOPED
+Solna ortopedmottagning
+Capio ortopediska huset
+Aleris specialistvård Sabbatsberg
+Liljeholmens ortopedi
+Ortoped medicinskt center
+Stockholms ortoped center
 Ortopedisk mottagning
 Ortopedverkstaden
 Aktiv Ortopedteknik
@@ -398,6 +432,15 @@ Vårdhygien-enheten
 Centrum för intergrativ medicin
 HCUTYPE:
 REHAB
+Sophiahemmet rehabcenter
+Spine rehab
+Rehab City Norrmalm
+Rehab City Kungsholmen
+Sergel rehab och träning
+Stockholm rehabklinik
+Specialiserad fysioterapi C Kaijser Alin
+Neuroteam rehab södra
+Högdalen rehab södra 
 Reagerakliniken Huddinge
 Frösunda rehabcenter
 Rehab Danderyds sjukhus
@@ -406,19 +449,23 @@ Rehab på Röda Korset
 Furuhöjdens rehab
 Rehab Station Stockholm
 HCUTYPE:
-SJUKHEM
-Älvsjö sjukhem
-Vårbergs sjukhem
-Stockholms sjukhem
-Stureby sjukhem
-Ekbackens sjukhem
-HCUTYPE:
 APOTEK
-apotek scheele
+Apoteket Fenix
+Apoteket Elefanten
+Apoteket Sergel
+Apoteket Biet
+Apoteket Ugglan
+Kronans Apotek
+Apoteket Björnen
+Apoteket Hjärtat
+Apotek Scheele
 Apoteket på KS, Solna
-apoteket Fjärilen
+Apoteket Fjärilen
 HCUTYPE:
 GERIATRIK
+Äldrevårdsmottagning [3]
+Stiftelsen Stora Sköndal [2]
+Capio Ortopediska huset [2]
 Jakobsbergsgeriatriken [3]
 Danderydsgeriatriken [3]
 Huddingegeriatriken [2]
@@ -426,6 +473,7 @@ Brommageriatriken [3]
 Nackageriatriken [1]
 Stockholms geriatriska klinik [1]
 Dalens geriatrik [2]
+Intagningsenheten Enskede/Årsta/Vantör [1]
 HCUTYPE:
 PALLIATIV
 ASIH Äldreteamet
