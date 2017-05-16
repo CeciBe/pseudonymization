@@ -212,6 +212,11 @@ Nockeby servicehem [3]
 Orsavillan [3]
 Östfora LVM-hem [3]
 Klubbackens barn- och ungdomsboende [1]
+Hallens korttidsboende [1]
+Sundtorps korttidsboende [6]
+Utsiktens korttidsboende [5]
+Löwenströmska korttidsboende [1]
+Hornstulls korttidsboende [1]
 HCUTYPE:
 MISSBRUK
 Missbruksenheten, Huddinge kommun
@@ -220,13 +225,6 @@ socialtjänsten i Huddinge
 Missbruksenheten
 Beroendecentrum
 Nutritionsteamet
-HCUTYPE:
-KORTTID
-Hallens korttidsboende
-Sundtorps korttidsboende
-Utsiktens korttidsboende
-Löwenströmska korttidsboende
-Hornstulls korttidsboende
 HCUTYPE:
 VÅRDCENTRAL
 Abrahamsbergs vårdcentral
