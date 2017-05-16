@@ -174,8 +174,8 @@ Norrbotten
 Närke
 Skåne
 Småland
-Södermanland
-Uppland
+Södermanland [2]
+Uppland [3]
 Värmland
 Västerbotten
 Västergötland
@@ -201,9 +201,9 @@ Jämtlands län
 Jönköpings län
 Norrbottens län
 Skåne län
-Stockholms län
-Södermanlands län
-Uppsala län
+Stockholms län [1]
+Södermanlands län [2]
+Uppsala län [3]
 Värmlands län
 Västerbottens län
 Västernorrlands län
@@ -228,7 +228,7 @@ Borås
 Broo
 Brätte
 Båstad
-Djursholm
+Djursholm [3]
 Eksjö
 Elleholm
 Enköping
@@ -258,7 +258,7 @@ Härnösand
 Hässleholm
 Hästholmen
 Höganäs
-Järle (Jerle)
+Järle 
 Jönköping
 Kalmar
 Karl Johans stad
@@ -279,7 +279,7 @@ Kungälv
 Köping
 Laholm
 Landskrona
-Lidingö
+Lidingö [1]
 Lidköping
 Lindesberg
 Linköping
@@ -301,16 +301,16 @@ Mjölby
 Motala
 Mölndal
 Mönsterås
-Nacka
+Nacka [1]
 Nora
 Norrköping
-Norrtälje
+Norrtälje [3]
 Järlåsa
 Nya Lidköping
 Nya Lödöse
 Nybro
 Nyköping
-Nynäshamn
+Nynäshamn [2]
 Nässjö
 Oskarshamn
 Oxelösund
@@ -318,7 +318,7 @@ Piteå
 Ronneby
 Sala
 Sandviken
-Sigtuna
+Sigtuna [3]
 Simrishamn
 Skanör
 Skanör med Falsterbo
@@ -327,18 +327,18 @@ Skellefteå
 Skänninge
 Skövde
 Sollefteå
-Solna
-Stockholm
-Strängnäs
+Solna [1]
+Stockholm [1]
+Strängnäs 
 Strömstad
-Sundbyberg
+Sundbyberg [1]
 Sundsvall
 Säffle
 Säter
 Sävsjö
 Söderhamn
 Söderköping
-Södertälje
+Södertälje [2]
 Sölvesborg
 Tidaholm
 Torget
@@ -377,247 +377,247 @@ Ystad
 Östhammar
 LOCATIONTYPE:
 KOMMUN/ORT/DISTRIKT
-Botkyrka
-Danderyd
-Ekerö
-Haninge
-Huddinge
-Järfälla
-Lidingö
-Nacka
-Nockeby
-Norrtälje
-Nykvarn
-Nynäshamn
-Salem
-Sigtuna
-Sollentuna
-Solna
-Stockholm
-Sundbyberg
-Söder
-Södertälje
-Tumba
-Tyresö
-Täby
-Upplands-Bro
-Upplands Väsby
-Vallentuna
-Vaxholm
-Värmdö
-Österåker
-Alby
-Arninge
-Djursholm
-Kårsta
-Skärholmen
-Vallentuna
-Åkersberga
-Älvsjö
-Kista
-Skarpnäck
+Botkyrka [2]
+Danderyd [3]
+Ekerö [3]
+Haninge [2]
+Huddinge [2]
+Järfälla [3]
+Lidingö [1]
+Nacka [1]
+Nockeby [3]
+Norrtälje [3]
+Nykvarn [2]
+Nynäshamn [2]
+Salem [2]
+Sigtuna [3]
+Sollentuna [3]
+Solna [1]
+Stockholm [1]
+Sundbyberg [1]
+Söder [1]
+Södertälje [2]
+Tumba [2]
+Tyresö [2]
+Täby [3]
+Upplands-Bro [3]
+Upplands Väsby [3]
+Vallentuna [3]
+Vaxholm [3]
+Värmdö [3]
+Österåker [3]
+Alby [2]
+Arninge [3]
+Djursholm [3]
+Kårsta [3]
+Skärholmen [2]
+Vallentuna [3]
+Åkersberga [3]
+Älvsjö [1]
+Kista [3]
+Skarpnäck [2]
 LOCATIONTYPE:
 STADSDEL
-Bromma
-Odenplan
-Enskede
-Årsta
-Vantör
-Farsta
-Hägersten
-Liljeholmen
-Hässelby
-Vällingby
-Kungsholmen
-Norrmalm
-Rinkeby
-Kista
-Skarpnäck
-Skärholmen
-Spånga
-Tensta
-Södermalm
-Älvsjö
-Östermalm
-Örby
+Bromma [3]
+Odenplan [1]
+Enskede [2]
+Årsta [1]
+Vantör [1]
+Farsta [2]
+Hägersten [2]
+Liljeholmen [1]
+Hässelby [3]
+Vällingby [3]
+Kungsholmen [1]
+Norrmalm [1]
+Rinkeby [3]
+Kista [3]
+Skarpnäck [2]
+Skärholmen [2]
+Spånga [3]
+Tensta [3]
+Södermalm [1]
+Älvsjö [1]
+Östermalm [1]
+Örby [2]
 LOCATIONTYPE:
 ADRESS
-Sibeliusgången 20 A-B, Rinkeby Kista, Stockholm
-Bättringsvägen 7, Hässelby Vällingby, Stockholm
-Eastmansvägen 26, Norrmalm, Stockholm
-Vita Liljans väg 53, Skärholmen, Stockholm
-Skarpnäcks Torg 1, Skarpnäck, Stockholm
-Spadvägen 9, Älvsjö, Stockholm
-Bergtallsvägen 12, Älvsjö, Stockholm
-Trollesundsvägen 44, Enskede Årsta Vantör, Stockholm
-Åmänningevägen 13, Enskede Årsta Vantör, Stockholm
-Kinmanssonsvägen 41-43, Hägersten Liljeholmen, Stockholm
-Gamla Södertäljevägen 3, Hägersten Liljeholmen, Stockholm
-Elinsborgsbacken 5, Spånga Tensta, Stockholm
-Birger Jarlsgatan 91, Norrmalm, Stockholm
-Nils Brincks väg 1, Farsta, Stockholm
-Frösätrabacken 7D, Skärholmen, Stockholm
-Högalidsgatan 26 -28, Södermalm, Stockholm
-Brahegatan 47, Östermalm, Stockholm
-Vårholmsbackarna 106, Skärholmen, Stockholm
-Bogsätravägen 27, Skärholmen, Stockholm
-Elinsborgsbacken 9, Spånga Tensta, Stockholm
-Handelsvägen 170 B, Enskede Årsta Vantör, Stockholm
-Bersågränd 11, Enskede Årsta Vantör, Stockholm
-Råckstavägen 34, Hus C, Bromma, Stockholm
-Linnégatan 61, Östermalm, Stockholm
-Åstorpsringen 26, Enskede Årsta Vantör, Stockholm
-Ramviksvägen 213, Enskede Årsta Vantör, Stockholm
-Cervins väg 13, Spånga Tensta, Stockholm
-Gamla Södertäljevägen 5, Hägersten Liljeholmen, Stockholm
-Gamla Södertäljevägen 7-9, Hägersten Liljeholmen, Stockholm
-Gamla Tyresövägen 349, Skarpnäck, Stockholm
-Hornskroken 1, Södermalm, Stockholm
-Ormängsgatan 10, Hässelby Vällingby, Stockholm
-Ripsavägen 38-44, Enskede Årsta Vantör, Stockholm
-Efraim Dahlins väg 5, Farsta, Stockholm
-Kampementsgatan 2B, Östermalm, Stockholm
-Roslagstullsbacken 7, Östermalm, Stockholm
-Kista Torg 7, Rinkeby Kista, Stockholm
-Bättringsvägen 5 - 9, Hässelby Vällingby, Stockholm
-Armborstsvägen 6, Älvsjö, Stockholm
-Knut Sjöbergs väg 2, Farsta, Stockholm
-Majstångsvägen 6, Hägersten Liljeholmen, Stockholm
-Lignagatan 14, Södermalm, Stockholm
-Beckombergavägen 297 , Bromma, Stockholm
-Bättringsvägen 5 - 9, Hässelby Vällingby, Stockholm
-Löjtnantsgatan 8, Östermalm, Stockholm
-Timmermansgatan 27, Södermalm, Stockholm
-Wivalliusgatan 17, Kungsholmen, Stockholm
-Kumlagatan 5, Enskede Årsta Vantör, Stockholm
-Tunnlandsvägen 89-95, Bromma, Stockholm
-Kottbygatan 5, Spånga Tensta, Stockholm
-Brevvägen 8-14, Farsta, Stockholm
-Norrtullsgatan 12 L, Norrmalm, Stockholm
-Sandhamnsgatan 4, Östermalm, Stockholm
-Kumlagatan 13, Enskede Årsta Vantör, Stockholm
-P O Hallmans gata 1, Kungsholmen, Stockholm
-Eastmansvägen 29, Norrmalm, Stockholm
-Berghamnsvägen 65, Hässelby Vällingby, Stockholm
-Aktergatan 17-19, Södermalm, Stockholm
-Bersågränd 11, Enskede Årsta Vantör, Stockholm
-Sandviksvägen 155, Hässelby Vällingby, Stockholm
-Edelundavägen 3, Hässelby Vällingby, Stockholm
-Erstagatan 34, Södermalm, Stockholm
-Stadshagsvägen 5, Kungsholmen, Stockholm
-Nils Brincks väg 6B , Farsta, Stockholm
-Mariebergsgatan 22, Kungsholmen, Stockholm
-Tussmötevägen 175, Enskede Årsta Vantör, Stockholm
-Frösätrabacken 7C, Skärholmen, Stockholm
-Söndagsvägen 18, Farsta, Stockholm
-Lövholmsvägen 29, Hägersten Liljeholmen, Stockholm
-Måndagsvägen 32, Farsta, Stockholm
-Stora Sköndals väg 107, Farsta, Stockholm
-Stora Sköndals väg 101, Farsta, Stockholm
-Brattforsgatan 25, Farsta, Stockholm
-Edelundavägen 5, Hässelby Vällingby, Stockholm
-Elinsborgsbacken 5, Spånga Tensta, Stockholm
-Brunnsgatan 26, Norrmalm, Stockholm
-Indalsbacken 17, Hässelby Vällingby, Stockholm
-Lignagatan 14, Södermalm, Stockholm
-Glavagatan 21, Farsta, Stockholm
-Årstavägen 112, Enskede Årsta Vantör, Stockholm
-Sparbanksvägen 30, Hägersten Liljeholmen, Stockholm
-Fridhemsgatan 58, Kungsholmen, Stockholm
-Folkskolegatan 30, Södermalm, Stockholm
-Artemisgatan 2, Östermalm, Stockholm
-Nordmarksvägen 82-84, Farsta, Stockholm
-Tideliusgatan 16, Södermalm, Stockholm
-Fleminggatan 113, Kungsholmen, Stockholm
-Lignagatan 6, Södermalm, Stockholm
-Lödösevägen 9A och B, Skarpnäck, Stockholm
-Tideliusgatan 7-9, Södermalm, Stockholm
-Tantogatan 19, Södermalm, Stockholm
-Annebodavägen 23-25, Älvsjö, Stockholm
-Backskåran 9, Bromma, Stockholm
-Nytorgsgatan 44, Södermalm, Stockholm
-Rinkebyplan 4, Rinkeby Kista, Stockholm
-Bolindersplan 1, Kungsholmen, Stockholm
-Folkparksvägen 156, Älvsjö, Stockholm
-Tranebergsvägen 47, Bromma, Stockholm
-Bromma Kyrkväg 449-453, Bromma, Stockholm
-Blackebergsbacken 41, Bromma, Stockholm
-Bolinders plan 3, Kungsholmen, Stockholm
-Abrahamsbergs vårdcentral, Drottningholmsvägen 322, 167 31 Bromma
-Albyägen 2, 145 59 Norsborg
-Axelsbergs vårdcentral, Axelsbergs torg 2, 129 38 Hägersten
-Barkarby vårdcentral, Jaktplan 3, 175 63 Järfälla
-Björnstigen 34B, 170 72 Solna
-Bollmora vårdcentral, Bollmoravägen 14, 135 41 Tyresö
-Edövägen 2, Ormingehus , 132 30  Saltsjö-Boo
-Brandbergens vårdcentral, Jungfrunsgata 416-419 Brandbergens centrum, 136 60 Haninge
-Bredängstorget 1, 2 trappor, 127 34 Skärholmen
-Klädesvägen 12, 1 tr, 168 76 Bromma
-Dalarö vårdcentral, Odinsvägen 20, 137 70 Dalarö
-Djursholms husläkarmottagning, Gudmundvägen 9, 182 65 Djursholm
-Enebybergs vårdcentral, Eneby Torg 17, 182 04 Enebyberg
-Essinge vårdcentral, Primusgatan 112, 112 67 Stockholm
-Fisksätra vårdcentral,  Fisksätra Torg 20, plan 3, 133 04 Saltsjöbaden
-Fittja vårdcentral, Fittjavägen 9, 3 tr, 145 51 Norsborg
-Röntgenvägen 3, plan 7, 141 52 Huddinge
-Romansvägen 12, 131 53 Nacka
-Lövholmsvägen 33, 117 65 Stockholm
-Odelbergs väg 19, 134 40 Gustavsberg
-Sandhamnsgatan 4, 115 40 Stockholm
-Hallonbergens vårdcentral, Lötsjövägen 1B, 174 52 Sundbyberg
-Hallunda Torg 10
-Dalarövägen 6, 136 45 Handen
-Hagalundsgatan 1, 169 65 Solna
-Paradistorget 4, plan 2, 141 47 Huddinge
-Husby-Akalla vårdcentral, Sibeliusgången 20A, 164 77 Kista
-Johannes Husläkarmottagning och Barnavårdcentral, Döbelnsgatan 56, 113 52 Stockholm
-Hässelby Torg 20
-Birgittavägen 4, 177 31 Järfälla
-Jordbro vårdcentral, Hurtigs torg 2, 137 64 Jordbro
-Kista vårdcentral, Kista Galleria (trapphus 3) plan 1
-Kungsängens vårdcentral, Gamla Landsvägen 2, Kungsängen
-Surbrunnsgatan 66, plan 5, 113 27 Stockholm
-Liljeholmens vårdcentral, Liljeholmstorget 7, plan 4, 117 94 Stockholm
-Lisebergs vårdcentral, Annebodavägen 4-6, 125 71 Älvsjö
-Nygatan 16, 151 72 Södertälje
-Mörby vårdcentral, Golfvägen 8, plan 5, 182 31 Danderyd
-Norrvikens vårdcentral, Vespergränd 29, 192 72 Sollentuna
-Skårbygränd 3, 163 72 Spånga
-Rissne torg 3, 174 57 Sundbyberg
-Kung Hans Väg 12, 192 68 Sollentuna
-Stråkvägen 7, 169 35 Solna
-Salems vårdcentral, Säbytorgsvägen 6, 144 30 Rönninge
-Häradsvägen 254, 141 71 Segeltorp
-Stora Gatan 56 B, 193 30 Sigtuna
-Skärholmens vårdcentral, Storholmsgatan 19, plan 4, 127 48 Skärholmen
-Solna Centrum Vårdcentral, Hotellgatan 3, plan 2, 171 45 Solna
-Sörgårdsvägen 10, 163 52 Spånga
-Stocksunds vårdcentral, Stockholmsvägen 43, 182 88 Stocksund
-Sätra vårdcentral, Kungssätravägen 33, 127 37 Skärholmen
-Tallhöjdens vårdcentral, Tallhöjdsvägen 3, 152 41 Södertälje
-Tensta Vårdcentral ,Tenstagången 18 ,163 64 Spånga
-Herserudsvägen 5 B, 181 50 Lidingö
-Tranebergsplan 1, plan 2, 167 44 Bromma
-Kumla Allé 5, 135 53 Tyresö
-Trångsunds vårdcentral, Trångsunds Torg 9
-Tullinge Vårdcentral, Kvällsvägen 5, 146 31 Tullinge
-Samaritvägen 4, 147 41 Tumba
-Tingsvägen 19, 191 61 Sollentuna
-Täby vårdcentral, Biblioteksgången 10, 4tr, 183 34 Täby
-Åby gata 6, 186 36 Vallentuna
-Valsta vårdcentral, Hammargatan 6, 195 53 Märsta
-Vendelsö vårdcentral, Skomakarvägen 20, 136 70 Vendelsö
-Botkyrkavägen 4, 143 30 Vårby
-Solberga Hagväg 1, 1 tr, 125 44 Älvsjö
-Krysshammarvägen 12 A, Solna
-Sänkhagsv 7, 191 50 Sollentuna
-Lignagatan 14, 3 trp
-Tumba Torg 101, 3 tr1147 30 TUMBA
-Box 4064141 04 HUDDINGE
-141 86 Stockholm
-Emaljvägen 16176 73 JÄRFÄLLA
-152 86 SÖDERTÄLJE
-Riddargatan
+Sibeliusgången 20 A-B, Rinkeby Kista, Stockholm [3]
+Bättringsvägen 7, Hässelby Vällingby, Stockholm [3]
+Eastmansvägen 26, Norrmalm, Stockholm [1]
+Vita Liljans väg 53, Skärholmen, Stockholm [2]
+Skarpnäcks Torg 1, Skarpnäck, Stockholm [2]
+Spadvägen 9, Älvsjö, Stockholm [1]
+Bergtallsvägen 12, Älvsjö, Stockholm [1]
+Trollesundsvägen 44, Enskede Årsta Vantör, Stockholm [1]
+Åmänningevägen 13, Enskede Årsta Vantör, Stockholm [1]
+Kinmanssonsvägen 41-43, Hägersten Liljeholmen, Stockholm [2]
+Gamla Södertäljevägen 3, Hägersten Liljeholmen, Stockholm [2]
+Elinsborgsbacken 5, Spånga Tensta, Stockholm [3]
+Birger Jarlsgatan 91, Norrmalm, Stockholm [1]
+Nils Brincks väg 1, Farsta, Stockholm [2]
+Frösätrabacken 7D, Skärholmen, Stockholm [2]
+Högalidsgatan 26 -28, Södermalm, Stockholm [1]
+Brahegatan 47, Östermalm, Stockholm [1]
+Vårholmsbackarna 106, Skärholmen, Stockholm [2]
+Bogsätravägen 27, Skärholmen, Stockholm [2]
+Elinsborgsbacken 9, Spånga Tensta, Stockholm [3]
+Handelsvägen 170 B, Enskede Årsta Vantör, Stockholm [1]
+Bersågränd 11, Enskede Årsta Vantör, Stockholm [1]
+Råckstavägen 34, Hus C, Bromma, Stockholm [3]
+Linnégatan 61, Östermalm, Stockholm [1]
+Åstorpsringen 26, Enskede Årsta Vantör, Stockholm [1]
+Ramviksvägen 213, Enskede Årsta Vantör, Stockholm [1]
+Cervins väg 13, Spånga Tensta, Stockholm [1]
+Gamla Södertäljevägen 5, Hägersten Liljeholmen, Stockholm [1]
+Gamla Södertäljevägen 7-9, Hägersten Liljeholmen, Stockholm [1]
+Gamla Tyresövägen 349, Skarpnäck, Stockholm [2]
+Hornskroken 1, Södermalm, Stockholm [1]
+Ormängsgatan 10, Hässelby Vällingby, Stockholm [3]
+Ripsavägen 38-44, Enskede Årsta Vantör, Stockholm [1]
+Efraim Dahlins väg 5, Farsta, Stockholm [2]
+Kampementsgatan 2B, Östermalm, Stockholm [1]
+Roslagstullsbacken 7, Östermalm, Stockholm [1]
+Kista Torg 7, Rinkeby Kista, Stockholm [3]
+Bättringsvägen 5 - 9, Hässelby Vällingby, Stockholm [3]
+Armborstsvägen 6, Älvsjö, Stockholm [1]
+Knut Sjöbergs väg 2, Farsta, Stockholm [2]
+Majstångsvägen 6, Hägersten Liljeholmen, Stockholm [1]
+Lignagatan 14, Södermalm, Stockholm [1]
+Beckombergavägen 297 , Bromma, Stockholm [3]
+Bättringsvägen 5 - 9, Hässelby Vällingby, Stockholm [3]
+Löjtnantsgatan 8, Östermalm, Stockholm [1]
+Timmermansgatan 27, Södermalm, Stockholm [1]
+Wivalliusgatan 17, Kungsholmen, Stockholm [1]
+Kumlagatan 5, Enskede Årsta Vantör, Stockholm [1]
+Tunnlandsvägen 89-95, Bromma, Stockholm [3]
+Kottbygatan 5, Spånga Tensta, Stockholm [3]
+Brevvägen 8-14, Farsta, Stockholm [2]
+Norrtullsgatan 12 L, Norrmalm, Stockholm [1]
+Sandhamnsgatan 4, Östermalm, Stockholm [1]
+Kumlagatan 13, Enskede Årsta Vantör, Stockholm [1]
+P O Hallmans gata 1, Kungsholmen, Stockholm [1]
+Eastmansvägen 29, Norrmalm, Stockholm [1]
+Berghamnsvägen 65, Hässelby Vällingby, Stockholm [3]
+Aktergatan 17-19, Södermalm, Stockholm [1]
+Bersågränd 11, Enskede Årsta Vantör, Stockholm [1]
+Sandviksvägen 155, Hässelby Vällingby, Stockholm [3]
+Edelundavägen 3, Hässelby Vällingby, Stockholm [3]
+Erstagatan 34, Södermalm, Stockholm [1]
+Stadshagsvägen 5, Kungsholmen, Stockholm [1]
+Nils Brincks väg 6B , Farsta, Stockholm [2]
+Mariebergsgatan 22, Kungsholmen, Stockholm [1]
+Tussmötevägen 175, Enskede Årsta Vantör, Stockholm [1]
+Frösätrabacken 7C, Skärholmen, Stockholm [2]
+Söndagsvägen 18, Farsta, Stockholm [2]
+Lövholmsvägen 29, Hägersten Liljeholmen, Stockholm [1]
+Måndagsvägen 32, Farsta, Stockholm [2]
+Stora Sköndals väg 107, Farsta, Stockholm [2]
+Stora Sköndals väg 101, Farsta, Stockholm [2]
+Brattforsgatan 25, Farsta, Stockholm [2]
+Edelundavägen 5, Hässelby Vällingby, Stockholm [3]
+Elinsborgsbacken 5, Spånga Tensta, Stockholm [3]
+Brunnsgatan 26, Norrmalm, Stockholm [1]
+Indalsbacken 17, Hässelby Vällingby, Stockholm [3]
+Lignagatan 14, Södermalm, Stockholm [1]
+Glavagatan 21, Farsta, Stockholm [2]
+Årstavägen 112, Enskede Årsta Vantör, Stockholm [1]
+Sparbanksvägen 30, Hägersten Liljeholmen, Stockholm [1]
+Fridhemsgatan 58, Kungsholmen, Stockholm [1]
+Folkskolegatan 30, Södermalm, Stockholm [1]
+Artemisgatan 2, Östermalm, Stockholm [1]
+Nordmarksvägen 82-84, Farsta, Stockholm [2]
+Tideliusgatan 16, Södermalm, Stockholm [1]
+Fleminggatan 113, Kungsholmen, Stockholm [1]
+Lignagatan 6, Södermalm, Stockholm [1]
+Lödösevägen 9A och B, Skarpnäck, Stockholm [2]
+Tideliusgatan 7-9, Södermalm, Stockholm [1]
+Tantogatan 19, Södermalm, Stockholm [1]
+Annebodavägen 23-25, Älvsjö, Stockholm [1]
+Backskåran 9, Bromma, Stockholm [3]
+Nytorgsgatan 44, Södermalm, Stockholm [1]
+Rinkebyplan 4, Rinkeby Kista, Stockholm [3]
+Bolindersplan 1, Kungsholmen, Stockholm [1]
+Folkparksvägen 156, Älvsjö, Stockholm [1]
+Tranebergsvägen 47, Bromma, Stockholm [3]
+Bromma Kyrkväg 449-453, Bromma, Stockholm [3]
+Blackebergsbacken 41, Bromma, Stockholm [3]
+Bolinders plan 3, Kungsholmen, Stockholm [1]
+Abrahamsbergs vårdcentral, Drottningholmsvägen 322, 167 31 Bromma [3]
+Albyägen 2, 145 59 Norsborg [2]
+Axelsbergs vårdcentral, Axelsbergs torg 2, 129 38 Hägersten [2]
+Barkarby vårdcentral, Jaktplan 3, 175 63 Järfälla [3]
+Björnstigen 34B, 170 72 Solna [1]
+Bollmora vårdcentral, Bollmoravägen 14, 135 41 Tyresö [2]
+Edövägen 2, Ormingehus , 132 30  Saltsjö-Boo [1]
+Brandbergens vårdcentral, Jungfrunsgata 416-419 Brandbergens centrum, 136 60 Haninge [2]
+Bredängstorget 1, 2 trappor, 127 34 Skärholmen [2]
+Klädesvägen 12, 1 tr, 168 76 Bromma [3]
+Dalarö vårdcentral, Odinsvägen 20, 137 70 Dalarö [2]
+Djursholms husläkarmottagning, Gudmundvägen 9, 182 65 Djursholm [3]
+Enebybergs vårdcentral, Eneby Torg 17, 182 04 Enebyberg [3]
+Essinge vårdcentral, Primusgatan 112, 112 67 Stockholm [1]
+Fisksätra vårdcentral,  Fisksätra Torg 20, plan 3, 133 04 Saltsjöbaden [1]
+Fittja vårdcentral, Fittjavägen 9, 3 tr, 145 51 Norsborg [2]
+Röntgenvägen 3, plan 7, 141 52 Huddinge [2]
+Romansvägen 12, 131 53 Nacka [2]
+Lövholmsvägen 33, 117 65 Stockholm [1]
+Odelbergs väg 19, 134 40 Gustavsberg [3]
+Sandhamnsgatan 4, 115 40 Stockholm [1]
+Hallonbergens vårdcentral, Lötsjövägen 1B, 174 52 Sundbyberg [1]
+Hallunda Torg 10 [2]
+Dalarövägen 6, 136 45 Handen [2]
+Hagalundsgatan 1, 169 65 Solna [1]
+Paradistorget 4, plan 2, 141 47 Huddinge [2]
+Husby-Akalla vårdcentral, Sibeliusgången 20A, 164 77 Kista [3]
+Johannes Husläkarmottagning och Barnavårdcentral, Döbelnsgatan 56, 113 52 Stockholm [1]
+Hässelby Torg 20 [2]
+Birgittavägen 4, 177 31 Järfälla [3]
+Jordbro vårdcentral, Hurtigs torg 2, 137 64 Jordbro [2]
+Kista vårdcentral, Kista Galleria (trapphus 3) plan 1 [3]
+Kungsängens vårdcentral, Gamla Landsvägen 2, Kungsängen [3]
+Surbrunnsgatan 66, plan 5, 113 27 Stockholm [1]
+Liljeholmens vårdcentral, Liljeholmstorget 7, plan 4, 117 94 Stockholm [1]
+Lisebergs vårdcentral, Annebodavägen 4-6, 125 71 Älvsjö [1]
+Nygatan 16, 151 72 Södertälje [2]
+Mörby vårdcentral, Golfvägen 8, plan 5, 182 31 Danderyd [3]
+Norrvikens vårdcentral, Vespergränd 29, 192 72 Sollentuna [3]
+Skårbygränd 3, 163 72 Spånga [3]
+Rissne torg 3, 174 57 Sundbyberg [1]
+Kung Hans Väg 12, 192 68 Sollentuna [3]
+Stråkvägen 7, 169 35 Solna [1]
+Salems vårdcentral, Säbytorgsvägen 6, 144 30 Rönninge [2]
+Häradsvägen 254, 141 71 Segeltorp [2]
+Stora Gatan 56 B, 193 30 Sigtuna [3]
+Skärholmens vårdcentral, Storholmsgatan 19, plan 4, 127 48 Skärholmen [2]
+Solna Centrum Vårdcentral, Hotellgatan 3, plan 2, 171 45 Solna [1]
+Sörgårdsvägen 10, 163 52 Spånga [3]
+Stocksunds vårdcentral, Stockholmsvägen 43, 182 88 Stocksund [3]
+Sätra vårdcentral, Kungssätravägen 33, 127 37 Skärholmen [2]
+Tallhöjdens vårdcentral, Tallhöjdsvägen 3, 152 41 Södertälje [2]
+Tensta Vårdcentral ,Tenstagången 18 ,163 64 Spånga [2]
+Herserudsvägen 5 B, 181 50 Lidingö [1]
+Tranebergsplan 1, plan 2, 167 44 Bromma [3]
+Kumla Allé 5, 135 53 Tyresö [2]
+Trångsunds vårdcentral, Trångsunds Torg 9 [2]
+Tullinge Vårdcentral, Kvällsvägen 5, 146 31 Tullinge [2]
+Samaritvägen 4, 147 41 Tumba [2]
+Tingsvägen 19, 191 61 Sollentuna [3]
+Täby vårdcentral, Biblioteksgången 10, 4tr, 183 34 Täby [3]
+Åby gata 6, 186 36 Vallentuna [3]
+Valsta vårdcentral, Hammargatan 6, 195 53 Märsta [3]
+Vendelsö vårdcentral, Skomakarvägen 20, 136 70 Vendelsö [2]
+Botkyrkavägen 4, 143 30 Vårby [2]
+Solberga Hagväg 1, 1 tr, 125 44 Älvsjö [1]
+Krysshammarvägen 12 A, Solna [1]
+Sänkhagsv 7, 191 50 Sollentuna [3]
+Lignagatan 14, 3 trp [1]
+Tumba Torg 101, 3 tr1147 30 TUMBA [2]
+Box 4064141 04 HUDDINGE [2]
+141 86 Stockholm [1]
+Emaljvägen 16176 73 JÄRFÄLLA [3]
+152 86 SÖDERTÄLJE [2]
+Riddargatan [1]
 LOCATIONTYPE:
 MEDICIN
 apoteket
