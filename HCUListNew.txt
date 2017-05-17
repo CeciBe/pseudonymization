@@ -359,7 +359,7 @@ Oral radiologi
 Klinisk oral fysiologi, Inst för odontologi
 Radiologi institutionen för odontologi
 HCUTYPE:
-ORTOPED
+MEDICIN
 Solna ortopedmottagning
 Capio ortopediska huset
 Aleris specialistvård Sabbatsberg
@@ -370,8 +370,6 @@ Ortopedisk mottagning
 Ortopedverkstaden
 Aktiv Ortopedteknik
 Ortopedkliniken
-HCUTYPE:
-MEDICIN
 Lungdagvården
 Thoraxmottagnoingen, Solna
 Lungmedicin
