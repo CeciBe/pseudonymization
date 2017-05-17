@@ -37,13 +37,13 @@ public class HealthCareUnit {
             result = checkIfClinic(hcu);
         }
         if(result == null) {
-            result = checkIfNeuro(hcu);
+            result = checkIfNeuro(hcu); //Tar bort neuro, medicin
         }
         if(result == null) {
             result = checkIfSurgery(hcu);
         }
         if(result == null) {
-            result = checkIfGeriatrics(hcu);
+            result = checkIfGeriatrics(hcu);    //geriatrik, sjukhem och palliativ
         }
         if(result == null) {
             result = checkIfNursingHome(hcu);
@@ -311,15 +311,15 @@ public class HealthCareUnit {
             if(option == 3) {
                 evaluateHospital(hcu,list);
             } else if(option == 4) {
-                evaluateNursingHome(hcu,list);
+                evaluateOtherHCU(hcu,list);
             } else if(option == 5) {
                 evaluateClinic(hcu,list);
             } else if(option == 6) {
-                evaluateNeuroUnit(hcu,list);
+                evaluateOtherHCU(hcu,list);
             } else if(option == 7) {
-                evaluateSurgery(hcu,list);
+                evaluateOtherHCU(hcu,list);
             } else if(option == 8) {
-                evaluateGeriatrics(hcu,list);
+                evaluateOtherHCU(hcu,list);
             }
             hcuMap = hcuValues;
         }
@@ -332,34 +332,41 @@ public class HealthCareUnit {
         }
         String[] hospitalArray = tempHospital.split(" ");
         for(int index = 0; index < list.size(); index++) {
-            String otherHCU = preprocessData(list.get(index).toLowerCase());
+            String otherHCU = list.get(index);
+            String tempHCU = preprocessData(otherHCU.toLowerCase());
             int counter = 0;
             for(int i = 0; i < hospitalArray.length; i++) {
-                if(otherHCU.toLowerCase().contains(hospitalArray[i])) {
+                if(tempHCU.contains(hospitalArray[i])) {
                     counter++;
                 }
             }
-            if(counter == hospitalArray.length) {
-                currentWord = otherHCU;
+            if(counter == hospitalArray.length - 1) {
+                mostProbableWord = otherHCU;
+                //currentWord = otherHCU;
             }
         }
+        currentWord = mostProbableWord;
     }
 
-    public void evaluateNursingHome(String nursingHome, ArrayList<String> list) {
-        String tempNursingHome = preprocessData(nursingHome).toLowerCase();
-        String[] nursHomArray = tempNursingHome.split(" ");
+    public void evaluateOtherHCU(String hcu, ArrayList<String> list) {
+        String tempHCU = preprocessData(hcu).toLowerCase();
+        String[] hcuArray = tempHCU.split(" ");
         for(int index = 0; index < list.size(); index++) {
-            String otherHCU = preprocessData(list.get(index).toLowerCase());
+            String otherHCU = list.get(index);
+            String temp = preprocessData(otherHCU.toLowerCase());
+            //String otherHCU = preprocessData(list.get(index).toLowerCase());
             int counter = 0;
-            for(int i = 0; i < nursHomArray.length; i++) {
-                if(otherHCU.toLowerCase().contains(nursHomArray[i])) {
+            for(int i = 0; i < hcuArray.length; i++) {
+                if(temp.contains(hcuArray[i])) {
                     counter++;
                 }
             }
-            if(counter == nursHomArray.length) {
-                currentWord = otherHCU;
+            if(counter == hcuArray.length - 1) {
+                mostProbableWord = otherHCU;
+                //currentWord = otherHCU;
             }
         }
+        currentWord = mostProbableWord;
     }
 
     public void evaluateClinic(String clinic, ArrayList<String> list) {
@@ -369,20 +376,23 @@ public class HealthCareUnit {
         }
         String[] clinicArray = tempClinic.split( " ");
         for(int index = 0; index < list.size(); index++) {
-            String otherHCU = preprocessData(list.get(index).toLowerCase());
+            String otherHCU = list.get(index);
+            String tempHCU = preprocessData(otherHCU.toLowerCase());
+            //String otherHCU = preprocessData(list.get(index).toLowerCase());
             int counter = 0;
             for(int i = 0; i < clinicArray.length; i++) {
-                if(otherHCU.toLowerCase().contains(clinicArray[i])) {
+                if(tempHCU.contains(clinicArray[i])) {
                     counter++;
                 }
             }
-            if(counter == clinicArray.length) {
-                currentWord = otherHCU;
+            if(counter == clinicArray.length - 1) {
+                mostProbableWord = otherHCU;
             }
         }
+        currentWord = mostProbableWord;
     }
 
-    public void evaluateNeuroUnit(String neuroUnit, ArrayList<String> list) {
+    /***public void evaluateNeuroUnit(String neuroUnit, ArrayList<String> list) {
         String tempNeuroUnit = preprocessData(neuroUnit).toLowerCase();
         String[] neuroArray = tempNeuroUnit.split(" ");
         for(int index = 0; index < list.size(); index++) {
@@ -431,7 +441,7 @@ public class HealthCareUnit {
                 currentWord = otherSurgery;
             }
         }
-    }
+    }***/
 
     class DataContainer {
 
