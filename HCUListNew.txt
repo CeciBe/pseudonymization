@@ -338,14 +338,6 @@ Lungmedicin
 Lungallergikliniken
 Lungkliniken
 HCUTYPE:
-NJUR
-Dialys Väst
-Dialys Öst
-Urologkliniken
-Njurmedicinska kliniken
-Njurmedicinsk mottagning Danderyds sjukhus
-Njurmedicin, Huddinge
-HCUTYPE:
 AKUT
 Närakuten Brommaplan
 Cityakuten
@@ -371,7 +363,7 @@ Centraloperation
 Kirurgjouren, SÖS
 Plastikkirurgiska mottagningen KS, Solna
 HCUTYPE:
-ENDOKRIN
+NJURENDOKRIN
 Endokrinologmottagning, Södermalm
 Andrologisk mottagning, Norrmalm
 Diabetes och Endokrinmottagning, Danderyd
@@ -381,6 +373,13 @@ Sophiahemmet endokrinologi
 Diabetesfot-teamet
 Kliniken för Endokrinologi, Metabolism och Diabetes
 Endokrinmottagningen, Huddinge
+Hemdialysvård Aleris
+Dialys Väst
+Dialys Öst
+Urologkliniken
+Njurmedicinska kliniken, Solna
+Njurmedicinsk mottagning Danderyds sjukhus
+Njurmedicin, Huddinge
 HCUTYPE:
 TAND
 Endodontiavdelningen Tandläkarhögskolan
