@@ -217,23 +217,6 @@ Sundtorps korttidsboende [6]
 Utsiktens korttidsboende [5]
 Löwenströmska korttidsboende [1]
 Hornstulls korttidsboende [1]
-Danvikshem [1]
-Farsta sjukhem [2]
-Tumba sjukhem [2]
-Älvsjö sjukhem [1]
-Vårbergs sjukhem [2]
-Stockholms sjukhem [1]
-Stureby sjukhem [2]
-Ekbackens sjukhem [1]
-HCUTYPE:
-MISSBRUK
-Missbruksenheten, Huddinge kommun
-Östfora behandlingshem
-socialtjänsten i Huddinge
-Missbruksenheten
-Beroendecentrum
-Nutritionsteamet
-Beroendeakuten S:t Görans sjukhus
 HCUTYPE:
 VÅRDCENTRAL
 Abrahamsbergs vårdcentral
@@ -312,33 +295,11 @@ Vårby vårdcentral [2]
 Västra skogens vårdcentral [3]
 Älvsjö vårdcentral [1]
 HCUTYPE:
-NEURO
-Neurologmottagning
-Neurologkliniken
-Neurologakuten
-Neurorehab
-neurolog-AVA
-Neurologavdelningen
-neurorehab på DS
-HCUTYPE:
-ONKOLOGI
-Öppenvårdsmottagning, Danderyd
-Onkologisk mottagning och behandlingsavdelning, Danderyds sjukhus
-Onkologen på Solna
-Onkologen på SÖS
-Radiumhemmet
-Onkologisk dagvårdsavdelning st Göran
-HCUTYPE:
-THORAX
-Lungdagvården
+AKUT
+Beroendeakuten S:t Görans sjukhus
 Hjärtintensiven
 Thoraxintensiven
-Thoraxmottagnoingen, Solna
-Lungmedicin
-Lungallergikliniken
-Lungkliniken
-HCUTYPE:
-AKUT
+Neurologakuten
 Närakuten Brommaplan
 Cityakuten
 Söderakuten
@@ -364,6 +325,7 @@ Kirurgjouren, SÖS
 Plastikkirurgiska mottagningen KS, Solna
 HCUTYPE:
 NJURENDOKRIN
+Nutritionsteamet
 Endokrinologmottagning, Södermalm
 Andrologisk mottagning, Norrmalm
 Diabetes och Endokrinmottagning, Danderyd
@@ -410,6 +372,21 @@ Aktiv Ortopedteknik
 Ortopedkliniken
 HCUTYPE:
 MEDICIN
+Lungdagvården
+Thoraxmottagnoingen, Solna
+Lungmedicin
+Lungallergikliniken
+Lungkliniken
+Neurologmottagning
+Neurologkliniken
+neurolog-AVA
+Neurologavdelningen
+Öppenvårdsmottagning, Danderyd
+Onkologisk mottagning och behandlingsavdelning, Danderyds sjukhus
+Onkologen på Solna
+Onkologen på SÖS
+Radiumhemmet
+Onkologisk dagvårdsavdelning st Göran
 Medicinkliniken
 Infektionskliniken
 Reumatologkliniken
@@ -431,6 +408,12 @@ Vårdhygien-enheten
 Centrum för intergrativ medicin
 HCUTYPE:
 REHAB
+Missbruksenheten, Huddinge kommun
+Socialtjänsten i Huddinge
+Missbruksenheten
+Beroendecentrum
+neurorehab på DS
+Neurorehab, Solna
 Sophiahemmet rehabcenter
 Spine rehab
 Rehab City Norrmalm
@@ -461,7 +444,15 @@ Apotek Scheele
 Apoteket på KS, Solna
 Apoteket Fjärilen
 HCUTYPE:
-GERIATRIK
+SJUKHEM
+Danvikshem [1]
+Farsta sjukhem [2]
+Tumba sjukhem [2]
+Älvsjö sjukhem [1]
+Vårbergs sjukhem [2]
+Stockholms sjukhem [1]
+Stureby sjukhem [2]
+Ekbackens sjukhem [1]
 Äldrevårdsmottagning [3]
 Stiftelsen Stora Sköndal [2]
 Capio Ortopediska huset [2]
@@ -473,23 +464,21 @@ Nackageriatriken [1]
 Stockholms geriatriska klinik [1]
 Dalens geriatrik [2]
 Intagningsenheten Enskede/Årsta/Vantör [1]
-HCUTYPE:
-PALLIATIV
-ASIH Äldreteamet
-ASIH, södra teamet
-ASIH-remissen
-ASIH, Långbropark
-ASIH Nordväst
-Bromma SAH
-Maria Regina hospice
-Ersta hospice
-Hospice Löwenströmska
-Stockholms sjukhems palliativa avd
-Palliativa enheten
-Palliativ avdelning Södertälje Sjukhus
-Specialiserad Palliativ Slutenvård Lidingö
-Capio Specialiserad palliativ slutenvård, Dalens sjukhus
-Byle Gård vårdavdelning
+ASIH Äldreteamet [2]
+ASIH, södra teamet [2]
+ASIH-remissen [2]
+ASIH, Långbropark [2]
+ASIH Nordväst [3]
+Bromma SAH [3]
+Maria Regina hospice [1]
+Ersta hospice [1]
+Hospice Löwenströmska [1]
+Stockholms sjukhems palliativa avd [1]
+Palliativa enheten, Enskede [2]
+Palliativ avdelning Södertälje Sjukhus [2]
+Specialiserad Palliativ Slutenvård Lidingö [1]
+Capio Specialiserad palliativ slutenvård, Dalens sjukhus [2]
+Byle Gård vårdavdelning [3]
 HCUTYPE:
 AVDELNINGAR
 DS avd 97
