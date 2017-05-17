@@ -1,380 +1,375 @@
 LAND
-Albanien
-Andorra
-Azerbajdzjan
-Belgien
-Bosnien och Hercegovina
-Bulgarien
-Danmark
-Estland
-Finland
-Frankrike
-Georgien
-Grekland
-Irland
-Island
-Italien
-Kosovo
-Kroatien
-Lettland
-Liechtenstein
-Litauen
-Luxemburg
-Makedonien
-Malta
-Moldavien
-Monaco
-Montenegro
-Nederländerna
-Norge
-Polen
-Portugal
-Rumänien
-Ryssland
-San Marino
-Schweiz
-Serbien
-Slovakien
-Slovenien
-Spanien
-Storbritannien
-Sverige
-Tjeckien
-Turkiet
-Tyskland
-Ukraina
-Ungern
-Vitryssland
-Österrike
+Albanien [S]
+Andorra [S]
+Azerbajdzjan [S]
+Belgien [N]
+Bosnien och Hercegovina [N]
+Bulgarien [S]
+Danmark [N]
+Estland [N]
+Finland [N]
+Frankrike [S]
+Georgien [S]
+Grekland [S]
+Irland [N]
+Island [N]
+Italien [S]
+Kosovo [S]
+Kroatien [S]
+Lettland [N]
+Liechtenstein [N]
+Litauen [N]
+Luxemburg [N]
+Makedonien [S]
+Malta [S]
+Moldavien [N]
+Monaco [S]
+Montenegro [S]
+Nederländerna [N]
+Norge [N]
+Polen [N]
+Portugal [S]
+Rumänien [S]
+Ryssland [N]
+San Marino [S]
+Schweiz [S]
+Serbien [S]
+Slovakien [N]
+Slovenien [S]
+Spanien [S]
+Storbritannien [N]
+Sverige [N]
+Tjeckien [N]
+Turkiet [S]
+Tyskland [N]
+Ukraina [N]
+Ungern [N]
+Vitryssland [N]
+Österrike [S]
 LOCATIONTYPE:
 ARABLÄNDER
-Algeriet
-Bahrain
-Egypten
-Förenade Arabemiraten
-Irak
-Israel
-Jemen
-Jordanien
-Kuwait
-Libanon
-Libyen
-Marocko
-Oman
-Qatar
-Saudiarabien
-Sudan
-Syrien
-Tunisien
-Djibouti
-Komorerna
-Malta
-Mauretanien
-Palestina
-Somalia
-Västsahara
+Algeriet [A]
+Bahrain [A]
+Egypten [A]
+Förenade Arabemiraten [A]
+Irak [A]
+Israel [A]
+Jemen [A]
+Jordanien [A]
+Kuwait [A]
+Libanon [A]
+Libyen [A]
+Marocko [A]
+Oman [A]
+Qatar [A]
+Saudiarabien [A]
+Sudan [A]
+Syrien [A]
+Tunisien [A]
+Djibouti [A]
+Komorerna [A]
+Malta [A]
+Mauretanien [A]
+Palestina [A]
+Somalia [A]
+Västsahara [A]
 LOCATIONTYPE:
 ASIATISKA LÄNDER
-Thailand
-Indien
-Kambodja
-Vietnam
-Indonesien
-Sri Lanka
-Malaysia
-Laos
-Kina
-Nepal
-Filipinerna
-Singapore
-Sri Lanka
-Maldiverna
-Bangladesh
-Burma
-Taiwan
+Thailand [SYD]
+Indien [SYD]
+Kambodja [SYD]
+Vietnam [SYDOST]
+Indonesien [SYDOST]
+Sri Lanka [SYD]
+Malaysia [SYDOST]
+Laos [SYDOST]
+Kina [OST]
+Nepal [SYD]
+Filipinerna [SYDOST]
+Singapore [SYDOST]
+Maldiverna [SYD]
+Bangladesh [SYD]
+Burma [SYDOST]
+Taiwan [OST]
 LOCATIONTYPE:
 NORDAMERIKANSKA LÄNDER
-USA
-Kanada
-Mexiko
-Belize
-Costa Rica
-El Salvador
-Guatemala
-Honduras
-Nicaragua
-Panama
+USA [N]
+Kanada [N] 
+Mexiko [N]
+Belize [S]
+Costa Rica [S]
+El Salvador [S]
+Guatemala [S]
+Honduras [S]
+Nicaragua [S]
+Panama [S]
 LOCATIONTYPE:
 EUROPEISKA STÄDER
-Moskva
-London
-Sankt Petersburg
-Berlin
-Madrid
-Kiev
-Rom
-Paris
-Minsk
-Bukarest
-Wien
-Hamburg
-Budapest
-Warszawa
-Belgrad
-Barcelona
-Charkiv
-München
-Milano
-Sofia
-Prag
-Nizjnij Novgorod
-Kazan
-Samara
-Rostov-na-Donu
-Birmingham
-Ufa
-Köln
-Perm
-Voronezj
-Odessa
-Volgograd
-Dnipropetrovsk
-Neapel
-Donetsk
-Stockholm [1]
-Turin
-Krasnodar
-Marseille
-Saratov
-Amsterdam
-Zagreb
-Leeds
-Zaporizjzja
-Kraków
-Valencia
-Lviv
-Frankfurt am Main
-Toljatti
-Lódz
+Moskva [O]
+London [W]
+Sankt Petersburg [O]
+Berlin [C]
+Madrid [W]
+Kiev [O]
+Rom [C]
+Paris [W]
+Minsk [O]
+Bukarest [O]
+Wien [W]
+Hamburg [C]
+Budapest [O]
+Warszawa [O]
+Belgrad [O]
+Barcelona [W]
+Charkiv [O]
+München [C]
+Milano [C]
+Sofia [O]
+Prag [W]
+Nizjnij Novgorod [O]
+Kazan [O]
+Samara [O]
+Rostov-na-Donu [O]
+Birmingham [W]
+Ufa [O]
+Köln [C]
+Perm [O]
+Voronezj [O]
+Odessa [O]
+Volgograd [O]
+Dnipropetrovsk [O]
+Neapel [C]
+Donetsk [O]
+Stockholm [C]
+Turin [C]
+Krasnodar [O]
+Marseille [W]
+Saratov [O]
+Amsterdam [W]
+Zagreb [C]
+Leeds [O]
+Zaporizjzja [O]
+Kraków [C]
+Valencia [W]
+Lviv [O]
+Frankfurt am Main [C]
+Toljatti [O]
+Lódz [C]
 LOCATIONTYPE:
 LANDSKAP
-Blekinge
-Bohuslän
-Dalarna
-Dalsland
-Gotland
-Gästrikland
-Halland
-Hälsingland
-Härjedalen
-Jämtland
-Lappland
-Medelpad
-Norrbotten
-Närke
-Skåne
-Småland
-Södermanland [2]
-Uppland [3]
-Värmland
-Västerbotten
-Västergötland
-Västmanland
-Ångermanland
-Öland
-Östergötland
+Blekinge [30]
+Bohuslän [31]
+Dalarna [31]
+Dalsland [31]
+Gotland [30]
+Gästrikland [31]
+Halland [30]
+Hälsingland [31]
+Härjedalen [32]
+Jämtland [32]
+Lappland [32]
+Medelpad [32]
+Norrbotten [32]
+Närke [31]
+Skåne [30]
+Småland [30]
+Södermanland [31]
+Uppland [31]
+Värmland [31]
+Västerbotten [32]
+Västergötland [31]
+Västmanland [31]
+Ångermanland [32]
+Öland [30]
+Östergötland [31]
 LOCATIONTYPE:
 LANDSDEL
-Norrland
-Svealand
-Götaland
+Norrland [LD]
+Svealand [LD]
+Götaland [LD]
 LOCATIONTYPE:
 LÄN
-Blekinge län
-Dalarnas län
-Gotlands län
-Gävleborgs län
-Hallands län
-Kalmar län
-Kronobergs län
-Jämtlands län
-Jönköpings län
-Norrbottens län
-Skåne län
-Stockholms län [1]
-Södermanlands län [2]
-Uppsala län [3]
-Värmlands län
-Västerbottens län
-Västernorrlands län
-Västmanlands län
-Västra Götalands län
-Örebro län
-Östergötlands län
+Blekinge län [SYD]
+Dalarnas län [CENT]
+Gotlands län [SYD]
+Gävleborgs län [CENT]
+Hallands län [SYD]
+Kalmar län [SYD]
+Kronobergs län [SYD]
+Jämtlands län [NOR]
+Jönköpings län [SYD]
+Norrbottens län [NOR]
+Skåne län [SYD]
+Stockholms län [CENT]
+Södermanlands län [CENT]
+Uppsala län [CENT]
+Värmlands län [CENT]
+Västerbottens län [NOR]
+Västernorrlands län [NOR]
+Västmanlands län [CENT]
+Västra Götalands län [SYD]
+Örebro län [CENT]
+Östergötlands län [CENT]
 LOCATIONTYPE:
 STAD
-Alingsås
-Arboga
-Arlanda
-Arvika
-Askersund
-Avaskär
-Avesta
-Boden
-Bollnäs
-Borgholm
-Borlänge
-Borås
-Broo
-Brätte
-Båstad
+Alingsås [1]
+Arboga [4]
+Arlanda [3]
+Arvika [4]
+Askersund [3]
+Avaskär [1]
+Avesta [3]
+Boden [2]
+Bollnäs [3]
+Borgholm [1]
+Borlänge [3]
+Borås [1]
+Brätte [1]
+Båstad [4]
 Djursholm [3]
-Eksjö
-Elleholm
-Enköping
-Eskilstuna
-Eslöv
-Fagersta
-Falkenberg
-Falköping
-Falsterbo
-Falun
-Filipstad
-Flen
-Gamla Lödöse
-Getakärr
-Gränna
-Gävle
-Göteborg
-Hagfors
-Halmstad
-Haparanda
-Hedemora
-Helsingborg
-Hjo
-Hudiksvall
-Huskvarna
-Härnösand
-Hässleholm
-Hästholmen
-Höganäs
-Järle 
-Jönköping
-Kalmar
-Karl Johans stad
-Karlshamn
-Karlskoga
-Karlskrona
-Karlstad
-Katrineholm
-Kiruna
-Kongahälla
-Kramfors
-Kristianopel
-Kristianstad
-Kristinehamn
-Kumla
-Kungsbacka
-Kungälv
-Köping
-Laholm
-Landskrona
-Lidingö [1]
-Lidköping
-Lindesberg
-Linköping
-Ljungby
-Lomma
-Ludvika
-Luleå
-Lund
-Luntertun
-Lycksele
-Lyckå
-Lysekil
-Lödöse
-Malmö
-Mariefred
-Mariestad
-Marstrand
-Mjölby
-Motala
-Mölndal
-Mönsterås
-Nacka [1]
-Nora
-Norrköping
+Eksjö [1]
+Elleholm [1]
+Enköping [3]
+Eskilstuna [3]
+Eslöv [1]
+Fagersta [3]
+Falkenberg [1]
+Falköping [1]
+Falsterbo [1]
+Falun [3]
+Filipstad [3]
+Flen [3]
+Gamla Lödöse [1]
+Getakärr [1]
+Gränna [1]
+Gävle [3]
+Göteborg [1]
+Hagfors [1]
+Halmstad [1]
+Haparanda [2]
+Hedemora [3]
+Helsingborg [1]
+Hjo [1]
+Hudiksvall [2]
+Huskvarna [1]
+Härnösand [2]
+Hässleholm [1]
+Hästholmen [1]
+Höganäs [2]
+Järle [3]
+Jönköping [1]
+Kalmar [1]
+Karlshamn [1]
+Karlskoga [3]
+Karlskrona [1]
+Karlstad [1]
+Katrineholm [3]
+Kiruna [2]
+Kongahälla [1]
+Kramfors [2]
+Kristianopel [1]
+Kristianstad [1]
+Kristinehamn [3]
+Kumla [3]
+Kungsbacka [1]
+Kungälv [1]
+Köping [3]
+Laholm [1]
+Landskrona [1]
+Lidingö [3]
+Lidköping [1]
+Lindesberg [3]
+Linköping [3]
+Ljungby [1]
+Lomma [1]
+Ludvika [3]
+Luleå [2]
+Lund [1]
+Lycksele [2]
+Lyckå [3]
+Lysekil [1]
+Lödöse [1]
+Malmö [1]
+Mariefred [3]
+Mariestad [1]
+Marstrand [1]
+Mjölby [3]
+Motala [3]
+Mölndal [1]
+Mönsterås [1]
+Nacka [3]
+Nora [3]
+Norrköping [3]
 Norrtälje [3]
-Järlåsa
-Nya Lidköping
-Nya Lödöse
-Nybro
-Nyköping
-Nynäshamn [2]
-Nässjö
-Oskarshamn
-Oxelösund
-Piteå
-Ronneby
-Sala
-Sandviken
+Järlåsa [3]
+Nya Lidköping [1]
+Nybro [1]
+Nyköping [3]
+Nynäshamn [3]
+Nässjö [1]
+Oskarshamn [1]
+Oxelösund [3]
+Piteå [2]
+Ronneby [1]
+Sala [3]
+Sandviken [3]
 Sigtuna [3]
-Simrishamn
-Skanör
-Skanör med Falsterbo
-Skara
-Skellefteå
-Skänninge
-Skövde
-Sollefteå
-Solna [1]
-Stockholm [1]
-Strängnäs 
-Strömstad
-Sundbyberg [1]
-Sundsvall
-Säffle
-Säter
-Sävsjö
-Söderhamn
-Söderköping
-Södertälje [2]
-Sölvesborg
-Tidaholm
-Torget
-Torshälla
-Tranås
-Trelleborg
-Trollhättan
-Trosa
-Tumathorp
-Uddevalla
-Ulricehamn
-Umeå
-Uppsala
-Vadstena
-Varberg
-Vaxholm
-Vetlanda
-Vimmerby
-Visby
-Vä
-Vänersborg
-Värnamo
-Västervik
-Västerås
-Växjö
-Ystad
-Åhus
-Åmål
-Älvsborg
-Ängelholm
-Öjebyn
-Örebro
-Öregrund
-Örnsköldsvik
-Östersund
-Östhammar
+Simrishamn [1]
+Skanör [1]
+Skanör med Falsterbo [1]
+Skara [1]
+Skellefteå [2]
+Skänninge [1]
+Skövde [1]
+Sollefteå [1]
+Solna [3]
+Stockholm [3]
+Strängnäs [3]
+Strömstad [1]
+Sundbyberg [3]
+Sundsvall [1]
+Säffle [1]
+Säter [1]
+Sävsjö [1]
+Söderhamn [2]
+Söderköping [3]
+Södertälje [3]
+Sölvesborg [1]
+Tidaholm [1]
+Torget [3]
+Torshälla [3]
+Tranås [1]
+Trelleborg [1]
+Trollhättan [1]
+Trosa [3]
+Tumathorp [1]
+Uddevalla [1]
+Ulricehamn [1]
+Umeå [2]
+Uppsala [3]
+Vadstena [4]
+Varberg [1]
+Vaxholm [3]
+Vetlanda [1]
+Vimmerby [1]
+Visby [1]
+Vä [1]
+Vänersborg [1]
+Värnamo [1]
+Västervik [1]
+Västerås [4]
+Växjö [1]
+Ystad [1]
+Åhus [1]
+Åmål [1]
+Älvsborg [1]
+Ängelholm [1]
+Öjebyn [2]
+Örebro [4]
+Öregrund [3]
+Örnsköldsvik [2]
+Östersund [2]
+Östhammar [3]
 LOCATIONTYPE:
 KOMMUN/ORT/DISTRIKT
 Botkyrka [2]
@@ -620,71 +615,70 @@ Emaljvägen 16176 73 JÄRFÄLLA [3]
 Riddargatan [1]
 LOCATIONTYPE:
 MEDICIN
-apoteket
-apoteket hjärtat
-apoteket ugglan
-apoteksgruppen
-link stockholm
-Polar Print AB
-Varsam 
-Sakta
-Sodexho Hjälpmedelsservice 
-Iris Hjälpmedel
-fresenius kabi
-Nutricia
-Norvatis
+apoteket [MED]
+apoteket hjärtat [MED]
+apoteket ugglan [MED]
+apoteksgruppen [MED]
+link stockholm [MED]
+Polar Print AB [MED]
+Varsam [MED]
+Sakta [MED]
+Sodexo [MED]
+Iris Hjälpmedel [MED]
+fresenius kabi [MED]
+Nutricia [MED]
+Norvatis [MED]
 LOCATIONTYPE:
 MAT
-restaurang Vapiano
-Restaurang Trekanten
-Sodexo
-TGI Fridays
-Koh Phangan
-Akkurat restaurang
-Urban deli
-Grekiska kolgrillsbaren
-Indian garden
-Restaurang prinsen
-Trattorian
-Restaurang kvarnen
-Operakällaren
-Sushi Yama
+restaurang Vapiano [M]
+Restaurang Trekanten [M]
+TGI Fridays [M]
+Koh Phangan [M]
+Akkurat restaurang [M]
+Urban deli [M]
+Grekiska kolgrillsbaren [M]
+Indian garden [M]
+Restaurang prinsen [M]
+Trattorian [M]
+Restaurang kvarnen [M]
+Operakällaren [M]
+Sushi Yama [M]
 LOCATIONTYPE:
 HOTELL
-hotell Clarion
-Radisson Blu
-Best Western
-Scandic hotell
-Sheraton hotell
-Connect hotell
-Grand hotell
-Elite Palace Hotell
-First hotell
+hotell Clarion [H]
+Radisson Blu [H]
+Best Western [H]
+Scandic hotell [H]
+Sheraton hotell [H]
+Connect hotell [H]
+Grand hotell [H]
+Elite Palace Hotell [H]
+First hotell [H]
 LOCATIONTYPE:
 SHOPPING
-Gallerian
-Kista galleria
-Mall of Scandinavia
-Skärholmens centrum
-Västermalmsgallerian
-Täby centrum
-Nacka forum
-Sickla köpkvarter
-Kungens kurva
-Bromma blocks
-Vällingby city
-Farsta centrum
-Liljeholmstorgets galleria
-Arninge centrum
+Gallerian [C]
+Kista galleria [S]
+Mall of Scandinavia [C]
+Skärholmens centrum [S]
+Västermalmsgallerian [C]
+Täby centrum [S]
+Nacka forum [S]
+Sickla köpkvarter [C]
+Kungens kurva [S]
+Bromma blocks [S]
+Vällingby city [C]
+Farsta centrum [S]
+Liljeholmstorgets galleria [S]
+Arninge centrum [S]
 LOCATIONTYPE:
 ÖVRIGA VÄRDEN
-Röda korset
-Stockholms läns landsting
-sjukhuset
-Kunskapsverkstaden
-celsus advokatbyrå
-Nestle Nutrition
-Hus K, Plan 4
-Länsrätten i Stockholmslän
-Rotel 444
-polisen
+Röda korset [O]
+Stockholms läns landsting [O]
+sjukhuset [O]
+Kunskapsverkstaden [O]
+celsus advokatbyrå [O]
+Nestle Nutrition [O]
+Hus K, Plan 4 [O]
+Länsrätten i Stockholmslän [O]
+Rotel 444 [O]
+polisen [O]
