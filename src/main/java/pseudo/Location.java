@@ -103,6 +103,7 @@ public class Location {
         ArrayList<String> tempList = new ArrayList<>();
         for(Map.Entry<String,String> iter: locations.entrySet()) {
             String key = iter.getKey();
+            System.out.println("Key: " + key + ", " + location);
             if((key.charAt(0) == location.charAt(0)) && (key.length() > location.length())) {
                 tempList.add(key);
             }
@@ -229,16 +230,8 @@ public class Location {
 
     public HashMap<String, String> checkIfAddress(String location) {
         HashMap<String,String> result = null;
-        if(location.contains("väg") || location.contains("gata")) {
+        if(location.contains("väg") || location.contains("gata") || location.contains("torg") || location.contains("box")) {
             result = searchLocation(location, 3);
-        } else {
-            String tempAddress = preprocessData(location);
-            String[] addressArray = tempAddress.split(" ");
-            if(addressArray.length > 1) {
-                int number = 0; String text = null;
-                for(int i = 0; i < addressArray.length; i++) {
-                }
-            }
         }
         return result;
     }
@@ -252,7 +245,7 @@ public class Location {
                 String[] otherLocationArray = otherLocation.split(" ");
                 String loc1 = preprocessData(locationArray[0].toLowerCase());
                 String loc2 = preprocessData(otherLocationArray[0].toLowerCase());
-                if(!loc1.equals(loc2)) {
+                if(loc1.equals(loc2)) {
                     currentWord = otherLocation;
                 }
             }

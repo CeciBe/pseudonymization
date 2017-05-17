@@ -37,7 +37,10 @@ public class HealthCareUnit {
             result = checkIfClinic(hcu);
         }
         if(result == null) {
-            result = checkIfNeuro(hcu); //Tar bort neuro, medicin
+            result = checkIfEmergency(hcu);
+        }
+        if(result == null) {
+            result = checkIfEndocrine(hcu); //Tar bort neuro, medicin
         }
         if(result == null) {
             result = checkIfSurgery(hcu);
@@ -46,7 +49,22 @@ public class HealthCareUnit {
             result = checkIfGeriatrics(hcu);    //geriatrik, sjukhem och palliativ
         }
         if(result == null) {
+            result = checkIfDental(hcu);
+        }
+        if(result == null) {
             result = checkIfNursingHome(hcu);
+        }
+        if (result == null) {
+            result = checkIfRehab(hcu);
+        }
+        if(result == null) {
+            result = checkIfFarmacy(hcu);
+        }
+        if(result == null) {
+            result = checkIfMedicine(hcu);
+        }
+        if(result == null) {
+            //result = checkIfDept(hcu);
         }
         return result;
     }
@@ -97,7 +115,24 @@ public class HealthCareUnit {
 
         if(tempHCU.contains("sjukh") || tempHCU.contains("lasaret") || (tempHCU.contains("sjh")) || (tempHCU.contains("avd"))) {
             result = searchHCU(hcu, 3);
-            System.out.println("Result from checkIfHos() " + result);
+        }
+        return result;
+    }
+
+    public HashMap<String,String> checkIfFarmacy(String hcu) {
+        HashMap<String,String> result = null;
+        String tempHCU = hcu.toLowerCase();
+        if(tempHCU.contains("apotek")) {
+            result = searchHCU(hcu,13);
+        }
+        return result;
+    }
+
+    public HashMap<String,String> checkIfEmergency(String hcu) {
+        HashMap<String,String> result = null;
+        String tempHCU = hcu.toLowerCase();
+        if(tempHCU.contains("akut") || tempHCU.contains("intensiv")) {
+            result = searchHCU(hcu,9);
         }
         return result;
     }
@@ -106,11 +141,17 @@ public class HealthCareUnit {
         HashMap<String,String> result = null;
         String tempHCU = hcu.toLowerCase();
 
-        //if(tempHCU.contains("boende") || tempHCU.contains("sjukhem") || tempHCU.contains("service")) {
+        if(tempHCU.contains("boende") || tempHCU.contains("sjukhem") || tempHCU.contains("service")) {
             result = searchHCU(hcu, 4);
-        //}
+        }
         return result;
     }
+
+    /***public HashMap<String,String> checkIfDept(String hcu) {
+        String tempHCU = preprocessData(hcu.toLowerCase());
+        tempHCU = tempHCU.replace(" ")
+        if(tempHCU.contains("avd") || tempHCU.length())
+    }***/
 
     public HashMap<String, String> checkIfClinic(String hcu) {
         HashMap<String,String> result = null;
@@ -122,12 +163,24 @@ public class HealthCareUnit {
         return result;
     }
 
-    public HashMap<String, String> checkIfNeuro(String hcu) {
+    public HashMap<String, String> checkIfEndocrine(String hcu) {
         HashMap<String,String> result = null;
-        String tempNeuro = hcu.toLowerCase();
+        String tempHCU = hcu.toLowerCase();
 
-        if(tempNeuro.contains("neuro")) {
+        if(tempHCU.contains("endokrin") || tempHCU.contains("diabetes") || tempHCU.contains("njur") ||
+                tempHCU.contains("dialys") || tempHCU.contains("urolog")) {
             result = searchHCU(hcu, 6);
+        }
+        return result;
+    }
+
+    public HashMap<String,String> checkIfDental(String hcu) {
+        HashMap<String,String> result = null;
+        String tempHCU = hcu.toLowerCase();
+
+        if(tempHCU.contains("tand") || tempHCU.contains("oral") || tempHCU.contains("käk") ||
+                tempHCU.contains("endodonti") || tempHCU.contains("odontologi") || tempHCU.contains("dental")) {
+            result = searchHCU(hcu, 10);
         }
         return result;
     }
@@ -142,13 +195,31 @@ public class HealthCareUnit {
         return result;
     }
 
+    public HashMap<String, String> checkIfRehab(String hcu) {
+        HashMap<String,String> result = null;
+        String tempHCU = hcu.toLowerCase();
+
+        if(tempHCU.contains("rehab")) {
+            result = searchHCU(hcu, 12);
+        }
+        return result;
+    }
+
     public HashMap<String, String> checkIfGeriatrics(String hcu) {
         HashMap<String,String> result = null;
         String tempGer = hcu.toLowerCase();
 
-        if(tempGer.contains("geri") || tempGer.contains("operat")) {
+        if(tempGer.contains("geri") || tempGer.contains("operat") || tempGer.contains("sjukhem") ||
+                tempGer.contains("asih") || tempGer.contains("palliativ") || tempGer.contains("hospice")) {
             result = searchHCU(hcu, 8);
         }
+        return result;
+    }
+
+    public HashMap<String,String> checkIfMedicine(String hcu) {
+        HashMap<String,String> result = null;
+        String tempHCU = hcu.toLowerCase();
+        result = searchHCU(hcu, 11);
         return result;
     }
 
@@ -161,9 +232,7 @@ public class HealthCareUnit {
                 continiueSearchingAcronym(hcus, hcu);
             } else if (option == 2) {
                 continiueSearchingHCU(hcus, hcu);
-            } else if (option == 3 || option == 4 || option == 5) {
-                evaluateDefinedHCU(hcus,hcu,option);
-            } else if (option == 6 || option == 7 || option == 8) {
+            } else {
                 evaluateDefinedHCU(hcus,hcu,option);
             }
         }
@@ -310,15 +379,9 @@ public class HealthCareUnit {
         if(list != null) {
             if(option == 3) {
                 evaluateHospital(hcu,list);
-            } else if(option == 4) {
-                evaluateOtherHCU(hcu,list);
             } else if(option == 5) {
                 evaluateClinic(hcu,list);
-            } else if(option == 6) {
-                evaluateOtherHCU(hcu,list);
-            } else if(option == 7) {
-                evaluateOtherHCU(hcu,list);
-            } else if(option == 8) {
+            } else {
                 evaluateOtherHCU(hcu,list);
             }
             hcuMap = hcuValues;
@@ -332,41 +395,34 @@ public class HealthCareUnit {
         }
         String[] hospitalArray = tempHospital.split(" ");
         for(int index = 0; index < list.size(); index++) {
-            String otherHCU = list.get(index);
-            String tempHCU = preprocessData(otherHCU.toLowerCase());
+            String otherHCU = preprocessData(list.get(index).toLowerCase());
             int counter = 0;
             for(int i = 0; i < hospitalArray.length; i++) {
-                if(tempHCU.contains(hospitalArray[i])) {
+                if(otherHCU.contains(hospitalArray[i])) {
                     counter++;
                 }
             }
-            if(counter == hospitalArray.length - 1) {
-                mostProbableWord = otherHCU;
-                //currentWord = otherHCU;
+            if(counter == hospitalArray.length) {
+                currentWord = otherHCU;
             }
         }
-        currentWord = mostProbableWord;
     }
 
     public void evaluateOtherHCU(String hcu, ArrayList<String> list) {
         String tempHCU = preprocessData(hcu).toLowerCase();
         String[] hcuArray = tempHCU.split(" ");
         for(int index = 0; index < list.size(); index++) {
-            String otherHCU = list.get(index);
-            String temp = preprocessData(otherHCU.toLowerCase());
-            //String otherHCU = preprocessData(list.get(index).toLowerCase());
+            String otherHCU = preprocessData(list.get(index).toLowerCase());
             int counter = 0;
             for(int i = 0; i < hcuArray.length; i++) {
-                if(temp.contains(hcuArray[i])) {
+                if(otherHCU.contains(hcuArray[i])) {
                     counter++;
                 }
             }
-            if(counter == hcuArray.length - 1) {
-                mostProbableWord = otherHCU;
-                //currentWord = otherHCU;
+            if(counter == hcuArray.length) {
+                currentWord = otherHCU;
             }
         }
-        currentWord = mostProbableWord;
     }
 
     public void evaluateClinic(String clinic, ArrayList<String> list) {
@@ -376,72 +432,18 @@ public class HealthCareUnit {
         }
         String[] clinicArray = tempClinic.split( " ");
         for(int index = 0; index < list.size(); index++) {
-            String otherHCU = list.get(index);
-            String tempHCU = preprocessData(otherHCU.toLowerCase());
-            //String otherHCU = preprocessData(list.get(index).toLowerCase());
+            String otherHCU = preprocessData(list.get(index).toLowerCase());
             int counter = 0;
             for(int i = 0; i < clinicArray.length; i++) {
-                if(tempHCU.contains(clinicArray[i])) {
+                if(otherHCU.contains(clinicArray[i])) {
                     counter++;
                 }
             }
-            if(counter == clinicArray.length - 1) {
-                mostProbableWord = otherHCU;
-            }
-        }
-        currentWord = mostProbableWord;
-    }
-
-    /***public void evaluateNeuroUnit(String neuroUnit, ArrayList<String> list) {
-        String tempNeuroUnit = preprocessData(neuroUnit).toLowerCase();
-        String[] neuroArray = tempNeuroUnit.split(" ");
-        for(int index = 0; index < list.size(); index++) {
-            String otherNeuro = preprocessData(list.get(index).toLowerCase());
-            int counter = 0;
-            for (int i = 0; i < neuroArray.length; i++) {
-                if(otherNeuro.toLowerCase().contains(neuroArray[i])) {
-                    counter++;
-                }
-            }
-            if(counter == neuroArray.length) {
-                currentWord = otherNeuro;
+            if(counter == clinicArray.length) {
+                currentWord = otherHCU;
             }
         }
     }
-
-    public void evaluateSurgery(String surgeryUnit, ArrayList<String> list) {
-        String tempSurgeryUnit = preprocessData(surgeryUnit).toLowerCase();
-        String[] surgeryArray = tempSurgeryUnit.split(" ");
-        for(int index = 0; index < list.size(); index++) {
-            String otherSurgery = preprocessData(list.get(index).toLowerCase());
-            int counter = 0;
-            for (int i = 0; i < surgeryArray.length; i++) {
-                if(otherSurgery.toLowerCase().contains(surgeryArray[i])) {
-                    counter++;
-                }
-            }
-            if(counter == surgeryArray.length) {
-                currentWord = otherSurgery;
-            }
-        }
-    }
-
-    public void evaluateGeriatrics(String gerUnit, ArrayList<String> list) {
-        String tempGer = preprocessData(gerUnit).toLowerCase();
-        String[] gerArray = tempGer.split(" ");
-        for(int index = 0; index < list.size(); index++) {
-            String otherSurgery = preprocessData(list.get(index).toLowerCase());
-            int counter = 0;
-            for (int i = 0; i < gerArray.length; i++) {
-                if(otherSurgery.toLowerCase().contains(gerArray[i])) {
-                    counter++;
-                }
-            }
-            if(counter == gerArray.length) {
-                currentWord = otherSurgery;
-            }
-        }
-    }***/
 
     class DataContainer {
 
@@ -471,11 +473,23 @@ public class HealthCareUnit {
                         break;
                 case 5: category = "VÅRDCENTRAL";
                         break;
-                case 6: category = "NEURO";
+                case 6: category = "NJURENDOKRIN";
                         break;
                 case 7: category = "KIRURGI";
                         break;
                 case 8: category = "GERIATRIK";
+                        break;
+                case 9: category = "AKUT";
+                        break;
+                case 10: category = "TAND";
+                        break;
+                case 11: category = "MEDICIN";
+                        break;
+                case 12: category = "REHAB";
+                        break;
+                case 13: category = "APOTEK";
+                        break;
+                case 14: category = "AVDELNING";
                         break;
             }
             return category;

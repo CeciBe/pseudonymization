@@ -7,7 +7,7 @@ import java.util.regex.*;
 
 public class Pseudonymizer {
 
-    private String locationListLink = "C:/LocationList.txt";
+    private String locationListLink = "C:/LocationListNew.txt";
     private String hcuListLink = "C:/HCUListNew.txt";
     private String currentWord = null;
     private TempData tempObject = new TempData();
@@ -31,13 +31,21 @@ public class Pseudonymizer {
                 HashMap <String,String> tempMap = new HashMap<>();
                 String category = line;
                 while(((line = locationReader.readLine()) != null) && !(line.equals("LOCATIONTYPE:"))) {
-                    String locationUnit = line;
-                    String [] locMap = locationUnit.split(" ");
+                    String [] locMap = line.split(" ");
                     int index = locMap.length - 1;
-                    String newLocation = locationUnit;//= locationUnit.replace(locMap[index], "");
-                    newLocation = newLocation.trim();
-                    tempMap.put(newLocation, category);
-                    groupedSurrogates.put(newLocation, locMap[index]);
+                    if(locMap[index].contains("[")) {
+                        String newHCU = line.replace(locMap[index], "");
+                        newHCU = newHCU.trim();
+                        tempMap.put(newHCU, category);
+                        groupedSurrogates.put(newHCU, locMap[index]);
+                    } else {
+                        tempMap.put(line,category);
+                    }
+                    //String newLocation = line.replace(locMap[index], "");
+
+                    //newLocation = newLocation.trim();
+                    //tempMap.put(newLocation, category);
+                    //groupedSurrogates.put(newLocation, locMap[index]);
                 }
                 locationList.add(tempMap);
             }
@@ -59,10 +67,14 @@ public class Pseudonymizer {
                     String hcu = line;
                     String [] hcuMap = hcu.split(" ");
                     int index = hcuMap.length - 1;
-                    String newHCU = hcu; //hcu.replace(hcuMap[index], "");
-                    newHCU = newHCU.trim();
-                    tempMap.put(newHCU, category);
-                    groupedSurrogates.put(newHCU, hcuMap[index]);
+                    if(hcuMap[index].contains("[")) {
+                        String newHCU = hcu.replace(hcuMap[index], "");
+                        newHCU = newHCU.trim();
+                        tempMap.put(newHCU, category);
+                        groupedSurrogates.put(newHCU, hcuMap[index]);
+                    } else {
+                        tempMap.put(hcu,category);
+                    }
                 }
                 hcuList.add(tempMap);
             }

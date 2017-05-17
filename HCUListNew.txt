@@ -1,4 +1,4 @@
-SJUKHUS
+﻿SJUKHUS
 Södersjukhuset [1]
 Danderyds sjukhus [3]
 Dalens sjukhus [2]
@@ -217,6 +217,14 @@ Sundtorps korttidsboende [6]
 Utsiktens korttidsboende [5]
 Löwenströmska korttidsboende [1]
 Hornstulls korttidsboende [1]
+Danvikshem [1]
+Farsta sjukhem [2]
+Tumba sjukhem [2]
+Älvsjö sjukhem [1]
+Vårbergs sjukhem [2]
+Stockholms sjukhem [1]
+Stureby sjukhem [2]
+Ekbackens sjukhem [1]
 HCUTYPE:
 VÅRDCENTRAL
 Abrahamsbergs vårdcentral
@@ -442,15 +450,7 @@ Apotek Scheele
 Apoteket på KS, Solna
 Apoteket Fjärilen
 HCUTYPE:
-SJUKHEM
-Danvikshem [1]
-Farsta sjukhem [2]
-Tumba sjukhem [2]
-Älvsjö sjukhem [1]
-Vårbergs sjukhem [2]
-Stockholms sjukhem [1]
-Stureby sjukhem [2]
-Ekbackens sjukhem [1]
+GERIATRIK
 Äldrevårdsmottagning [3]
 Stiftelsen Stora Sköndal [2]
 Capio Ortopediska huset [2]
@@ -478,7 +478,7 @@ Specialiserad Palliativ Slutenvård Lidingö [1]
 Capio Specialiserad palliativ slutenvård, Dalens sjukhus [2]
 Byle Gård vårdavdelning [3]
 HCUTYPE:
-AVDELNINGAR
+AVDELNING
 DS avd 97
 R82
 K41
